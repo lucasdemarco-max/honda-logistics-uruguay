@@ -5,7 +5,8 @@
 - [ ] Diseño (rojo/blanco/negro/grises) y layout público
 - [ ] Inicio, Catálogo con filtros, Marcas Asociadas, Seguimiento, Presupuestos, Envíos y pagos
 - [ ] Carrito + checkout informativo (solo transferencia)
-- [ ] Registro / inicio de sesión / recuperar contraseña
+- [x] Registro / inicio de sesión / recuperar contraseña
+- [x] Logo de la empresa (emblema Honda + HONDA) en encabezado, pie y favicon
 - [ ] Mi cuenta: estado, datos, vehículos, casos, presupuestos, titularidad, pedidos
 - [ ] Panel admin: clientes, vehículos, casos, presupuestos, catálogo, marcas, titularidad, pedidos, usuarios/permisos, auditoría
 - [ ] Tests de reglas (estados, totales, enmascarado de VIN)
