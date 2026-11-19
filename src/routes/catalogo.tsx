@@ -12,6 +12,7 @@ import { DemoNotice } from "@/components/site/DemoNotice";
 import { searchCatalog, type CatalogQuery } from "@/lib/public.functions";
 import { catalogMetaQuery } from "./index";
 import { cn } from "@/lib/utils";
+import { FILTER_SUBCATEGORIES, FILTER_SUBCATEGORY_SLUGS } from "@/lib/filter-categories";
 
 interface CatalogSearch {
   q?: string | undefined;
@@ -96,7 +97,7 @@ function Catalogo() {
           >
             Todas
           </button>
-          {meta.categories.map((c) => (
+          {meta.categories.filter((c) => c.slug === "filtros").map((c) => (
             <button
               key={c.id}
               type="button"
@@ -110,6 +111,37 @@ function Catalogo() {
               {c.name}
             </button>
           ))}
+          {(search.categoria === "filtros" || FILTER_SUBCATEGORY_SLUGS.some((slug) => slug === search.categoria)) &&
+            FILTER_SUBCATEGORIES.map((subcategory) => (
+                <button
+                  key={subcategory.slug}
+                  type="button"
+                  onClick={() => set({ categoria: subcategory.slug })}
+                  aria-pressed={search.categoria === subcategory.slug}
+                  className={cn(
+                    "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
+                    search.categoria === subcategory.slug ? "border-primary bg-primary text-primary-foreground" : "bg-card hover:border-primary",
+                  )}
+                >
+                  {subcategory.name}
+                </button>
+              ))}
+          {meta.categories
+            .filter((c) => c.slug !== "filtros" && !FILTER_SUBCATEGORY_SLUGS.some((slug) => slug === c.slug))
+            .map((c) => (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => set({ categoria: c.slug })}
+                aria-pressed={search.categoria === c.slug}
+                className={cn(
+                  "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
+                  search.categoria === c.slug ? "border-primary bg-primary text-primary-foreground" : "bg-card hover:border-primary",
+                )}
+              >
+                {c.name}
+              </button>
+            ))}
         </div>
 
         <div className="mt-4 grid gap-3 sm:grid-cols-3 lg:max-w-3xl">

@@ -5,6 +5,7 @@ import heroImg from "@/assets/hero-parts.jpg";
 import { Button } from "@/components/ui/button";
 import { SearchBox } from "@/components/site/SearchBox";
 import { getCatalogMeta } from "@/lib/public.functions";
+import { FILTER_SUBCATEGORIES } from "@/lib/filter-categories";
 
 export const catalogMetaQuery = queryOptions({
   queryKey: ["catalog-meta"],
@@ -86,18 +87,6 @@ function Index() {
           <div className="mt-8 max-w-2xl">
             <SearchBox size="lg" />
           </div>
-          <div className="mt-6 flex flex-wrap gap-2" aria-label="Modelos">
-            {data.models.map((m) => (
-              <Link
-                key={m.id}
-                to="/catalogo"
-                search={{ modelo: m.slug }}
-                className="rounded-full border border-ink-border bg-ink/60 px-3.5 py-1.5 text-sm text-ink-foreground backdrop-blur transition-colors hover:border-primary hover:text-primary"
-              >
-                {m.name}
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -131,7 +120,35 @@ function Index() {
           </Button>
         </div>
         <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-7">
-          {data.categories.map((c) => (
+          <div className="group overflow-hidden rounded-lg border bg-card shadow-card transition-shadow hover:shadow-lift">
+            <div className="aspect-square overflow-hidden bg-muted">
+              <img
+                src="/images/categories/filtros.jpg"
+                alt=""
+                loading="lazy"
+                width={944}
+                height={704}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div className="border-t-2 border-transparent p-3 transition-colors group-hover:border-primary">
+              <p className="font-display text-lg font-semibold uppercase">Filtros</p>
+              <ul className="mt-2 space-y-1 text-xs">
+                {FILTER_SUBCATEGORIES.map((subcategory) => (
+                  <li key={subcategory.slug}>
+                    <Link
+                      to="/catalogo"
+                      search={{ categoria: subcategory.slug }}
+                      className="block rounded px-1 py-0.5 text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
+                    >
+                      {subcategory.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          {data.categories.filter((c) => c.slug !== "filtros").map((c) => (
             <Link
               key={c.id}
               to="/catalogo"

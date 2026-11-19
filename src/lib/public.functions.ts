@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { createClient } from "@supabase/supabase-js";
 import type { Database } from "@/integrations/supabase/types";
+import { FILTER_SUBCATEGORY_SLUGS } from "@/lib/filter-categories";
 
 function publicClient() {
   const url = process.env["SUPABASE_URL"]!;
@@ -93,13 +94,18 @@ export const searchCatalog = createServerFn({ method: "GET" })
     const sb = publicClient();
     const args: { _q?: string; _category?: string; _model?: string; _year?: number; _brand?: string } = {};
     if (data.q) args._q = data.q;
-    if (data.categoria) args._category = data.categoria;
+    if (data.categoria && data.categoria !== "filtros") args._category = data.categoria;
     if (data.modelo) args._model = data.modelo;
     if (data.anio) args._year = data.anio;
     if (data.marca) args._brand = data.marca;
     const { data: rows, error } = await sb.rpc("search_products", args);
     if (error) throw new Error("No pudimos cargar el catálogo");
-    return enrich(sb, (rows ?? []) as ProductRow[]);
+    const enriched = await enrich(sb, (rows ?? []) as ProductRow[]);
+    if (data.categoria === "filtros") {
+      const allowed = new Set<string>(["filtros", ...FILTER_SUBCATEGORY_SLUGS]);
+      return enriched.filter((product) => product.category?.slug && allowed.has(product.category.slug));
+    }
+    return enriched;
   });
 
 export const listBrands = createServerFn({ method: "GET" }).handler(async () => {

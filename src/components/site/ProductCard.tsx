@@ -2,8 +2,7 @@ import { ShieldCheck, ShoppingCart, Info } from "lucide-react";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { StatusBadge } from "./StatusBadge";
-import { AVAILABILITY, HONDA_RELATIONS, canClaimHomologation } from "@/lib/labels";
+import { HONDA_RELATIONS, canClaimHomologation } from "@/lib/labels";
 import { formatUYU } from "@/lib/format";
 import { useCart } from "@/lib/cart";
 import type { CatalogProduct } from "@/lib/public.functions";
@@ -88,10 +87,6 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
             {product.is_demo && product.price_uyu !== null && (
               <p className="mt-0.5 text-[11px] text-muted-foreground">Precio ilustrativo</p>
             )}
-            <div className="mt-2 flex items-center gap-2">
-              <StatusBadge options={AVAILABILITY} value={product.availability} />
-              {typeof product.stock === "number" && <span className="text-xs text-muted-foreground">{product.stock} u.</span>}
-            </div>
           </div>
           <Button
             size="icon"
