@@ -49,6 +49,32 @@ const errorMessage = (error: unknown) => {
   return "Ocurrió un error inesperado";
 };
 
+const modelNameFromRecord = (record: Record<string, unknown>) => {
+  const entry = Object.entries(record).find(([key]) =>
+    ["modelo", "model", "modelname", "modelid"].includes(normalizeImportValue(key)),
+  );
+  return String(entry?.[1] ?? "").trim();
+};
+
+const modelSlug = (name: string) =>
+  name
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+
+const modelDisplayName = (name: string) => {
+  const names: Record<string, string> = {
+    ridgeline: "Ridgeline",
+    "zr-v": "ZR-V",
+    odyssey: "Odyssey",
+    "type-r": "Type-R",
+  };
+  return names[modelSlug(name)] ?? name;
+};
+
 export const Route = createFileRoute("/_authenticated/admin")({
   head: () => ({
     meta: [
@@ -131,6 +157,7 @@ function Admin() {
         ["Plantilla de productos Honda Logistics"],
         ["Ingresá una fila por producto y repetí el SKU cuando tenga más de un modelo compatible."],
         ["Las filas con el mismo SKU deben repetir los mismos datos del producto."],
+        ["Si el precio cambia entre filas del mismo SKU, se usará el precio más alto."],
         [
           "Dejá Modelo, Año Desde y Año Hasta vacíos si el producto no tiene compatibilidad específica.",
         ],
@@ -139,6 +166,7 @@ function Admin() {
         [
           "La base actual no guarda subcategorías por separado; se importarán bajo la categoría general Filtros.",
         ],
+        ["Los modelos de la planilla que aún no existan se agregarán al catálogo si tenés permiso."],
         [],
         ["Categorías disponibles"],
         ...categories.map((category) => [category.name, category.slug]),
@@ -223,8 +251,52 @@ function Admin() {
         );
 
       if (!records.length) throw new Error("La hoja no contiene filas de productos");
+
+      const sourceModelNames = [
+        ...new Set(records.map(({ record }) => modelNameFromRecord(record)).filter(Boolean)),
+      ];
+      const missingModels = sourceModelNames.filter(
+        (name) =>
+          !models.some((model) =>
+            [model.name, model.slug].some(
+              (value) => normalizeImportValue(value) === normalizeImportValue(name),
+            ),
+          ),
+      );
+      let availableModels = models;
+      if (missingModels.length > 0) {
+        const { data: userResult, error: userError } = await supabase.auth.getUser();
+        if (userError) throw userError;
+        if (!userResult.user) throw new Error("Iniciá sesión para agregar modelos al catálogo");
+        const { data: canManageCatalog, error: permissionError } = await supabase.rpc(
+          "has_permission",
+          { _user_id: userResult.user.id, _perm: "catalogo" },
+        );
+        if (permissionError) throw permissionError;
+        if (!canManageCatalog)
+          throw new Error("Tu cuenta no tiene permisos para agregar modelos al catálogo");
+
+        const { error: insertModelsError } = await supabase.from("vehicle_models").upsert(
+          missingModels.map((name, index) => ({
+            name: modelDisplayName(name),
+            slug: modelSlug(name),
+            sort_order: 100 + index,
+          })),
+          { onConflict: "slug" },
+        );
+        if (insertModelsError) throw insertModelsError;
+
+        const { data: refreshedModels, error: modelsError } = await supabase
+          .from("vehicle_models")
+          .select("id, name, slug")
+          .order("sort_order");
+        if (modelsError) throw modelsError;
+        availableModels = refreshedModels;
+        setModels(refreshedModels);
+      }
+
       const parsedRows = records.map(({ record, rowNumber }) =>
-        parseImportRow(record, rowNumber, categories, models),
+        parseImportRow(record, rowNumber, categories, availableModels),
       );
       const validatedRows = validateDuplicateSkus(parsedRows);
       setRows(validatedRows);
@@ -369,7 +441,8 @@ function Admin() {
               <h2 className="text-2xl font-semibold uppercase">Importar productos desde Excel</h2>
               <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
                 Cargá .xlsx, .xls o CSV. Repetí el SKU en una fila por modelo compatible y mantené
-                iguales los datos del producto en esas filas.
+                iguales los datos del producto en esas filas. Para SKU repetidos con distintos
+                precios se conserva el más alto; los modelos faltantes se agregan al catálogo.
               </p>
             </div>
             <Button

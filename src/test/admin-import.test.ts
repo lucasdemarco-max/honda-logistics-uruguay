@@ -92,4 +92,53 @@ describe("product Excel import validation", () => {
     const inconsistentRows = validateDuplicateSkus([first, inconsistent]);
     expect(inconsistentRows.every((row) => row.error?.includes("mismos datos"))).toBe(true);
   });
+
+  it("imports CategoryName and ModelID headers and applies the highest repeated-SKU price", () => {
+    const first = parseImportRow(
+      {
+        SKU: "30907",
+        NAME: "Filtro de Aceite",
+        CategoryName: "Filtros",
+        HondaCode: "15400-RTA-003",
+        Description: "Filtro de Aceite",
+        Price: 716.56,
+        Stock: 0,
+        availability: 0,
+        Active: "Si",
+        ModelID: "CIVIC",
+        YearFrom: 2018,
+        YearTo: 2024,
+      },
+      2,
+      categories,
+      models,
+    );
+    const second = parseImportRow(
+      {
+        SKU: "30907",
+        NAME: "Filtro de Aceite",
+        CategoryName: "Filtros",
+        HondaCode: "15400-RTA-003",
+        Description: "Filtro de Aceite",
+        Price: 5.17,
+        Stock: 0,
+        availability: 0,
+        Active: "Si",
+        ModelID: "Fit",
+        YearFrom: 2018,
+        YearTo: 2023,
+      },
+      3,
+      categories,
+      models,
+    );
+
+    const rows = validateDuplicateSkus([first, second]);
+
+    expect(rows.every((row) => row.error === null)).toBe(true);
+    expect(rows.map((row) => row.price)).toEqual([716.56, 716.56]);
+    expect(rows[0]?.categoryId).toBe("filters-id");
+    expect(rows[0]?.modelId).toBe("civic-id");
+    expect(rows[0]?.availability).toBe("consultar");
+  });
 });

@@ -75,7 +75,7 @@ const parseAvailability = (value: unknown): Availability | null => {
   if (["pocasunidades", "ultimasunidades"].includes(normalized)) return "pocas_unidades";
   if (["apedido", "pedido"].includes(normalized)) return "a_pedido";
   if (["sinstock", "agotado"].includes(normalized)) return "sin_stock";
-  if (["", "consultar"].includes(normalized)) return "consultar";
+  if (["", "0", "consultar"].includes(normalized)) return "consultar";
   return null;
 };
 
@@ -87,7 +87,13 @@ export const parseImportRow = (
 ): ImportRow => {
   const sku = textValue(record, ["sku", "codigo sku", "codigo"]);
   const name = textValue(record, ["nombre", "nombre producto", "producto", "name"]);
-  const categoryName = textValue(record, ["categoria", "categoría", "category"]);
+  const categoryName = textValue(record, [
+    "categoria",
+    "categoría",
+    "category",
+    "category name",
+    "categoryid",
+  ]);
   const subcategoryName = textValue(record, [
     "subcategoria",
     "subcategoría",
@@ -113,7 +119,7 @@ export const parseImportRow = (
     inactivo: false,
   };
   const active = activeValue ? activeOptions[activeValue] : true;
-  const modelName = textValue(record, ["modelo", "model"]);
+  const modelName = textValue(record, ["modelo", "model", "model name", "modelid"]);
   const yearFromValue = parseNumber(
     getValue(record, ["anio desde", "año desde", "year from", "desde"]),
   );
@@ -206,14 +212,16 @@ export const validateDuplicateSkus = (rows: ImportRow[]) => {
     const group = bySku.get(row.sku) ?? [];
     if (group.length < 2) return row;
 
+    const prices = group.flatMap((item) => (item.price === null ? [] : [item.price]));
+    const highestPrice = prices.length ? Math.max(...prices) : null;
+    const pricedGroup = group.map((item) => ({ ...item, price: highestPrice }));
     const productDetails = new Set(
-      group.map((item) =>
+      pricedGroup.map((item) =>
         JSON.stringify([
           item.name,
           item.categoryId,
           item.hondaCode,
           item.description,
-          item.price,
           item.stock,
           item.availability,
           item.active,
@@ -227,6 +235,6 @@ export const validateDuplicateSkus = (rows: ImportRow[]) => {
     const hasNoModel = group.some((item) => !item.modelId);
     if (hasModel && hasNoModel)
       return withRowError(row, "No mezcles filas con y sin modelo para el mismo SKU");
-    return row;
+    return { ...row, price: highestPrice };
   });
 };
