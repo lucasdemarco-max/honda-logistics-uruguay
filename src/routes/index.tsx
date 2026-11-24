@@ -5,7 +5,7 @@ import heroImg from "@/assets/hero-parts.jpg";
 import { Button } from "@/components/ui/button";
 import { SearchBox } from "@/components/site/SearchBox";
 import { getCatalogMeta } from "@/lib/public.functions";
-import { FILTER_SUBCATEGORIES } from "@/lib/filter-categories";
+import { HONDA_FILTER_MODELS } from "@/lib/filter-categories";
 
 export const catalogMetaQuery = queryOptions({
   queryKey: ["catalog-meta"],
@@ -132,20 +132,29 @@ function Index() {
               />
             </div>
             <div className="border-t-2 border-transparent p-3 transition-colors group-hover:border-primary">
-              <p className="font-display text-lg font-semibold uppercase">Filtros</p>
-              <ul className="mt-2 space-y-1 text-xs">
-                {FILTER_SUBCATEGORIES.map((subcategory) => (
-                  <li key={subcategory.slug}>
+              <Link to="/catalogo" search={{ categoria: "filtros" }} className="hover:text-primary">
+                <p className="font-display text-lg font-semibold uppercase">Filtros por Modelo</p>
+              </Link>
+              <ul className="mt-2 grid grid-cols-2 gap-1 text-[11px]">
+                {HONDA_FILTER_MODELS.slice(0, 8).map((m) => (
+                  <li key={m.slug}>
                     <Link
                       to="/catalogo"
-                      search={{ categoria: subcategory.slug }}
-                      className="block rounded px-1 py-0.5 text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary"
+                      search={{ categoria: "filtros", modelo: m.slug }}
+                      className="block truncate rounded px-1 py-0.5 text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary font-medium"
                     >
-                      {subcategory.name}
+                      {m.name}
                     </Link>
                   </li>
                 ))}
               </ul>
+              <Link
+                to="/catalogo"
+                search={{ categoria: "filtros" }}
+                className="mt-2 block text-[11px] font-semibold text-primary hover:underline"
+              >
+                Ver todos los modelos →
+              </Link>
             </div>
           </div>
           {data.categories.filter((c) => c.slug !== "filtros").map((c) => (

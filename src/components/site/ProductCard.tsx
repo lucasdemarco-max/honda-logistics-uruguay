@@ -54,14 +54,19 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
         {product.description && <p className="line-clamp-2 text-sm text-muted-foreground">{product.description}</p>}
 
         {showRelation && (
-          <div className="flex items-start gap-1.5 text-xs" title={relation.description}>
+          <div className="flex items-start gap-1.5 text-xs" title={relation.description || relation.label}>
             {relation.value === "homologado_honda" ? (
               <ShieldCheck className="h-4 w-4 shrink-0 text-success" aria-hidden />
             ) : (
               <Info className="h-4 w-4 shrink-0 text-info" aria-hidden />
             )}
             <span>
-              <strong>{relation.label}.</strong> <span className="text-muted-foreground">{relation.description}</span>
+              <strong>{relation.label}</strong>
+              {relation.description ? (
+                <>
+                  . <span className="text-muted-foreground">{relation.description}</span>
+                </>
+              ) : null}
             </span>
           </div>
         )}

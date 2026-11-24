@@ -2,6 +2,7 @@ import { createServerFn } from "@tanstack/react-start";
 import { createClient } from "@supabase/supabase-js";
 import type { Database } from "@/integrations/supabase/types";
 import { FILTER_SUBCATEGORY_SLUGS } from "@/lib/filter-categories";
+import filtrosData from "@/data/filtros.json";
 
 function publicClient() {
   const url = process.env["SUPABASE_URL"]!;
@@ -37,9 +38,36 @@ export const getCatalogMeta = createServerFn({ method: "GET" }).handler(async ()
     sb.from("vehicle_models").select("*").order("sort_order"),
     sb.from("brands").select("id, name, slug, segment, is_demo").eq("active", true).order("sort_order"),
   ]);
+
+  const dbModels = (models.data ?? []) as VehicleModel[];
+  const existingSlugs = new Set(dbModels.map((m) => m.slug));
+  const additionalModels: VehicleModel[] = [];
+  const modelOrder = ["ridgeline", "zr-v", "odyssey", "type-r"];
+  const modelDisplay: Record<string, string> = {
+    ridgeline: "Ridgeline",
+    "zr-v": "ZR-V",
+    odyssey: "Odyssey",
+    "type-r": "Civic Type R",
+  };
+
+  for (const slug of modelOrder) {
+    if (!existingSlugs.has(slug)) {
+      additionalModels.push({
+        id: `model-${slug}`,
+        name: modelDisplay[slug] || slug.toUpperCase(),
+        slug,
+        sort_order: 10 + additionalModels.length,
+      });
+    }
+  }
+
+  const otros = dbModels.find((m) => m.slug === "otros");
+  const withoutOtros = dbModels.filter((m) => m.slug !== "otros");
+  const finalModels = [...withoutOtros, ...additionalModels, ...(otros ? [otros] : [])];
+
   return {
     categories: (cats.data ?? []) as Category[],
-    models: (models.data ?? []) as VehicleModel[],
+    models: finalModels,
     brands: brands.data ?? [],
   };
 });
@@ -82,6 +110,53 @@ async function enrich(sb: ReturnType<typeof publicClient>, products: ProductRow[
   }));
 }
 
+function filterFiltrosLocal(data: CatalogQuery): CatalogProduct[] {
+  if (data.marca) return [];
+
+  const isFiltrosCategory =
+    !data.categoria ||
+    data.categoria === "filtros" ||
+    FILTER_SUBCATEGORY_SLUGS.some((slug) => slug === data.categoria);
+
+  if (!isFiltrosCategory) return [];
+
+  const qNorm = data.q?.toLowerCase().trim();
+  const allFilters = filtrosData as unknown as CatalogProduct[];
+
+  return allFilters.filter((p) => {
+    if (data.categoria && data.categoria !== "filtros") {
+      if (p.category?.slug !== data.categoria) return false;
+    }
+
+    if (data.modelo) {
+      const matchModel = p.compat.some(
+        (c) => c.model_slug === data.modelo || c.model.toLowerCase() === data.modelo!.toLowerCase(),
+      );
+      if (!matchModel) return false;
+    }
+
+    if (data.anio) {
+      const matchYear = p.compat.some((c) => {
+        if (data.modelo && c.model_slug !== data.modelo && c.model.toLowerCase() !== data.modelo!.toLowerCase()) {
+          return false;
+        }
+        return data.anio! >= c.year_from && data.anio! <= c.year_to;
+      });
+      if (!matchYear) return false;
+    }
+
+    if (qNorm) {
+      const inName = p.name.toLowerCase().includes(qNorm);
+      const inSku = p.sku.toLowerCase().includes(qNorm);
+      const inHondaCode = (p.honda_code ?? "").toLowerCase().includes(qNorm);
+      const inDesc = (p.description ?? "").toLowerCase().includes(qNorm);
+      if (!inName && !inSku && !inHondaCode && !inDesc) return false;
+    }
+
+    return true;
+  });
+}
+
 export const searchCatalog = createServerFn({ method: "GET" })
   .inputValidator((input: CatalogQuery) => ({
     q: typeof input?.q === "string" ? input.q.slice(0, 80) : undefined,
@@ -91,21 +166,29 @@ export const searchCatalog = createServerFn({ method: "GET" })
     marca: typeof input?.marca === "string" ? input.marca.slice(0, 60) : undefined,
   }))
   .handler(async ({ data }) => {
+    const localFilters = filterFiltrosLocal(data);
+
+    // If searching strictly within filters, return the local verified list directly
+    if (data.categoria === "filtros" || (data.categoria && FILTER_SUBCATEGORY_SLUGS.some((s) => s === data.categoria))) {
+      return localFilters;
+    }
+
     const sb = publicClient();
     const args: { _q?: string; _category?: string; _model?: string; _year?: number; _brand?: string } = {};
     if (data.q) args._q = data.q;
-    if (data.categoria && data.categoria !== "filtros") args._category = data.categoria;
+    if (data.categoria) args._category = data.categoria;
     if (data.modelo) args._model = data.modelo;
     if (data.anio) args._year = data.anio;
     if (data.marca) args._brand = data.marca;
+
     const { data: rows, error } = await sb.rpc("search_products", args);
     if (error) throw new Error("No pudimos cargar el catálogo");
+
     const enriched = await enrich(sb, (rows ?? []) as ProductRow[]);
-    if (data.categoria === "filtros") {
-      const allowed = new Set<string>(["filtros", ...FILTER_SUBCATEGORY_SLUGS]);
-      return enriched.filter((product) => product.category?.slug && allowed.has(product.category.slug));
-    }
-    return enriched;
+    // Filter out old demo filter products so real filters take precedence
+    const nonDemoEnriched = enriched.filter((p) => !p.sku.startsWith("DEMO-FIL-"));
+
+    return [...localFilters, ...nonDemoEnriched];
   });
 
 export const listBrands = createServerFn({ method: "GET" }).handler(async () => {

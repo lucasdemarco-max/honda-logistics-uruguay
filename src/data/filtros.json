@@ -1,0 +1,2434 @@
+[
+  {
+    "id": "fil-30907",
+    "sku": "30907",
+    "honda_code": "15400-RTA-003",
+    "name": "Filtro de Aceite",
+    "description": "Filtro de Aceite",
+    "category_id": "subcat-aceite",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 716.56,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.949Z",
+    "updated_at": "2026-11-20T13:39:12.950Z",
+    "category": {
+      "id": "subcat-aceite",
+      "name": "Filtros de Aceite",
+      "slug": "filtros-aceite",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-22674",
+    "sku": "22674",
+    "honda_code": "94109-14000",
+    "name": "Arandela del Filtro de Aceite",
+    "description": "Arandela del Filtro de Aceite",
+    "category_id": "subcat-aceite",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 26.33,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.950Z",
+    "updated_at": "2026-11-20T13:39:12.950Z",
+    "category": {
+      "id": "subcat-aceite",
+      "name": "Filtros de Aceite",
+      "slug": "filtros-aceite",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-21541",
+    "sku": "21541",
+    "honda_code": "90471-PX4-000",
+    "name": "Arandela del Fluido del Diferencial",
+    "description": "Arandela del Fluido del Diferencial",
+    "category_id": "subcat-caja",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 209.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.950Z",
+    "updated_at": "2026-11-20T13:39:12.950Z",
+    "category": {
+      "id": "subcat-caja",
+      "name": "Filtros de Caja de Cambio",
+      "slug": "filtros-caja-cambio",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-20092",
+    "sku": "20092",
+    "honda_code": "80291-TF0-U01",
+    "name": "Filtro de Aire Acondicionado",
+    "description": "Filtro de Aire Acondicionado",
+    "category_id": "subcat-polen",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2557.17,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.950Z",
+    "updated_at": "2026-11-20T13:39:12.950Z",
+    "category": {
+      "id": "subcat-polen",
+      "name": "Filtros de Polen",
+      "slug": "filtros-polen",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2025,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2021,
+        "notes": null
+      },
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-22677",
+    "sku": "22677",
+    "honda_code": "94109-20000",
+    "name": "Arandela del Filtro de Aceite",
+    "description": "Arandela del Filtro de Aceite",
+    "category_id": "subcat-aceite",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 51.28,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.950Z",
+    "updated_at": "2026-11-20T13:39:12.950Z",
+    "category": {
+      "id": "subcat-aceite",
+      "name": "Filtros de Aceite",
+      "slug": "filtros-aceite",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-29746",
+    "sku": "29746",
+    "honda_code": "17220-55a-Z01",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1861.4,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.950Z",
+    "updated_at": "2026-11-20T13:39:12.950Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-27286",
+    "sku": "27286",
+    "honda_code": "17220-5R0-008",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2367.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.950Z",
+    "updated_at": "2026-11-20T13:39:12.950Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-27285",
+    "sku": "27285",
+    "honda_code": "17048-T5A-000",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4128.89,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.950Z",
+    "updated_at": "2026-11-20T13:39:12.950Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      },
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-33916",
+    "sku": "33916",
+    "honda_code": "17048-T9A-T00",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8340.95,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.950Z",
+    "updated_at": "2026-11-20T13:39:12.950Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-34830",
+    "sku": "34830",
+    "honda_code": "91302-5T0-003",
+    "name": "Oring Intercambiador del Filtro",
+    "description": "Oring Intercambiador del Filtro",
+    "category_id": "subcat-aceite",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 205.13,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.950Z",
+    "updated_at": "2026-11-20T13:39:12.950Z",
+    "category": {
+      "id": "subcat-aceite",
+      "name": "Filtros de Aceite",
+      "slug": "filtros-aceite",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2017,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2016,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2015,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2023,
+        "year_to": 2025,
+        "notes": null
+      },
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2015,
+        "year_to": 2019,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2017,
+        "year_to": 2019,
+        "notes": null
+      },
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2020,
+        "notes": null
+      },
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-28061",
+    "sku": "28061",
+    "honda_code": "17220-51B-H00",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1568.95,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-25411",
+    "sku": "25411",
+    "honda_code": "25450-P4V-013",
+    "name": "Filtro de Transmision",
+    "description": "Filtro de Transmision",
+    "category_id": "subcat-caja",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1517.67,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-caja",
+      "name": "Filtros de Caja de Cambio",
+      "slug": "filtros-caja-cambio",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-29856",
+    "sku": "29856",
+    "honda_code": "17048-T7J-000",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9130.97,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-28062",
+    "sku": "28062",
+    "honda_code": "17048-T7L-H00",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8410.25,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2016,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-29128",
+    "sku": "29128",
+    "honda_code": "17220-5AA-A00",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1646.57,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-35012",
+    "sku": "35012",
+    "honda_code": "17220-6MA-J01",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1914.07,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-35882",
+    "sku": "35882",
+    "honda_code": "17220-64A-A00",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2751.21,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-32256",
+    "sku": "32256",
+    "honda_code": "17048-THA-H50",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 14989.59,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-36522",
+    "sku": "36522",
+    "honda_code": "17048-TLA-X02",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6996.53,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2017,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-30058",
+    "sku": "30058",
+    "honda_code": "17048-TX4-000",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13553.69,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2012,
+        "year_to": 2016,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-27456",
+    "sku": "27456",
+    "honda_code": "17220-5LA-A00",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2189.88,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2015,
+        "year_to": 2016,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-24167",
+    "sku": "24167",
+    "honda_code": "17220-R5A-A00",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2802.49,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2012,
+        "year_to": 2014,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-34859",
+    "sku": "34859",
+    "honda_code": "25430-R5L-003",
+    "name": "Filtro de Transmision",
+    "description": "Filtro de Transmision",
+    "category_id": "subcat-caja",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2424.11,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-caja",
+      "name": "Filtros de Caja de Cambio",
+      "slug": "filtros-caja-cambio",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2012,
+        "year_to": 2014,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2017,
+        "year_to": 2019,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2016,
+        "year_to": 2020,
+        "notes": null
+      },
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2009,
+        "year_to": 2014,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2012,
+        "year_to": 2016,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-36662",
+    "sku": "36662",
+    "honda_code": "25565-5LJ-A01",
+    "name": "Oring Intercambiador del Filtro",
+    "description": "Oring Intercambiador del Filtro",
+    "category_id": "subcat-aceite",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 336.8,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aceite",
+      "name": "Filtros de Aceite",
+      "slug": "filtros-aceite",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2015,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2017,
+        "year_to": 2019,
+        "notes": null
+      },
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2020,
+        "notes": null
+      },
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-38244",
+    "sku": "38244",
+    "honda_code": "80292-SDA-407",
+    "name": "Filtro de Aire Acondicionado",
+    "description": "Filtro de Aire Acondicionado",
+    "category_id": "subcat-polen",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1495.49,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-polen",
+      "name": "Filtros de Polen",
+      "slug": "filtros-polen",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-28046",
+    "sku": "28046",
+    "honda_code": "17220-5J6-A10",
+    "name": "Filtro de Aire Acondicionado",
+    "description": "Filtro de Aire Acondicionado",
+    "category_id": "subcat-polen",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2108.11,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-polen",
+      "name": "Filtros de Polen",
+      "slug": "filtros-polen",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2021,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-28045",
+    "sku": "28045",
+    "honda_code": "17048-TZ5-A00",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8566.87,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2022,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-29407",
+    "sku": "29407",
+    "honda_code": "17220-5BA-A00",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2139.98,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-35912",
+    "sku": "35912",
+    "honda_code": "17048-T90-A00",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 130.25,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-35710",
+    "sku": "35710",
+    "honda_code": "80292-TYA-H41",
+    "name": "Filtro de Aire Acondicionado",
+    "description": "Filtro de Aire Acondicionado",
+    "category_id": "subcat-polen",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 21.96,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-polen",
+      "name": "Filtros de Polen",
+      "slug": "filtros-polen",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-35645",
+    "sku": "35645",
+    "honda_code": "17220-61A-A00",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 23.54,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-36664",
+    "sku": "36664",
+    "honda_code": "25565-RJ2-005",
+    "name": "Oring Intercambiador de CVT",
+    "description": "Oring Intercambiador de CVT",
+    "category_id": "subcat-caja",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 17.18,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-caja",
+      "name": "Filtros de Caja de Cambio",
+      "slug": "filtros-caja-cambio",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-34055",
+    "sku": "34055",
+    "honda_code": "80292-TF0-003",
+    "name": "Filtro de Aire Acondicionado",
+    "description": "Filtro de Aire Acondicionado",
+    "category_id": "subcat-polen",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 971.59,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-polen",
+      "name": "Filtros de Polen",
+      "slug": "filtros-polen",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-3468",
+    "sku": "3468",
+    "honda_code": "17048-TF0-000",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5135.13,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2009,
+        "year_to": 2014,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-3652",
+    "sku": "3652",
+    "honda_code": "17220-RB6-Z00",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1843.38,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2009,
+        "year_to": 2014,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-29203",
+    "sku": "29203",
+    "honda_code": "17048-TEK-000",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13366.58,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2018,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-35011",
+    "sku": "35011",
+    "honda_code": "17048-T50-J00",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8181.56,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-36032",
+    "sku": "36032",
+    "honda_code": "17048-TBA-X01",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 11819.81,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2019,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-32351",
+    "sku": "32351",
+    "honda_code": "17048-TGH-G00",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 20038.79,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-32352",
+    "sku": "32352",
+    "honda_code": "17220-5BF-A00",
+    "name": "Filtro de Aire Acondicionado",
+    "description": "Filtro de Aire Acondicionado",
+    "category_id": "subcat-polen",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3190.57,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-polen",
+      "name": "Filtros de Polen",
+      "slug": "filtros-polen",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-24056",
+    "sku": "24056",
+    "honda_code": "17048-TR0-G00",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6681.91,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2012,
+        "year_to": 2016,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-24055",
+    "sku": "24055",
+    "honda_code": "17220-R1A-A01",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2139.98,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2012,
+        "year_to": 2016,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-24955",
+    "sku": "24955",
+    "honda_code": "80292-TR8-M01",
+    "name": "Filtro de Aire Acondicionado",
+    "description": "Filtro de Aire Acondicionado",
+    "category_id": "subcat-polen",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2986.83,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-polen",
+      "name": "Filtros de Polen",
+      "slug": "filtros-polen",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2012,
+        "year_to": 2016,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-30933",
+    "sku": "30933",
+    "honda_code": "17048-TVE-H02",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10661.11,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-36150",
+    "sku": "36150",
+    "honda_code": "80292-SWA-013",
+    "name": "Filtro de Aire Acondicionado",
+    "description": "Filtro de Aire Acondicionado",
+    "category_id": "subcat-polen",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4476.78,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-polen",
+      "name": "Filtros de Polen",
+      "slug": "filtros-polen",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-30934",
+    "sku": "30934",
+    "honda_code": "17220-6B2-A00",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2630.63,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-38439",
+    "sku": "38439",
+    "honda_code": "17048-THR-X02",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6623.69,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-36033",
+    "sku": "36033",
+    "honda_code": "17048-THR-X01",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6623.69,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-30972",
+    "sku": "30972",
+    "honda_code": "17048-TK8-A10",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9487.17,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2013,
+        "year_to": 2017,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-23514",
+    "sku": "23514",
+    "honda_code": "17220-RV0-A00",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2120.58,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2013,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-35891",
+    "sku": "35891",
+    "honda_code": "17048-T60-H00",
+    "name": "Filtro de Combustible",
+    "description": "Filtro de Combustible",
+    "category_id": "subcat-combustible",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9981.97,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-combustible",
+      "name": "Filtros de Combustible",
+      "slug": "filtros-combustible",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "fil-35883",
+    "sku": "35883",
+    "honda_code": "17220-66V-A00",
+    "name": "Filtro de Aire",
+    "description": "Filtro de Aire",
+    "category_id": "subcat-aire",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3419.26,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-20T13:39:12.951Z",
+    "updated_at": "2026-11-20T13:39:12.951Z",
+    "category": {
+      "id": "subcat-aire",
+      "name": "Filtro de Aire",
+      "slug": "filtros-aire",
+      "image_key": "filtros"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  }
+]

@@ -76,8 +76,8 @@ export const BRAND_SEGMENTS: { value: BrandSegment; label: string }[] = [
 export const HONDA_RELATIONS: { value: HondaRelation; label: string; description: string; tone: Tone }[] = [
   {
     value: "homologado_honda",
-    label: "Homologado por Honda",
-    description: "Cuenta con respaldo documental de homologación registrado por Honda Logistics.",
+    label: "Repuestos Originales HONDA",
+    description: "",
     tone: "success",
   },
   {

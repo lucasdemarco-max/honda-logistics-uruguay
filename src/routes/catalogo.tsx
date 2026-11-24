@@ -12,7 +12,7 @@ import { DemoNotice } from "@/components/site/DemoNotice";
 import { searchCatalog, type CatalogQuery } from "@/lib/public.functions";
 import { catalogMetaQuery } from "./index";
 import { cn } from "@/lib/utils";
-import { FILTER_SUBCATEGORIES, FILTER_SUBCATEGORY_SLUGS } from "@/lib/filter-categories";
+import { HONDA_FILTER_MODELS } from "@/lib/filter-categories";
 
 interface CatalogSearch {
   q?: string | undefined;
@@ -97,11 +97,11 @@ function Catalogo() {
           >
             Todas
           </button>
-          {meta.categories.filter((c) => c.slug === "filtros").map((c) => (
+          {meta.categories.map((c) => (
             <button
               key={c.id}
               type="button"
-              onClick={() => set({ categoria: c.slug })}
+              onClick={() => set({ categoria: c.slug, modelo: c.slug === "filtros" ? search.modelo : undefined, anio: undefined })}
               aria-pressed={search.categoria === c.slug}
               className={cn(
                 "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
@@ -111,38 +111,44 @@ function Catalogo() {
               {c.name}
             </button>
           ))}
-          {(search.categoria === "filtros" || FILTER_SUBCATEGORY_SLUGS.some((slug) => slug === search.categoria)) &&
-            FILTER_SUBCATEGORIES.map((subcategory) => (
-                <button
-                  key={subcategory.slug}
-                  type="button"
-                  onClick={() => set({ categoria: subcategory.slug })}
-                  aria-pressed={search.categoria === subcategory.slug}
-                  className={cn(
-                    "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
-                    search.categoria === subcategory.slug ? "border-primary bg-primary text-primary-foreground" : "bg-card hover:border-primary",
-                  )}
-                >
-                  {subcategory.name}
-                </button>
-              ))}
-          {meta.categories
-            .filter((c) => c.slug !== "filtros" && !FILTER_SUBCATEGORY_SLUGS.some((slug) => slug === c.slug))
-            .map((c) => (
+        </div>
+
+        {search.categoria === "filtros" && (
+          <div className="mt-3 flex flex-wrap items-center gap-1.5" aria-label="Modelos de Honda">
+            <span className="mr-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+              Modelos:
+            </span>
+            <button
+              type="button"
+              onClick={() => set({ modelo: undefined, anio: undefined })}
+              aria-pressed={!search.modelo}
+              className={cn(
+                "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
+                !search.modelo
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "bg-card hover:border-primary",
+              )}
+            >
+              Todos los modelos
+            </button>
+            {HONDA_FILTER_MODELS.map((m) => (
               <button
-                key={c.id}
+                key={m.slug}
                 type="button"
-                onClick={() => set({ categoria: c.slug })}
-                aria-pressed={search.categoria === c.slug}
+                onClick={() => set({ modelo: m.slug, anio: undefined })}
+                aria-pressed={search.modelo === m.slug}
                 className={cn(
-                  "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
-                  search.categoria === c.slug ? "border-primary bg-primary text-primary-foreground" : "bg-card hover:border-primary",
+                  "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
+                  search.modelo === m.slug
+                    ? "border-primary bg-primary text-primary-foreground"
+                    : "bg-card hover:border-primary",
                 )}
               >
-                {c.name}
+                {m.name}
               </button>
             ))}
-        </div>
+          </div>
+        )}
 
         <div className="mt-4 grid gap-3 sm:grid-cols-3 lg:max-w-3xl">
           <div>
@@ -175,6 +181,58 @@ function Catalogo() {
         </div>
 
         <DemoNotice className="mt-6" />
+
+        {search.categoria === "filtros" && !search.modelo && (
+          <div className="mt-6 rounded-xl border bg-card p-6 shadow-card">
+            <div className="max-w-xl">
+              <span className="eyebrow text-primary">Filtros Originales por Modelo</span>
+              <h2 className="mt-1 text-2xl font-bold uppercase tracking-tight text-foreground">
+                Elegí el modelo de tu Honda
+              </h2>
+              <p className="mt-1.5 text-sm text-muted-foreground">
+                Seleccioná tu vehículo para ver en detalle todos los filtros oficiales que utiliza con sus años:
+              </p>
+            </div>
+            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+              {HONDA_FILTER_MODELS.map((m) => (
+                <button
+                  key={m.slug}
+                  type="button"
+                  onClick={() => set({ modelo: m.slug, anio: undefined })}
+                  className="group flex flex-col items-start rounded-lg border bg-background p-3.5 text-left transition-all hover:border-primary hover:shadow-md"
+                >
+                  <span className="font-display text-lg font-bold uppercase text-foreground group-hover:text-primary">
+                    {m.name}
+                  </span>
+                  <span className="mt-0.5 text-xs text-muted-foreground">
+                    Años {m.years}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {search.categoria === "filtros" && activeModel && (
+          <div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-primary/20 bg-primary/5 p-4">
+            <div>
+              <span className="eyebrow text-primary">Vehículo seleccionado</span>
+              <h2 className="text-xl font-bold uppercase text-foreground">
+                Filtros para Honda {activeModel.name}
+              </h2>
+              <p className="text-xs text-muted-foreground">
+                Mostrando todos los filtros requeridos con sus años de compatibilidad para {activeModel.name}.
+              </p>
+            </div>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => set({ modelo: undefined, anio: undefined })}
+            >
+              Cambiar modelo
+            </Button>
+          </div>
+        )}
 
         <div className="mt-6 flex items-center justify-between">
           <p className="text-sm text-muted-foreground" aria-live="polite">
