@@ -1,53 +1,58 @@
+import { useState } from "react";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
-import { keepPreviousData, queryOptions, useQuery, useSuspenseQuery } from "@tanstack/react-query";
-import { PackageSearch, X } from "lucide-react";
+import { queryOptions, useQuery, useSuspenseQuery } from "@tanstack/react-query";
+import { ArrowRight, CarFront, PackageSearch, Search, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PageHeader } from "@/components/site/PageHeader";
 import { SearchBox } from "@/components/site/SearchBox";
 import { ProductCard } from "@/components/site/ProductCard";
 import { EmptyState } from "@/components/site/EmptyState";
 import { DemoNotice } from "@/components/site/DemoNotice";
-import { searchCatalog, type CatalogQuery } from "@/lib/public.functions";
+import { searchCatalog, type CatalogProduct, type CatalogQuery } from "@/lib/public.functions";
+import {
+  categoriesForModel,
+  catalogCategoryCounts,
+  selectCatalogCategory,
+  selectCatalogModel,
+  validateCatalogSearch,
+  type CatalogNavigationState,
+} from "@/lib/catalog-navigation";
+import { resolveCatalogSelection } from "@/lib/catalog";
 import { catalogMetaQuery } from "./index";
 import { cn } from "@/lib/utils";
-import { HONDA_FILTER_MODELS } from "@/lib/filter-categories";
 
-interface CatalogSearch {
-  q?: string | undefined;
-  categoria?: string | undefined;
-  modelo?: string | undefined;
-  anio?: number | undefined;
-  marca?: string | undefined;
-}
+const catalogQuery = (search: CatalogQuery) =>
+  queryOptions({
+    queryKey: ["catalog", search],
+    queryFn: () => searchCatalog({ data: search }),
+    staleTime: 60_000,
+  });
 
-const str = (v: unknown) => (typeof v === "string" && v.trim() ? v.trim().slice(0, 80) : undefined);
-
-const catalogQuery = (s: CatalogQuery) =>
-  queryOptions({ queryKey: ["catalog", s], queryFn: () => searchCatalog({ data: s }), staleTime: 60_000 });
-
-const CURRENT_YEAR = new Date().getFullYear();
-const YEARS = Array.from({ length: CURRENT_YEAR + 1 - 1995 + 1 }, (_, i) => CURRENT_YEAR + 1 - i);
 const ALL = "__all";
 
 export const Route = createFileRoute("/catalogo")({
-  validateSearch: (s: Record<string, unknown>): CatalogSearch => {
-    const anio = Number(s["anio"]);
-    return {
-      q: str(s["q"]),
-      categoria: str(s["categoria"]),
-      modelo: str(s["modelo"]),
-      anio: Number.isInteger(anio) && anio > 1970 && anio < 2100 ? anio : undefined,
-      marca: str(s["marca"]),
-    };
-  },
+  validateSearch: validateCatalogSearch,
   head: () => ({
     meta: [
       { title: "Catálogo de repuestos Honda — Honda Logistics" },
-      { name: "description", content: "Filtros, correas, frenos, encendido, suspensión y motor para Civic, Fit, City, HR-V, CR-V y más. Precios en UYU." },
+      {
+        name: "description",
+        content:
+          "Elegí tu modelo Honda y explorá las categorías de repuestos con aplicaciones cargadas. Filtrá por año o buscá por código. Precios en UYU.",
+      },
       { property: "og:title", content: "Catálogo de repuestos Honda — Honda Logistics" },
-      { property: "og:description", content: "Buscá repuestos por nombre, código o modelo y año. Precios en pesos uruguayos." },
+      {
+        property: "og:description",
+        content: "Repuestos por modelo, categoría y año. Precios en pesos uruguayos.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -56,7 +61,7 @@ export const Route = createFileRoute("/catalogo")({
   loader: async ({ context, deps }) => {
     await Promise.all([
       context.queryClient.ensureQueryData(catalogMetaQuery),
-      context.queryClient.ensureQueryData(catalogQuery(deps)),
+      context.queryClient.prefetchQuery(catalogQuery(deps)),
     ]);
   },
   component: Catalogo,
@@ -66,208 +71,385 @@ function Catalogo() {
   const search = Route.useSearch();
   const navigate = useNavigate({ from: "/catalogo" });
   const { data: meta } = useSuspenseQuery(catalogMetaQuery);
-  const { data: products, isLoading, isError } = useQuery({ ...catalogQuery(search), placeholderData: keepPreviousData });
+  const {
+    data: products,
+    isLoading,
+    isFetching,
+    isError,
+    refetch,
+  } = useQuery({
+    ...catalogQuery(search),
+  });
 
-  const set = (patch: Partial<CatalogSearch>) => navigate({ search: (prev) => ({ ...prev, ...patch }) });
-  const hasFilters = !!(search.q || search.categoria || search.modelo || search.anio || search.marca);
-  const activeModel = meta.models.find((m) => m.slug === search.modelo);
+  const set = (patch: Partial<CatalogNavigationState>) =>
+    void navigate({ search: (previous) => ({ ...previous, ...patch }) });
+  const selection = resolveCatalogSelection(meta, search);
+  const activeModel = meta.models.find((model) => model.id === selection.modelId);
+  const activeCategory = meta.categories.find((category) => category.id === selection.categoryId);
+  const legacyFilters =
+    !search.categoryId && search.categoria?.toLocaleLowerCase("es") === "filtros";
+  const availableCategories = categoriesForModel(
+    meta.categories,
+    meta.facets,
+    selection.modelId,
+    search.anio,
+  );
+  const hasFilters = Boolean(
+    search.q ||
+    search.categoryId ||
+    search.modelId ||
+    search.categoria ||
+    search.modelo ||
+    search.anio ||
+    search.marca,
+  );
+  const hasModelSelection = Boolean(search.modelId || search.modelo);
+  const hasCategorySelection = Boolean(search.categoryId || search.categoria);
+  const changingResults = isLoading;
+  const selectModel = (modelId: string | undefined) =>
+    void navigate({
+      search: (previous) => selectCatalogModel(previous, modelId),
+    });
+  const selectCategory = (categoryId: string | undefined) =>
+    void navigate({
+      search: (previous) => ({
+        ...selectCatalogCategory(previous, categoryId),
+        ...(activeModel ? { modelId: activeModel.id, modelo: undefined } : {}),
+      }),
+    });
+  const categoryCounts = catalogCategoryCounts(meta.facets, selection.modelId, search.anio);
+  const years = [
+    ...new Set(
+      meta.facets.flatMap((facet) => {
+        if (selection.modelId && facet.modelId !== selection.modelId) return [];
+        if (facet.yearFrom === null || facet.yearTo === null) return [];
+        const from = Math.max(1970, facet.yearFrom);
+        const to = Math.min(2100, facet.yearTo);
+        return Array.from({ length: Math.max(0, to - from + 1) }, (_, index) => from + index);
+      }),
+    ),
+  ].sort((a, b) => b - a);
+  const selectYear = (year: number | undefined) => {
+    const categoryRemainsAvailable =
+      !activeCategory ||
+      categoriesForModel(meta.categories, meta.facets, selection.modelId, year).some(
+        (category) => category.id === activeCategory.id,
+      );
+    set({
+      anio: year,
+      ...(!categoryRemainsAvailable ? { categoryId: undefined, categoria: undefined } : {}),
+    });
+  };
 
   return (
     <>
       <PageHeader
-        eyebrow="Catálogo"
-        title="Repuestos Honda"
-        description="La compatibilidad de cada repuesto se carga explícitamente por modelo y año. Si tu vehículo no aparece, consultanos con tu número de chasis."
-      >
-        <div className="max-w-2xl">
-          <SearchBox key={search.q ?? ""} initial={search.q ?? ""} />
-        </div>
-      </PageHeader>
+        eyebrow="Catálogo de repuestos"
+        title="Empezá por tu Honda"
+        description="Elegí el modelo, explorá sus categorías y ajustá por año. Cada compatibilidad corresponde a una aplicación cargada; si tenés dudas, consultanos con tu número de chasis."
+      />
 
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap gap-2" role="group" aria-label="Categorías">
-          <button
-            type="button"
-            onClick={() => set({ categoria: undefined })}
-            className={cn(
-              "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
-              !search.categoria ? "border-primary bg-primary text-primary-foreground" : "bg-card hover:border-primary",
+        <section
+          aria-labelledby="catalog-model-heading"
+          className="rounded-xl border bg-card p-5 shadow-card sm:p-6"
+        >
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <p className="eyebrow text-primary">1 · Modelo</p>
+              <h2 id="catalog-model-heading" className="mt-1 text-2xl font-semibold uppercase">
+                {activeModel ? `Honda ${activeModel.name}` : "Elegí el modelo de tu Honda"}
+              </h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                {activeModel
+                  ? "Repuestos con aplicaciones cargadas para este modelo."
+                  : "Encontrá las categorías disponibles para cada vehículo."}
+              </p>
+            </div>
+            {activeModel && (
+              <Button variant="outline" onClick={() => selectModel(undefined)}>
+                Cambiar modelo
+              </Button>
             )}
-            aria-pressed={!search.categoria}
-          >
-            Todas
-          </button>
-          {meta.categories.map((c) => (
-            <button
-              key={c.id}
-              type="button"
-              onClick={() => set({ categoria: c.slug, modelo: c.slug === "filtros" ? search.modelo : undefined, anio: undefined })}
-              aria-pressed={search.categoria === c.slug}
-              className={cn(
-                "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
-                search.categoria === c.slug ? "border-primary bg-primary text-primary-foreground" : "bg-card hover:border-primary",
-              )}
+          </div>
+          {hasModelSelection && !activeModel && (
+            <p role="alert" className="mt-3 text-sm text-destructive">
+              El modelo del enlace no está disponible. Elegí uno de los modelos del catálogo.
+            </p>
+          )}
+          {!activeModel ? (
+            <div
+              className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
+              role="group"
+              aria-label="Modelos Honda"
             >
-              {c.name}
-            </button>
-          ))}
-        </div>
+              {meta.models.map((model) => {
+                const categoryCount = categoriesForModel(
+                  meta.categories,
+                  meta.facets,
+                  model.id,
+                ).length;
+                return (
+                  <button
+                    key={model.id}
+                    type="button"
+                    onClick={() => selectModel(model.id)}
+                    className="group flex min-h-28 flex-col items-start rounded-lg border bg-background p-4 text-left transition-colors hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    <CarFront className="mb-2 h-5 w-5 text-primary" aria-hidden />
+                    <span className="font-display text-xl font-semibold uppercase group-hover:text-primary">
+                      {model.name}
+                    </span>
+                    <span className="mt-1 text-xs text-muted-foreground">
+                      {categoryCount > 0
+                        ? `${categoryCount} categoría${categoryCount === 1 ? "" : "s"}`
+                        : "Consultar aplicaciones"}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="mt-5 grid max-w-2xl gap-3 sm:grid-cols-2">
+              <div>
+                <label htmlFor="catalog-model" className="mb-1 block text-sm font-medium">
+                  Modelo seleccionado
+                </label>
+                <Select value={activeModel.id} onValueChange={selectModel}>
+                  <SelectTrigger id="catalog-model">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {meta.models.map((model) => (
+                      <SelectItem key={model.id} value={model.id}>
+                        {model.name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+              <div>
+                <label htmlFor="catalog-year" className="mb-1 block text-sm font-medium">
+                  Año del vehículo (opcional)
+                </label>
+                <Select
+                  value={search.anio ? String(search.anio) : ALL}
+                  onValueChange={(value) => selectYear(value === ALL ? undefined : Number(value))}
+                >
+                  <SelectTrigger id="catalog-year">
+                    <SelectValue placeholder="Todos los años" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value={ALL}>Todos los años</SelectItem>
+                    {[...new Set([...(search.anio ? [search.anio] : []), ...years])]
+                      .sort((a, b) => b - a)
+                      .map((year) => (
+                        <SelectItem key={year} value={String(year)}>
+                          {year}
+                        </SelectItem>
+                      ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          )}
+          {meta.models.length === 0 && (
+            <p className="mt-4 text-sm text-muted-foreground">
+              Todavía no hay modelos con aplicaciones cargadas. Podés explorar los productos o pedir
+              un presupuesto.
+            </p>
+          )}
+        </section>
 
-        {search.categoria === "filtros" && (
-          <div className="mt-3 flex flex-wrap items-center gap-1.5" aria-label="Modelos de Honda">
-            <span className="mr-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-              Modelos:
-            </span>
+        <section aria-labelledby="catalog-category-heading" className="mt-7">
+          <p className="eyebrow text-primary">2 · Categoría</p>
+          <h2 id="catalog-category-heading" className="mt-1 text-2xl font-semibold uppercase">
+            {activeModel ? `Repuestos para ${activeModel.name}` : "Explorá las categorías"}
+          </h2>
+          <p className="mt-1 text-sm text-muted-foreground">
+            {activeModel
+              ? "Estas categorías tienen productos con aplicaciones para el modelo y año seleccionados."
+              : "Seleccioná un modelo arriba para ver las categorías de tu vehículo, o explorá el catálogo completo."}
+          </p>
+          <div
+            className="mt-4 flex flex-wrap gap-2"
+            role="group"
+            aria-label="Categorías disponibles"
+          >
             <button
               type="button"
-              onClick={() => set({ modelo: undefined, anio: undefined })}
-              aria-pressed={!search.modelo}
+              onClick={() => selectCategory(undefined)}
+              aria-pressed={!hasCategorySelection}
               className={cn(
-                "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
-                !search.modelo
+                "rounded-full border px-4 py-2 text-sm font-medium transition-colors",
+                !hasCategorySelection
                   ? "border-primary bg-primary text-primary-foreground"
                   : "bg-card hover:border-primary",
               )}
             >
-              Todos los modelos
+              Todos los repuestos
             </button>
-            {HONDA_FILTER_MODELS.map((m) => (
+            {availableCategories.map((category) => (
               <button
-                key={m.slug}
+                key={category.id}
                 type="button"
-                onClick={() => set({ modelo: m.slug, anio: undefined })}
-                aria-pressed={search.modelo === m.slug}
+                onClick={() => selectCategory(category.id)}
+                aria-pressed={activeCategory?.id === category.id}
                 className={cn(
-                  "rounded-full border px-3 py-1 text-xs font-medium transition-colors",
-                  search.modelo === m.slug
+                  "rounded-full border px-4 py-2 text-sm font-medium transition-colors",
+                  activeCategory?.id === category.id
                     ? "border-primary bg-primary text-primary-foreground"
                     : "bg-card hover:border-primary",
                 )}
               >
-                {m.name}
+                {category.name}
+                {activeModel && (
+                  <span className="ml-2 text-xs opacity-75">{categoryCounts.get(category.id)}</span>
+                )}
               </button>
             ))}
           </div>
-        )}
-
-        <div className="mt-4 grid gap-3 sm:grid-cols-3 lg:max-w-3xl">
-          <div>
-            <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-muted-foreground" htmlFor="f-modelo">Modelo</label>
-            <Select value={search.modelo ?? ALL} onValueChange={(v) => set({ modelo: v === ALL ? undefined : v })}>
-              <SelectTrigger id="f-modelo" className="bg-card"><SelectValue placeholder="Todos los modelos" /></SelectTrigger>
-              <SelectContent>
-                <SelectItem value={ALL}>Todos los modelos</SelectItem>
-                {meta.models.map((m) => <SelectItem key={m.id} value={m.slug}>{m.name}</SelectItem>)}
-              </SelectContent>
-            </Select>
-          </div>
-          <div>
-            <label className="mb-1 block text-xs font-semibold uppercase tracking-wide text-muted-foreground" htmlFor="f-anio">Año</label>
-            <Select value={search.anio ? String(search.anio) : ALL} onValueChange={(v) => set({ anio: v === ALL ? undefined : Number(v) })}>
-              <SelectTrigger id="f-anio" className="bg-card"><SelectValue placeholder="Todos los años" /></SelectTrigger>
-              <SelectContent>
-                <SelectItem value={ALL}>Todos los años</SelectItem>
-                {YEARS.map((y) => <SelectItem key={y} value={String(y)}>{y}</SelectItem>)}
-              </SelectContent>
-            </Select>
-          </div>
-          <div className="flex items-end">
-            {hasFilters && (
-              <Button variant="ghost" onClick={() => navigate({ search: {} })}>
-                <X /> Limpiar filtros
-              </Button>
-            )}
-          </div>
-        </div>
-
-        <DemoNotice className="mt-6" />
-
-        {search.categoria === "filtros" && !search.modelo && (
-          <div className="mt-6 rounded-xl border bg-card p-6 shadow-card">
-            <div className="max-w-xl">
-              <span className="eyebrow text-primary">Filtros Originales por Modelo</span>
-              <h2 className="mt-1 text-2xl font-bold uppercase tracking-tight text-foreground">
-                Elegí el modelo de tu Honda
-              </h2>
-              <p className="mt-1.5 text-sm text-muted-foreground">
-                Seleccioná tu vehículo para ver en detalle todos los filtros oficiales que utiliza con sus años:
-              </p>
-            </div>
-            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-              {HONDA_FILTER_MODELS.map((m) => (
-                <button
-                  key={m.slug}
-                  type="button"
-                  onClick={() => set({ modelo: m.slug, anio: undefined })}
-                  className="group flex flex-col items-start rounded-lg border bg-background p-3.5 text-left transition-all hover:border-primary hover:shadow-md"
+          {activeModel && availableCategories.length === 0 && (
+            <p className="mt-3 text-sm text-muted-foreground">
+              No hay categorías con repuestos para esta combinación de modelo y año. Probá con todos
+              los años o consultanos por la aplicación que necesitás.
+            </p>
+          )}
+          {legacyFilters && (
+            <p className="mt-3 text-sm text-muted-foreground">
+              Estás viendo la familia de filtros de un enlace anterior. Podés elegir una categoría
+              específica arriba.
+            </p>
+          )}
+          {hasCategorySelection &&
+            !legacyFilters &&
+            (!activeCategory ||
+              !availableCategories.some((category) => category.id === activeCategory.id)) && (
+              <div
+                role="status"
+                className="mt-3 flex flex-wrap items-center gap-2 text-sm text-muted-foreground"
+              >
+                <span>La categoría del enlace no tiene aplicaciones para esta selección.</span>
+                <Button
+                  variant="link"
+                  className="h-auto p-0"
+                  onClick={() => selectCategory(undefined)}
                 >
-                  <span className="font-display text-lg font-bold uppercase text-foreground group-hover:text-primary">
-                    {m.name}
-                  </span>
-                  <span className="mt-0.5 text-xs text-muted-foreground">
-                    Años {m.years}
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
+                  Ver otras categorías
+                </Button>
+              </div>
+            )}
+        </section>
 
-        {search.categoria === "filtros" && activeModel && (
-          <div className="mt-6 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-primary/20 bg-primary/5 p-4">
-            <div>
-              <span className="eyebrow text-primary">Vehículo seleccionado</span>
-              <h2 className="text-xl font-bold uppercase text-foreground">
-                Filtros para Honda {activeModel.name}
-              </h2>
-              <p className="text-xs text-muted-foreground">
-                Mostrando todos los filtros requeridos con sus años de compatibilidad para {activeModel.name}.
-              </p>
-            </div>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => set({ modelo: undefined, anio: undefined })}
-            >
-              Cambiar modelo
-            </Button>
+        <details
+          className="mt-6 rounded-lg border bg-card p-4"
+          open={Boolean(search.q) || undefined}
+        >
+          <summary className="flex cursor-pointer items-center gap-2 text-sm font-medium">
+            <Search className="h-4 w-4 text-primary" aria-hidden /> ¿Tenés el código? Buscá por
+            código Honda, SKU o nombre
+          </summary>
+          <div className="mt-3 max-w-2xl">
+            <SearchBox key={search.q ?? ""} initial={search.q ?? ""} onSearch={(q) => set({ q })} />
+            <p className="mt-2 text-xs text-muted-foreground">
+              La búsqueda conserva el modelo, la categoría y el año seleccionados.
+            </p>
           </div>
-        )}
+        </details>
 
-        <div className="mt-6 flex items-center justify-between">
+        {products?.some((product) => product.is_demo) && <DemoNotice className="mt-6" />}
+
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm text-muted-foreground" aria-live="polite">
-            {isLoading ? "Buscando…" : `${products?.length ?? 0} resultado${products?.length === 1 ? "" : "s"}`}
+            {changingResults
+              ? "Buscando…"
+              : `${products?.length ?? 0} resultado${products?.length === 1 ? "" : "s"}`}
             {activeModel && ` para ${activeModel.name}`}
             {search.anio && ` ${search.anio}`}
+            {activeCategory && ` · ${activeCategory.name}`}
+            {legacyFilters && " · Filtros"}
             {search.q && ` · “${search.q}”`}
+            {isFetching && !changingResults && " · Actualizando…"}
           </p>
+          {hasFilters && (
+            <Button variant="ghost" onClick={() => void navigate({ search: {} })}>
+              <X /> Limpiar filtros
+            </Button>
+          )}
         </div>
 
-        <div className="mt-4">
-          {isLoading ? (
+        <section className="mt-4" aria-labelledby="catalog-products-heading" aria-busy={isFetching}>
+          <h2 id="catalog-products-heading" className="sr-only">
+            3 · Repuestos disponibles
+          </h2>
+          {changingResults ? (
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {Array.from({ length: 8 }).map((_, i) => <Skeleton key={i} className="h-[460px] rounded-lg" />)}
+              {Array.from({ length: 8 }).map((_, index) => (
+                <Skeleton key={index} className="h-[460px] rounded-lg" />
+              ))}
             </div>
           ) : isError ? (
-            <EmptyState icon={PackageSearch} title="No pudimos cargar el catálogo" description="Probá de nuevo en unos minutos." />
+            <EmptyState
+              icon={PackageSearch}
+              title="No pudimos cargar el catálogo"
+              description="Intentá cargar los productos nuevamente."
+              action={
+                <Button variant="outline" onClick={() => void refetch()}>
+                  Reintentar
+                </Button>
+              }
+            />
           ) : !products || products.length === 0 ? (
             <EmptyState
               icon={PackageSearch}
-              title="No encontramos repuestos con esos filtros"
+              title="No encontramos repuestos con esta selección"
               description="Puede que la aplicación todavía no esté cargada. Pedí un presupuesto con tu número de chasis y lo buscamos por vos."
               action={
                 <div className="flex flex-wrap justify-center gap-2">
-                  <Button variant="outline" onClick={() => navigate({ search: {} })}>Ver todo el catálogo</Button>
-                  <Button asChild><Link to="/presupuestos">Pedir presupuesto</Link></Button>
+                  <Button variant="outline" onClick={() => void navigate({ search: {} })}>
+                    Ver todo el catálogo
+                  </Button>
+                  <Button asChild>
+                    <Link to="/presupuestos">
+                      Pedir presupuesto <ArrowRight />
+                    </Link>
+                  </Button>
                 </div>
               }
             />
           ) : (
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {products.map((p) => <ProductCard key={p.id} product={p} />)}
-            </div>
+            <CatalogProductList key={JSON.stringify(search)} products={products} />
           )}
-        </div>
+        </section>
+      </div>
+    </>
+  );
+}
+
+const PRODUCTS_PER_PAGE = 24;
+
+function CatalogProductList({ products }: { products: CatalogProduct[] }) {
+  const [visibleCount, setVisibleCount] = useState(PRODUCTS_PER_PAGE);
+  const displayedCount = Math.min(visibleCount, products.length);
+  return (
+    <>
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {products.slice(0, displayedCount).map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+      <div className="mt-6 flex flex-col items-center gap-3">
+        <p role="status" className="text-sm text-muted-foreground">
+          Mostrando {displayedCount} de {products.length} repuestos
+        </p>
+        {displayedCount < products.length && (
+          <Button
+            variant="outline"
+            onClick={() => setVisibleCount((count) => count + PRODUCTS_PER_PAGE)}
+          >
+            Mostrar más repuestos
+          </Button>
+        )}
       </div>
     </>
   );

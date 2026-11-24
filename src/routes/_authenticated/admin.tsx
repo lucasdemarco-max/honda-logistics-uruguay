@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { createFileRoute, redirect } from "@tanstack/react-router";
+import { useQueryClient } from "@tanstack/react-query";
 import { Download, Upload } from "lucide-react";
 import { toast } from "sonner";
 import * as XLSX from "xlsx";
@@ -15,65 +16,30 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { prepareImportRecords, type CatalogLookup } from "@/lib/admin-import";
 import {
-  normalizeImportValue,
-  parseImportRow,
-  validateDuplicateSkus,
-  type CatalogLookup,
-  type ImportRow,
-} from "@/lib/admin-import";
+  readImportWorkbook,
+  validateImportFile,
+  type ImportWorkbookResult,
+} from "@/lib/import-workbook";
+import {
+  applyImportSafety,
+  CatalogImportError,
+  executeCatalogImport,
+  type ImportProgress,
+} from "@/lib/catalog-import";
+import { createImportTemplate } from "@/lib/import-template";
+import { createCatalogImportStore } from "@/lib/catalog-import-store";
 
-interface ImportRecord {
-  rowNumber: number;
-  record: Record<string, unknown>;
-}
-
-const chunksOf = <T,>(items: T[], size: number) => {
-  const chunks: T[][] = [];
-  for (let index = 0; index < items.length; index += size) {
-    chunks.push(items.slice(index, index + size));
-  }
-  return chunks;
-};
-
-const errorMessage = (error: unknown) => {
-  if (error instanceof Error) return error.message;
-  if (
-    typeof error === "object" &&
-    error !== null &&
-    "message" in error &&
-    typeof error.message === "string"
-  ) {
-    return error.message;
-  }
-  return "Ocurrió un error inesperado";
-};
-
-const modelNameFromRecord = (record: Record<string, unknown>) => {
-  const entry = Object.entries(record).find(([key]) =>
-    ["modelo", "model", "modelname", "modelid"].includes(normalizeImportValue(key)),
-  );
-  return String(entry?.[1] ?? "").trim();
-};
-
-const modelSlug = (name: string) =>
-  name
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-
-const modelDisplayName = (name: string) => {
-  const names: Record<string, string> = {
-    ridgeline: "Ridgeline",
-    "zr-v": "ZR-V",
-    odyssey: "Odyssey",
-    "type-r": "Type-R",
-  };
-  return names[modelSlug(name)] ?? name;
-};
+const errorMessage = (error: unknown) =>
+  error instanceof Error ? error.message : "Ocurrió un error inesperado";
+const emptyProgress = (): ImportProgress => ({
+  categories: 0,
+  models: 0,
+  createdProducts: 0,
+  updatedProducts: 0,
+  compatibilities: 0,
+});
 
 export const Route = createFileRoute("/_authenticated/admin")({
   head: () => ({
@@ -83,469 +49,389 @@ export const Route = createFileRoute("/_authenticated/admin")({
     ],
   }),
   beforeLoad: async ({ context }) => {
-    const { data } = await supabase.rpc("is_staff", {
+    const { data, error } = await supabase.rpc("is_staff", {
       _user_id: (context as { user: { id: string } }).user.id,
     });
+    if (error) throw error;
     if (!data) throw redirect({ to: "/cuenta" });
   },
   component: Admin,
 });
 
 function Admin() {
+  const store = useMemo(() => createCatalogImportStore(supabase), []);
+  const queryClient = useQueryClient();
   const [categories, setCategories] = useState<CatalogLookup[]>([]);
   const [models, setModels] = useState<CatalogLookup[]>([]);
   const [lookupsLoading, setLookupsLoading] = useState(true);
   const [lookupsError, setLookupsError] = useState<string | null>(null);
-  const [rows, setRows] = useState<ImportRow[]>([]);
+  const [workbook, setWorkbook] = useState<ImportWorkbookResult | null>(null);
+  const [selectedSheets, setSelectedSheets] = useState<string[]>([]);
   const [fileName, setFileName] = useState("");
+  const [fileError, setFileError] = useState<string | null>(null);
+  const [reading, setReading] = useState(false);
   const [importing, setImporting] = useState(false);
-
-  const validRows = useMemo(() => rows.filter((row) => !row.error), [rows]);
-  const invalidRows = useMemo(() => rows.filter((row) => row.error), [rows]);
+  const [result, setResult] = useState<string | null>(null);
+  const [progress, setProgress] = useState<ImportProgress>(emptyProgress);
+  const [page, setPage] = useState(0);
+  const busy = reading || importing;
+  const records = useMemo(
+    () =>
+      workbook?.records.filter((row) => row.sheetName && selectedSheets.includes(row.sheetName)) ??
+      [],
+    [workbook, selectedSheets],
+  );
+  const plan = useMemo(
+    () => applyImportSafety(prepareImportRecords(records, categories, models)),
+    [records, categories, models],
+  );
+  const invalidRows = plan.rows.filter((row) => row.error);
+  const uniqueSkus = new Set(plan.rows.map((row) => row.sku)).size;
+  const pageSize = 50;
+  const pageCount = Math.ceil(plan.rows.length / pageSize);
 
   useEffect(() => {
     let active = true;
-
-    const loadLookups = async () => {
-      setLookupsLoading(true);
-      setLookupsError(null);
+    void (async () => {
       try {
-        const [categoryResult, modelResult] = await Promise.all([
-          supabase.from("categories").select("id, name, slug").order("sort_order"),
-          supabase.from("vehicle_models").select("id, name, slug").order("sort_order"),
-        ]);
-        if (categoryResult.error) throw categoryResult.error;
-        if (modelResult.error) throw modelResult.error;
+        await store.authorize();
+        const lookups = await store.getLookups();
         if (!active) return;
-        setCategories(categoryResult.data);
-        setModels(modelResult.data);
+        setCategories(lookups.categories);
+        setModels(lookups.models);
       } catch (error) {
         if (active) setLookupsError(errorMessage(error));
       } finally {
         if (active) setLookupsLoading(false);
       }
-    };
-
-    void loadLookups();
+    })();
     return () => {
       active = false;
     };
-  }, []);
+  }, [store]);
 
   const downloadTemplate = () => {
-    try {
-      const headers = [
-        "SKU",
-        "Nombre",
-        "Categoría",
-        "Subcategoría Filtros",
-        "Código Honda",
-        "Descripción",
-        "Precio UYU",
-        "Stock",
-        "Disponibilidad",
-        "Activo",
-        "Modelo",
-        "Año Desde",
-        "Año Hasta",
-        "Notas Compatibilidad",
-      ];
-      const productsSheet = XLSX.utils.aoa_to_sheet([headers]);
-      productsSheet["!cols"] = headers.map((header) => ({ wch: Math.max(header.length + 2, 18) }));
-
-      const instructionRows: (string | number)[][] = [
-        ["Plantilla de productos Honda Logistics"],
-        ["Ingresá una fila por producto y repetí el SKU cuando tenga más de un modelo compatible."],
-        ["Las filas con el mismo SKU deben repetir los mismos datos del producto."],
-        ["Si el precio cambia entre filas del mismo SKU, se usará el precio más alto."],
-        [
-          "Dejá Modelo, Año Desde y Año Hasta vacíos si el producto no tiene compatibilidad específica.",
-        ],
-        ["Un SKU repetido sin modelo y con modelo se considera un error."],
-        ["Las celdas vacías de Precio UYU o Stock se guardan como sin dato."],
-        [
-          "La base actual no guarda subcategorías por separado; se importarán bajo la categoría general Filtros.",
-        ],
-        ["Los modelos de la planilla que aún no existan se agregarán al catálogo si tenés permiso."],
-        [],
-        ["Categorías disponibles"],
-        ...categories.map((category) => [category.name, category.slug]),
-        [],
-        ["Modelos disponibles"],
-        ...models.map((model) => [model.name, model.slug]),
-        [],
-        ["Disponibilidades", "en stock", "pocas unidades", "a pedido", "sin stock", "consultar"],
-        ["Activo", "sí o no"],
-      ];
-      const instructionsSheet = XLSX.utils.aoa_to_sheet(instructionRows);
-      instructionsSheet["!cols"] = [
-        { wch: 52 },
-        { wch: 28 },
-        { wch: 22 },
-        { wch: 22 },
-        { wch: 22 },
-        { wch: 22 },
-      ];
-
-      const workbook = XLSX.utils.book_new();
-      XLSX.utils.book_append_sheet(workbook, productsSheet, "Productos");
-      XLSX.utils.book_append_sheet(workbook, instructionsSheet, "Instrucciones");
-      XLSX.writeFile(workbook, "plantilla-productos-honda.xlsx");
-    } catch (error) {
-      toast.error(`No pudimos descargar la plantilla: ${errorMessage(error)}`);
-    }
+    XLSX.writeFile(createImportTemplate(categories, models), "plantilla-catalogo-honda.xlsx");
   };
 
   const readFile = async (file: File) => {
-    setImporting(true);
-    setRows([]);
+    setReading(true);
+    setWorkbook(null);
+    setSelectedSheets([]);
+    setFileError(null);
+    setResult(null);
+    setProgress(emptyProgress());
     setFileName(file.name);
+    setPage(0);
     try {
-      const extension = file.name.split(".").pop()?.toLowerCase();
-      if (!extension || !["xlsx", "xls", "csv"].includes(extension)) {
-        throw new Error("Elegí un archivo .xlsx, .xls o .csv");
-      }
-      if (!categories.length || !models.length) {
-        throw new Error("No pudimos cargar las categorías y modelos para validar el archivo");
-      }
-
-      const workbook = XLSX.read(await file.arrayBuffer(), { type: "array" });
-      const firstSheetName = workbook.SheetNames[0];
-      if (!firstSheetName) throw new Error("El archivo no contiene hojas para importar");
-      const sheet = workbook.Sheets[firstSheetName];
-      if (!sheet) throw new Error("No pudimos leer la primera hoja del archivo");
-
-      const matrix = XLSX.utils.sheet_to_json<unknown[]>(sheet, {
-        header: 1,
-        raw: true,
-        defval: "",
-        blankrows: true,
-      });
-      const headers = (matrix[0] ?? []).map((value) => String(value ?? "").trim());
-      if (
-        !headers.some((header) =>
-          ["sku", "codigo", "codigosku"].includes(normalizeImportValue(header)),
-        )
-      ) {
-        throw new Error("No encontramos una columna SKU en la primera fila");
-      }
-      if (
-        !headers.some((header) =>
-          ["nombre", "nombreproducto", "producto", "name"].includes(normalizeImportValue(header)),
-        )
-      ) {
-        throw new Error("No encontramos una columna Nombre en la primera fila");
-      }
-
-      const records: ImportRecord[] = matrix
-        .slice(1)
-        .map((cells, index) => {
-          const record: Record<string, unknown> = {};
-          headers.forEach((header, columnIndex) => {
-            if (header) record[header] = cells[columnIndex] ?? "";
-          });
-          return { rowNumber: index + 2, record };
-        })
-        .filter(({ record }) =>
-          Object.values(record).some((value) => String(value ?? "").trim() !== ""),
-        );
-
-      if (!records.length) throw new Error("La hoja no contiene filas de productos");
-
-      const sourceModelNames = [
-        ...new Set(records.map(({ record }) => modelNameFromRecord(record)).filter(Boolean)),
-      ];
-      const missingModels = sourceModelNames.filter(
-        (name) =>
-          !models.some((model) =>
-            [model.name, model.slug].some(
-              (value) => normalizeImportValue(value) === normalizeImportValue(name),
-            ),
-          ),
+      validateImportFile(file.name, file.size);
+      const parsed = readImportWorkbook(
+        XLSX.read(await file.arrayBuffer(), { type: "array", raw: true, cellNF: true }),
       );
-      let availableModels = models;
-      if (missingModels.length > 0) {
-        const { data: userResult, error: userError } = await supabase.auth.getUser();
-        if (userError) throw userError;
-        if (!userResult.user) throw new Error("Iniciá sesión para agregar modelos al catálogo");
-        const { data: canManageCatalog, error: permissionError } = await supabase.rpc(
-          "has_permission",
-          { _user_id: userResult.user.id, _perm: "catalogo" },
-        );
-        if (permissionError) throw permissionError;
-        if (!canManageCatalog)
-          throw new Error("Tu cuenta no tiene permisos para agregar modelos al catálogo");
-
-        const { error: insertModelsError } = await supabase.from("vehicle_models").upsert(
-          missingModels.map((name, index) => ({
-            name: modelDisplayName(name),
-            slug: modelSlug(name),
-            sort_order: 100 + index,
-          })),
-          { onConflict: "slug" },
-        );
-        if (insertModelsError) throw insertModelsError;
-
-        const { data: refreshedModels, error: modelsError } = await supabase
-          .from("vehicle_models")
-          .select("id, name, slug")
-          .order("sort_order");
-        if (modelsError) throw modelsError;
-        availableModels = refreshedModels;
-        setModels(refreshedModels);
-      }
-
-      const parsedRows = records.map(({ record, rowNumber }) =>
-        parseImportRow(record, rowNumber, categories, availableModels),
-      );
-      const validatedRows = validateDuplicateSkus(parsedRows);
-      setRows(validatedRows);
-
-      const invalidCount = validatedRows.filter((row) => row.error).length;
-      if (invalidCount > 0) {
-        toast.error(`Encontramos ${invalidCount} filas con errores. Corregilas antes de importar.`);
-      } else {
-        toast.success(`${validatedRows.length} filas listas para revisar.`);
-      }
+      setWorkbook(parsed);
+      setSelectedSheets(parsed.sheets.map((sheet) => sheet.name));
     } catch (error) {
-      toast.error(`No pudimos leer el archivo: ${errorMessage(error)}`);
+      setFileError(errorMessage(error));
     } finally {
-      setImporting(false);
+      setReading(false);
     }
   };
 
+  const downloadErrors = () => {
+    const file = XLSX.utils.book_new();
+    const sheet = XLSX.utils.aoa_to_sheet([
+      ["Hoja", "Fila", "SKU", "Error"],
+      ...invalidRows.map((row) => [row.sheetName ?? "", row.rowNumber, row.sku, row.error ?? ""]),
+    ]);
+    sheet["!cols"] = [{ wch: 25 }, { wch: 9 }, { wch: 22 }, { wch: 110 }];
+    XLSX.utils.book_append_sheet(file, sheet, "Errores");
+    XLSX.writeFile(file, "errores-importacion-honda.xlsx");
+  };
+
   const importRows = async () => {
-    if (importing || validRows.length === 0 || invalidRows.length > 0) return;
+    if (busy || !records.length || invalidRows.length || lookupsError) return;
     setImporting(true);
-
-    let savedProductCount = 0;
+    setResult(null);
+    setProgress(emptyProgress());
+    let succeeded = false;
     try {
-      const { data: userResult, error: userError } = await supabase.auth.getUser();
-      if (userError) throw userError;
-      if (!userResult.user) throw new Error("Iniciá sesión para importar productos");
-
-      const { data: canManageCatalog, error: permissionError } = await supabase.rpc(
-        "has_permission",
-        {
-          _user_id: userResult.user.id,
-          _perm: "catalogo",
-        },
-      );
-      if (permissionError) throw permissionError;
-      if (!canManageCatalog)
-        throw new Error("Tu cuenta no tiene permisos para administrar el catálogo");
-
-      const rowsBySku = new Map<string, ImportRow[]>();
-      for (const row of validRows) {
-        const group = rowsBySku.get(row.sku) ?? [];
-        group.push(row);
-        rowsBySku.set(row.sku, group);
-      }
-
-      const productRows = [...rowsBySku.values()].map((group) => {
-        const row = group[0];
-        if (!row) throw new Error("No pudimos preparar una fila de producto");
-        return {
-          sku: row.sku,
-          name: row.name,
-          category_id: row.categoryId,
-          honda_code: row.hondaCode || null,
-          description: row.description || null,
-          price_uyu: row.price,
-          stock: row.stock,
-          availability: row.availability,
-          active: row.active,
-          is_demo: false,
-        };
-      });
-
-      const savedProducts: { id: string; sku: string }[] = [];
-      for (const batch of chunksOf(productRows, 200)) {
-        const { data, error } = await supabase
-          .from("products")
-          .upsert(batch, { onConflict: "sku" })
-          .select("id, sku");
-        if (error) throw error;
-        savedProducts.push(...data);
-        savedProductCount = savedProducts.length;
-      }
-
-      const productIdBySku = new Map(savedProducts.map((product) => [product.sku, product.id]));
-      if (productIdBySku.size !== rowsBySku.size) {
-        throw new Error("No pudimos confirmar el guardado de todos los productos");
-      }
-
-      const productIds = savedProducts.map((product) => product.id);
-      for (const batch of chunksOf(productIds, 100)) {
-        const { error } = await supabase
-          .from("product_compatibilities")
-          .delete()
-          .in("product_id", batch);
-        if (error) throw error;
-      }
-
-      const compatibilityRows = new Map<
-        string,
-        {
-          product_id: string;
-          model_id: string;
-          year_from: number;
-          year_to: number;
-          notes: string | null;
-        }
-      >();
-      for (const row of validRows) {
-        if (!row.modelId) continue;
-        const productId = productIdBySku.get(row.sku);
-        if (!productId)
-          throw new Error(`No encontramos el producto ${row.sku} después de guardarlo`);
-        const compatibility = {
-          product_id: productId,
-          model_id: row.modelId,
-          year_from: row.yearFrom,
-          year_to: row.yearTo,
-          notes: row.compatibilityNotes || null,
-        };
-        const key = JSON.stringify(compatibility);
-        compatibilityRows.set(key, compatibility);
-      }
-
-      const compatibilityValues = [...compatibilityRows.values()];
-      for (const batch of chunksOf(compatibilityValues, 200)) {
-        const { error } = await supabase.from("product_compatibilities").insert(batch);
-        if (error) throw error;
-      }
-
-      toast.success(
-        `Importación completa: ${savedProducts.length} productos y ${compatibilityValues.length} compatibilidades.`,
-      );
+      const saved = await executeCatalogImport(records, store, setProgress);
+      const message = `Importación completa: ${saved.createdProducts} productos nuevos, ${saved.updatedProducts} actualizados y ${saved.compatibilities} aplicaciones agregadas. Se conservaron las aplicaciones anteriores.`;
+      setResult(message);
+      toast.success(message);
+      succeeded = true;
     } catch (error) {
-      const detail = errorMessage(error);
-      toast.error(
-        savedProductCount > 0
-          ? `Se guardaron ${savedProductCount} productos, pero no se completó toda la importación. Podés volver a importar el mismo archivo. ${detail}`
-          : `No pudimos importar los productos: ${detail}`,
-      );
+      const saved = error instanceof CatalogImportError ? error.progress : emptyProgress();
+      const changed = Object.values(saved).some((value) => value > 0);
+      const message = changed
+        ? `Importación incompleta: ${saved.categories} categorías, ${saved.models} modelos, ${saved.createdProducts + saved.updatedProducts} productos y ${saved.compatibilities} aplicaciones guardadas. ${errorMessage(error)} Los cambios confirmados se conservan. Revisá el resultado y reintentá el mismo archivo.`
+        : `No se confirmaron cambios. ${errorMessage(error)} Si hubo un corte de conexión, recargá antes de reintentar.`;
+      setResult(message);
+      toast.error(message);
     } finally {
+      await Promise.allSettled([
+        queryClient.invalidateQueries({ queryKey: ["catalog"] }),
+        queryClient.invalidateQueries({ queryKey: ["catalog-meta"] }),
+      ]);
+      try {
+        const lookups = await store.getLookups();
+        setCategories(lookups.categories);
+        setModels(lookups.models);
+      } catch {
+        setLookupsError(
+          "No se pudieron actualizar las referencias. Recargá la página antes de volver a importar.",
+        );
+      }
+      if (succeeded) {
+        setWorkbook(null);
+        setSelectedSheets([]);
+      }
       setImporting(false);
     }
   };
 
   return (
     <>
-      <PageHeader eyebrow="Administración" title="Panel administrativo" />
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-        <section className="rounded-lg border bg-card p-6 shadow-card">
+      <PageHeader
+        eyebrow="Administración"
+        title="Catálogo e importación"
+        description="Actualizá repuestos y aplicaciones por modelo y categoría desde una o varias hojas de Excel."
+      />
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <section className="rounded-lg border bg-card p-4 shadow-card sm:p-6">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
-              <h2 className="text-2xl font-semibold uppercase">Importar productos desde Excel</h2>
-              <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
-                Cargá .xlsx, .xls o CSV. Repetí el SKU en una fila por modelo compatible y mantené
-                iguales los datos del producto en esas filas. Para SKU repetidos con distintos
-                precios se conserva el más alto; los modelos faltantes se agregan al catálogo.
+              <h2 className="text-2xl font-semibold uppercase">Importar catálogo</h2>
+              <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
+                Cargá archivos .xlsx, .xls o .csv de cualquier categoría. Primero revisá las hojas,
+                las aplicaciones y los cambios propuestos; después confirmá el guardado.
               </p>
             </div>
             <Button
               type="button"
               variant="outline"
               onClick={downloadTemplate}
-              disabled={lookupsLoading || Boolean(lookupsError)}
+              disabled={busy || lookupsLoading || Boolean(lookupsError)}
             >
               <Download /> Descargar plantilla
             </Button>
           </div>
-
           {lookupsError && (
             <p role="alert" className="mt-4 text-sm text-destructive">
-              No pudimos cargar las categorías y modelos: {lookupsError}. Recargá la página e
-              intentá nuevamente.
+              {lookupsError}
             </p>
           )}
           {lookupsLoading && (
-            <p className="mt-4 text-sm text-muted-foreground">Cargando categorías y modelos…</p>
+            <p role="status" className="mt-4 text-sm text-muted-foreground">
+              Verificando permisos y referencias del catálogo…
+            </p>
           )}
-
           <div className="mt-6 flex flex-wrap items-center gap-3">
             <Input
               type="file"
               accept=".xlsx,.xls,.csv,text/csv"
+              aria-label="Archivo de catálogo"
+              disabled={busy || lookupsLoading || Boolean(lookupsError)}
+              className="max-w-md"
               onChange={(event) => {
                 const file = event.target.files?.[0];
                 if (file) void readFile(file);
                 event.target.value = "";
               }}
-              disabled={importing || lookupsLoading || Boolean(lookupsError)}
-              className="max-w-md"
-              aria-label="Archivo de productos"
             />
-            {fileName && <span className="text-sm text-muted-foreground">{fileName}</span>}
+            {fileName && (
+              <span className="break-all text-sm text-muted-foreground">{fileName}</span>
+            )}
           </div>
           <p className="mt-2 text-xs text-muted-foreground">
-            Categorías y modelos deben existir en el sistema. Las celdas vacías de precio o stock se
-            guardan sin dato.
+            Hasta 20 MB y 20.000 filas. Las celdas opcionales vacías conservan los datos existentes.
+            Las aplicaciones anteriores permanecen guardadas.
           </p>
-
-          {rows.length > 0 && (
-            <div className="mt-6">
-              <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
-                <p className="text-sm text-muted-foreground">
-                  Vista previa: {validRows.length} válidas · {invalidRows.length} con errores
-                </p>
-                <Button
-                  type="button"
-                  onClick={() => void importRows()}
-                  disabled={importing || validRows.length === 0 || invalidRows.length > 0}
-                >
-                  <Upload /> {importing ? "Importando…" : "Importar productos"}
-                </Button>
-              </div>
-              {invalidRows.length > 0 && (
-                <p role="alert" className="mb-3 text-sm text-destructive">
-                  Corregí todas las filas con errores y volvé a cargar el archivo para habilitar la
-                  importación.
-                </p>
-              )}
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead>Estado</TableHead>
-                    <TableHead>SKU</TableHead>
-                    <TableHead>Nombre</TableHead>
-                    <TableHead>Categoría</TableHead>
-                    <TableHead>Modelo / años</TableHead>
-                    <TableHead>Precio</TableHead>
-                    <TableHead>Stock</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {rows.slice(0, 100).map((row) => (
-                    <TableRow key={`${row.sku}-${row.rowNumber}`}>
-                      <TableCell className={row.error ? "text-destructive" : "text-success"}>
-                        {row.error ?? "Válida"}
-                      </TableCell>
-                      <TableCell className="font-mono">{row.sku}</TableCell>
-                      <TableCell>{row.name}</TableCell>
-                      <TableCell>{row.categoryName}</TableCell>
-                      <TableCell>
-                        {row.modelId
-                          ? `${models.find((model) => model.id === row.modelId)?.name ?? "Modelo"} · ${row.yearFrom}–${row.yearTo}`
-                          : "Sin compatibilidad"}
-                      </TableCell>
-                      <TableCell>{row.price === null ? "No informado" : row.price}</TableCell>
-                      <TableCell>{row.stock ?? "No informado"}</TableCell>
-                    </TableRow>
+          {reading && (
+            <p role="status" className="mt-4 text-sm">
+              Leyendo hojas y validando encabezados…
+            </p>
+          )}
+          {fileError && (
+            <p role="alert" className="mt-4 text-sm text-destructive">
+              {fileError}
+            </p>
+          )}
+          {workbook && (
+            <>
+              <fieldset disabled={busy} className="mt-6 rounded-lg border bg-muted/30 p-4">
+                <legend className="px-1 text-sm font-medium">Hojas que se importarán</legend>
+                <div className="flex flex-wrap gap-4">
+                  {workbook.sheets.map((sheet) => (
+                    <label key={sheet.name} className="flex items-center gap-2 text-sm">
+                      <input
+                        type="checkbox"
+                        checked={selectedSheets.includes(sheet.name)}
+                        onChange={(event) => {
+                          setSelectedSheets((previous) =>
+                            event.target.checked
+                              ? [...previous, sheet.name]
+                              : previous.filter((name) => name !== sheet.name),
+                          );
+                          setPage(0);
+                          setResult(null);
+                        }}
+                      />
+                      {sheet.name} · {sheet.rowCount} filas · encabezado en fila {sheet.headerRow}
+                    </label>
                   ))}
-                </TableBody>
-              </Table>
-              {rows.length > 100 && (
-                <p className="mt-3 text-xs text-muted-foreground">
-                  Se muestran las primeras 100 filas de la vista previa.
+                </div>
+                {workbook.ignoredSheets.length > 0 && (
+                  <p className="mt-3 text-xs text-muted-foreground">
+                    Hojas auxiliares omitidas: {workbook.ignoredSheets.join(", ")}.
+                  </p>
+                )}
+              </fieldset>
+              {(plan.newCategories.length > 0 || plan.newModels.length > 0) && (
+                <div className="mt-4 rounded-lg border border-primary/20 bg-primary/5 p-4 text-sm">
+                  <p>Se crearán estas referencias al confirmar:</p>
+                  {plan.newCategories.length > 0 && (
+                    <p className="mt-2">
+                      Categorías:{" "}
+                      {plan.newCategories
+                        .map((value) => `${value.name} (${value.slug})`)
+                        .join(" · ")}
+                    </p>
+                  )}
+                  {plan.newModels.length > 0 && (
+                    <p className="mt-2">
+                      Modelos:{" "}
+                      {plan.newModels.map((value) => `${value.name} (${value.slug})`).join(" · ")}
+                    </p>
+                  )}
+                </div>
+              )}
+              {plan.warnings.length > 0 && (
+                <div role="status" className="mt-4 rounded-lg border p-4 text-sm">
+                  <p>Observaciones para revisar:</p>
+                  <ul className="mt-2 list-disc space-y-1 pl-5">
+                    {plan.warnings.map((warning) => (
+                      <li key={warning}>{warning}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              <div className="my-5 flex flex-wrap items-center justify-between gap-3">
+                <p aria-live="polite" className="text-sm">
+                  {uniqueSkus} productos · {plan.rows.length} filas · {invalidRows.length} con
+                  errores
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {invalidRows.length > 0 && (
+                    <Button variant="outline" type="button" onClick={downloadErrors}>
+                      <Download /> Descargar errores
+                    </Button>
+                  )}
+                  <Button
+                    type="button"
+                    onClick={() => void importRows()}
+                    disabled={
+                      busy || !records.length || invalidRows.length > 0 || Boolean(lookupsError)
+                    }
+                  >
+                    <Upload />
+                    {importing ? "Guardando…" : "Confirmar importación"}
+                  </Button>
+                </div>
+              </div>
+              {!records.length && (
+                <p role="status" className="my-3 text-sm text-muted-foreground">
+                  Seleccioná al menos una hoja con productos.
                 </p>
               )}
-            </div>
+              {invalidRows.length > 0 && (
+                <p role="alert" className="mb-4 text-sm text-destructive">
+                  Corregí todas las filas indicadas y volvé a cargar el archivo. La vista previa no
+                  guarda cambios.
+                </p>
+              )}
+              {plan.rows.length > 0 && (
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead>Hoja / fila</TableHead>
+                      <TableHead>Estado</TableHead>
+                      <TableHead>SKU / producto</TableHead>
+                      <TableHead>Categoría</TableHead>
+                      <TableHead>Modelo / años</TableHead>
+                      <TableHead>Precio UYU</TableHead>
+                      <TableHead>Stock</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {plan.rows.slice(page * pageSize, (page + 1) * pageSize).map((row) => (
+                      <TableRow key={`${row.sheetName}-${row.rowNumber}`}>
+                        <TableCell>
+                          {row.sheetName} · {row.rowNumber}
+                        </TableCell>
+                        <TableCell
+                          className={row.error ? "min-w-52 text-destructive" : "text-success"}
+                        >
+                          {row.error ?? "Válida"}
+                        </TableCell>
+                        <TableCell>
+                          <span className="font-mono">{row.sku}</span>
+                          <p>{row.name}</p>
+                        </TableCell>
+                        <TableCell>{row.categoryName}</TableCell>
+                        <TableCell>
+                          {row.modelId
+                            ? `${row.modelName} · ${row.yearFrom}–${row.yearTo}`
+                            : "Sin aplicación informada"}
+                        </TableCell>
+                        <TableCell>
+                          {row.provided.price ? row.price : "Conservar / sin dato"}
+                        </TableCell>
+                        <TableCell>
+                          {row.provided.stock ? row.stock : "Conservar / sin dato"}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              )}
+              {pageCount > 1 && (
+                <div className="mt-4 flex flex-wrap items-center justify-end gap-3">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    disabled={page === 0}
+                    onClick={() => setPage(page - 1)}
+                  >
+                    Anterior
+                  </Button>
+                  <span className="text-xs text-muted-foreground">
+                    Página {page + 1} de {pageCount}
+                  </span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    disabled={page + 1 >= pageCount}
+                    onClick={() => setPage(page + 1)}
+                  >
+                    Siguiente
+                  </Button>
+                </div>
+              )}
+            </>
+          )}
+          {importing && (
+            <p role="status" className="mt-5 text-sm">
+              Guardados: {progress.createdProducts + progress.updatedProducts} productos ·{" "}
+              {progress.compatibilities} aplicaciones. Mantené esta página abierta.
+            </p>
+          )}
+          {result && (
+            <p role="status" className="mt-5 rounded-lg border bg-muted/30 p-4 text-sm">
+              {result}
+            </p>
           )}
         </section>
-
         <p className="mt-6 text-xs text-muted-foreground">
           Las demás pantallas administrativas (clientes, casos, presupuestos, marcas, titularidad y
           auditoría) siguen pendientes de construir.

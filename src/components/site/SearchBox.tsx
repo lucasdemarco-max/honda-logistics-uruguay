@@ -1,38 +1,54 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import { useNavigate } from "@tanstack/react-router";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-export function SearchBox({ size = "default", initial = "", className }: { size?: "default" | "lg"; initial?: string; className?: string }) {
+interface SearchBoxProps {
+  size?: "default" | "lg";
+  initial?: string;
+  className?: string;
+  onSearch?: (query: string | undefined) => void;
+}
+
+export function SearchBox({ size = "default", initial = "", className, onSearch }: SearchBoxProps) {
   const [q, setQ] = useState(initial);
+  const inputId = useId();
   const navigate = useNavigate();
   return (
     <form
       role="search"
-      className={cn("flex w-full items-stretch overflow-hidden rounded-md border bg-card shadow-card", className)}
+      className={cn(
+        "flex w-full items-stretch overflow-hidden rounded-md border bg-card shadow-card",
+        className,
+      )}
       onSubmit={(e) => {
         e.preventDefault();
-        navigate({ to: "/catalogo", search: { q: q.trim() || undefined } });
+        const query = q.trim() || undefined;
+        if (onSearch) onSearch(query);
+        else void navigate({ to: "/catalogo", search: { q: query } });
       }}
     >
-      <label htmlFor={`search-${size}`} className="sr-only">
-        Buscar repuestos por nombre, código o modelo
+      <label htmlFor={inputId} className="sr-only">
+        Buscar por código Honda, SKU o nombre
       </label>
-      <div className="flex flex-1 items-center gap-2 pl-4">
+      <div className="flex min-w-0 flex-1 items-center gap-2 pl-4">
         <Search className="h-5 w-5 shrink-0 text-muted-foreground" aria-hidden />
         <input
-          id={`search-${size}`}
+          id={inputId}
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          placeholder="Buscá por nombre, código Honda o modelo (ej. filtro Civic)"
+          placeholder="Código Honda, SKU o nombre del repuesto"
           className={cn(
-            "w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none",
+            "min-w-0 w-full bg-transparent text-foreground placeholder:text-muted-foreground focus:outline-none",
             size === "lg" ? "h-14 text-base" : "h-10 text-sm",
           )}
         />
       </div>
-      <Button type="submit" className={cn("rounded-none", size === "lg" ? "h-14 px-8 text-base" : "h-10")}>
+      <Button
+        type="submit"
+        className={cn("shrink-0 rounded-none", size === "lg" ? "h-14 px-8 text-base" : "h-10")}
+      >
         Buscar
       </Button>
     </form>
