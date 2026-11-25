@@ -188,7 +188,11 @@ export const searchCatalog = createServerFn({ method: "GET" })
     // Filter out old demo filter products so real filters take precedence
     const nonDemoEnriched = enriched.filter((p) => !p.sku.startsWith("DEMO-FIL-"));
 
-    return [...localFilters, ...nonDemoEnriched];
+    // Uploaded records take precedence over JSON seed rows with the same SKU.
+    // This avoids duplicate product cards after a previously local filter is imported.
+    const uniqueBySku = new Map(localFilters.map((product) => [product.sku, product] as const));
+    for (const product of nonDemoEnriched) uniqueBySku.set(product.sku, product);
+    return [...uniqueBySku.values()];
   });
 
 export const listBrands = createServerFn({ method: "GET" }).handler(async () => {
