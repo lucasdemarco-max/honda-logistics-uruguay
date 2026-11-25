@@ -53,7 +53,7 @@ const categoryFromRecord = (record: Record<string, unknown>) => {
   const get = (keys: string[]) => Object.entries(record).find(([key]) => keys.includes(normalizeImportValue(key)))?.[1];
   const name = String(get(["categoryname", "categoria", "category", "categorianombre"]) ?? "").trim();
   const externalId = String(get(["categoryid"]) ?? "").trim();
-  return { name: name || externalId, externalId };
+  return { name, externalId };
 };
 
 const categorySlug = (name: string) =>
@@ -269,6 +269,9 @@ function Admin() {
       const categoryRecords = records.map(({ record }) => categoryFromRecord(record));
       const namesByExternalId = new Map<string, string>();
       for (const item of categoryRecords) {
+        if (item.externalId && !item.name) {
+          throw new Error(`CategoryID ${item.externalId} necesita CategoryName para identificar su categoría`);
+        }
         if (!item.externalId || !item.name) continue;
         const previous = namesByExternalId.get(item.externalId);
         if (previous && normalizeImportValue(previous) !== normalizeImportValue(item.name)) {
@@ -294,37 +297,13 @@ function Admin() {
             ),
           ),
       );
-      let availableModels = models;
-      if (missingModels.length > 0) {
-        const { data: userResult, error: userError } = await supabase.auth.getUser();
-        if (userError) throw userError;
-        if (!userResult.user) throw new Error("Iniciá sesión para agregar modelos al catálogo");
-        const { data: canManageCatalog, error: permissionError } = await supabase.rpc(
-          "has_permission",
-          { _user_id: userResult.user.id, _perm: "catalogo" },
-        );
-        if (permissionError) throw permissionError;
-        if (!canManageCatalog)
-          throw new Error("Tu cuenta no tiene permisos para agregar modelos al catálogo");
-
-        const { error: insertModelsError } = await supabase.from("vehicle_models").upsert(
-          missingModels.map((name, index) => ({
-            name: modelDisplayName(name),
-            slug: modelSlug(name),
-            sort_order: 100 + index,
-          })),
-          { onConflict: "slug" },
-        );
-        if (insertModelsError) throw insertModelsError;
-
-        const { data: refreshedModels, error: modelsError } = await supabase
-          .from("vehicle_models")
-          .select("id, name, slug")
-          .order("sort_order");
-        if (modelsError) throw modelsError;
-        availableModels = refreshedModels;
-        setModels(refreshedModels);
-      }
+      // Preview is read-only; missing models are staged until confirmation.
+      const pendingModels: CatalogLookup[] = missingModels.map((name) => ({
+        id: `pending-${modelSlug(name)}`,
+        name: modelDisplayName(name),
+        slug: modelSlug(name),
+      }));
+      const availableModels = [...models, ...pendingModels];
 
       const parsedRows = records.map(({ record, rowNumber }) =>
         parseImportRow(record, rowNumber, availableCategories, availableModels),
@@ -366,6 +345,24 @@ function Admin() {
       if (!canManageCatalog)
         throw new Error("Tu cuenta no tiene permisos para administrar el catálogo");
 
+      // Create missing vehicle models only when the user confirms the import.
+      const pendingModelRows = validRows.filter((row) => row.modelId?.startsWith("pending-"));
+      const pendingModelSlugs = [...new Set(pendingModelRows.map((row) => row.modelId!.slice("pending-".length)))];
+      if (pendingModelSlugs.length) {
+        const { error: insertModelsError } = await supabase.from("vehicle_models").upsert(
+          pendingModelSlugs.map((slug, index) => ({
+            name: modelDisplayName(slug), slug, sort_order: 100 + index,
+          })),
+          { onConflict: "slug" },
+        );
+        if (insertModelsError) throw insertModelsError;
+      }
+      const { data: storedModels, error: refreshedModelsError } = await supabase
+        .from("vehicle_models").select("id, name, slug").order("sort_order");
+      if (refreshedModelsError) throw refreshedModelsError;
+      const modelBySlug = new Map(storedModels.map((item) => [item.slug, item.id]));
+      setModels(storedModels);
+
       // New workbook categories are created only after explicit confirmation.
       // Existing categories and other products remain intact.
       const pendingCategoryRows = validRows.filter((row) => row.categoryId?.startsWith("pending-"));
@@ -385,6 +382,7 @@ function Admin() {
         .from("categories").select("id, name, slug").order("sort_order");
       if (refreshedCategoryError) throw refreshedCategoryError;
       const categoryBySlug = new Map(storedCategories.map((item) => [item.slug, item.id]));
+      setCategories(storedCategories);
 
       const rowsBySku = new Map<string, ImportRow[]>();
       for (const row of validRows) {
@@ -458,7 +456,9 @@ function Admin() {
           throw new Error(`No encontramos el producto ${row.sku} después de guardarlo`);
         const compatibility = {
           product_id: productId,
-          model_id: row.modelId,
+          model_id: row.modelId.startsWith("pending-")
+            ? modelBySlug.get(row.modelId.slice("pending-".length)) ?? row.modelId
+            : row.modelId,
           year_from: row.yearFrom,
           year_to: row.yearTo,
           notes: row.compatibilityNotes || null,
