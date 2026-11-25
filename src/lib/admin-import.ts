@@ -94,6 +94,7 @@ export const parseImportRow = (
     "category name",
     "categoryid",
   ]);
+  const categoryExternalId = textValue(record, ["categoryid"]);
   const subcategoryName = textValue(record, [
     "subcategoria",
     "subcategoría",
@@ -133,8 +134,10 @@ export const parseImportRow = (
     [item.name, item.slug].some((value) => normalize(value) === normalize(subcategoryName)),
   );
   const categorySearch = subcategory ? "filtros" : categoryName || subcategoryName;
+  // CategoryID is an external workbook identifier; match an existing slug/name only when no name is provided.
+  const categoryLookup = categorySearch || categoryExternalId;
   const category = categories.find((item) =>
-    [item.name, item.slug].some((value) => normalize(value) === normalize(categorySearch)),
+    [item.name, item.slug].some((value) => normalize(value) === normalize(categoryLookup)),
   );
   const model = models.find((item) =>
     [item.name, item.slug].some((value) => normalize(value) === normalize(modelName)),
@@ -145,9 +148,9 @@ export const parseImportRow = (
   const errors: string[] = [];
   if (!sku) errors.push("SKU requerido");
   if (!name) errors.push("Nombre requerido");
-  if (!subcategoryName && !categoryName) errors.push("Categoría o subcategoría requerida");
+  if (!subcategoryName && !categoryName && !categoryExternalId) errors.push("CategoryName o categoría requerida para identificar CategoryID");
   if (subcategoryName && !subcategory) errors.push(`Subcategoría desconocida: ${subcategoryName}`);
-  if (categoryName && !category) errors.push(`Categoría desconocida: ${categoryName}`);
+  if (!category) errors.push(`Categoría desconocida: ${categoryLookup || categoryExternalId}`);
   if (subcategory && categoryName && normalize(categoryName) !== "filtros") {
     errors.push("La subcategoría de filtros debe usar la categoría Filtros");
   }
