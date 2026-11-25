@@ -92,7 +92,7 @@ export const parseImportRow = (
     "categoría",
     "category",
     "category name",
-    "categoryid",
+    "categoryname",
   ]);
   const categoryExternalId = textValue(record, ["categoryid"]);
   const subcategoryName = textValue(record, [
