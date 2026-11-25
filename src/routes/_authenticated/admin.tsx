@@ -391,6 +391,16 @@ function Admin() {
         rowsBySku.set(row.sku, group);
       }
 
+      // Preserve existing price/stock when an incoming workbook leaves those cells blank.
+      const knownProducts: { sku: string; price_uyu: number | null; stock: number | null }[] = [];
+      for (const batch of chunksOf([...rowsBySku.keys()], 100)) {
+        const { data, error } = await supabase.from("products")
+          .select("sku, price_uyu, stock").in("sku", batch);
+        if (error) throw error;
+        knownProducts.push(...data);
+      }
+      const currentBySku = new Map(knownProducts.map((product) => [product.sku, product]));
+
       const productRows = [...rowsBySku.values()].map((group) => {
         const row = group[0];
         if (!row) throw new Error("No pudimos preparar una fila de producto");
@@ -402,8 +412,8 @@ function Admin() {
             : row.categoryId,
           honda_code: row.hondaCode || null,
           description: row.description || null,
-          price_uyu: row.price,
-          stock: row.stock,
+          price_uyu: row.price ?? currentBySku.get(row.sku)?.price_uyu ?? null,
+          stock: row.stock ?? currentBySku.get(row.sku)?.stock ?? null,
           availability: row.availability,
           active: row.active,
           is_demo: false,
