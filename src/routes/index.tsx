@@ -3,7 +3,6 @@ import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
 import { ArrowRight, ClipboardList, FileText, PackageSearch, ShieldCheck, Truck, Landmark, Award } from "lucide-react";
 import heroImg from "@/assets/hero-parts.jpg";
 import { Button } from "@/components/ui/button";
-import { SearchBox } from "@/components/site/SearchBox";
 import { getCatalogMeta } from "@/lib/public.functions";
 import { HONDA_FILTER_MODELS } from "@/lib/filter-categories";
 
@@ -35,7 +34,7 @@ const SERVICES = [
   {
     icon: PackageSearch,
     title: "Catálogo de repuestos",
-    text: "Buscá por nombre, código Honda o modelo. Cada aplicación se carga de forma explícita.",
+    text: "Elegí tu modelo Honda y explorá sus repuestos agrupados por categoría.",
     to: "/catalogo" as const,
     cta: "Ver catálogo",
   },
@@ -81,11 +80,11 @@ function Index() {
             El repuesto correcto para tu Honda, <span className="text-primary">con seguimiento real.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-ink-muted">
-            Catálogo con compatibilidades cargadas por modelo y año, presupuestos por número de chasis y el estado de cada repuesto de
+            Repuestos organizados por modelo y categoría, presupuestos por número de chasis y el estado de cada repuesto de
             tu pedido.
           </p>
           <div className="mt-8 max-w-2xl">
-            <SearchBox size="lg" />
+            <Button asChild size="lg"><Link to="/catalogo">Elegir modelo Honda <ArrowRight /></Link></Button>
           </div>
         </div>
       </section>
