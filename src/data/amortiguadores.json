@@ -1,0 +1,2968 @@
+[
+  {
+    "id": "amo-25809",
+    "sku": "25809",
+    "honda_code": "51605-SJC-A03",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 19395.68,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2005,
+        "year_to": 2014,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-25810",
+    "sku": "25810",
+    "honda_code": "51606-SJC-A03",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 19395.68,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2005,
+        "year_to": 2014,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-39668",
+    "sku": "39668",
+    "honda_code": "51611-39K-P03",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9325.01,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-38691",
+    "sku": "38691",
+    "honda_code": "51611-3A0-A51",
+    "name": "Amortiguador Delantero Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13714.47,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-38004",
+    "sku": "38004",
+    "honda_code": "51611-3C2-T51",
+    "name": "Amortiguador Delantero Lado Derecho (Hibrida)",
+    "description": "Amortiguador Delantero Lado Derecho (Hibrida)",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 20974.34,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-35798",
+    "sku": "35798",
+    "honda_code": "51611-3M6-M01",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13376.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-39049",
+    "sku": "39049",
+    "honda_code": "51611-3M6-M02",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13376.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2027,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-39492",
+    "sku": "39492",
+    "honda_code": "51611-3V0-J01",
+    "name": "Amortiguador Delantero",
+    "description": "Amortiguador Delantero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 15814.26,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36105",
+    "sku": "36105",
+    "honda_code": "51611-3W0-A01",
+    "name": "Amortiguador Delantero",
+    "description": "Amortiguador Delantero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13376.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-38659",
+    "sku": "38659",
+    "honda_code": "51611-T24-K03",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13578.64,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2017,
+        "year_to": 2021,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-39085",
+    "sku": "39085",
+    "honda_code": "51611-T54-M01",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 18214.81,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2024,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36129",
+    "sku": "36129",
+    "honda_code": "51611-T5A-M01",
+    "name": "Amortiguador Delantero Lado Derecho (Hibrida)",
+    "description": "Amortiguador Delantero Lado Derecho (Hibrida)",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": null,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-31297",
+    "sku": "31297",
+    "honda_code": "51611-T5N-M11",
+    "name": "Amortiguador Delantero Derecho",
+    "description": "Amortiguador Delantero Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7969.5,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-27728",
+    "sku": "27728",
+    "honda_code": "51611-T5X-P01",
+    "name": "Amortiguador Delantero Derecho",
+    "description": "Amortiguador Delantero Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7969.5,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36151",
+    "sku": "36151",
+    "honda_code": "51611-T60-J03",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 35840.57,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-28991",
+    "sku": "28991",
+    "honda_code": "51611-T6Z-A02",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12729.02,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2021,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-32689",
+    "sku": "32689",
+    "honda_code": "51611-T7T-M01",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 16213.43,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2015,
+        "year_to": 2018,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-29861",
+    "sku": "29861",
+    "honda_code": "51611-T7W-P01",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 22360.34,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2016,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36152",
+    "sku": "36152",
+    "honda_code": "51611-T90-A22",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 22817.72,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36153",
+    "sku": "36153",
+    "honda_code": "51611-T91-A02",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 17552.3,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-29455",
+    "sku": "29455",
+    "honda_code": "51611-TEK-M01",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13578.64,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2017,
+        "year_to": 2021,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-32395",
+    "sku": "32395",
+    "honda_code": "51611-TGH-A01",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 78638.87,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2020,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-33455",
+    "sku": "33455",
+    "honda_code": "51611-THR-A92",
+    "name": "Amortiguador Delantero",
+    "description": "Amortiguador Delantero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 23697.83,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-29988",
+    "sku": "29988",
+    "honda_code": "51611-TLA-A51",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 17829.5,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2022,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-29989",
+    "sku": "29989",
+    "honda_code": "51611-TLB-A01",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 18959.09,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-30331",
+    "sku": "30331",
+    "honda_code": "51611-TRY-M01",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9325.01,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-39667",
+    "sku": "39667",
+    "honda_code": "51621-39K-P03",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9325.01,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36154",
+    "sku": "36154",
+    "honda_code": "51621-3A0-A51",
+    "name": "Amortiguador Delantero Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13714.47,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-38003",
+    "sku": "38003",
+    "honda_code": "51621-3C2-T51",
+    "name": "Amortiguador Delantero Lado Izquierdo (Hibrida)",
+    "description": "Amortiguador Delantero Lado Izquierdo (Hibrida)",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 20974.34,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36155",
+    "sku": "36155",
+    "honda_code": "51621-3M6-M01",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13376.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-39048",
+    "sku": "39048",
+    "honda_code": "51621-3M6-M02",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13376.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2027,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-39495",
+    "sku": "39495",
+    "honda_code": "51621-3V0-J01",
+    "name": "Amortiguador Delantero",
+    "description": "Amortiguador Delantero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 15837.82,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36156",
+    "sku": "36156",
+    "honda_code": "51621-3W0-A01",
+    "name": "Amortiguador Delantero",
+    "description": "Amortiguador Delantero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13376.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-34032",
+    "sku": "34032",
+    "honda_code": "51621-T14-M01",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10352.03,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36157",
+    "sku": "36157",
+    "honda_code": "51621-T14-M11",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6622.31,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-38658",
+    "sku": "38658",
+    "honda_code": "51621-T24-K03",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13578.64,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-39086",
+    "sku": "39086",
+    "honda_code": "51621-T54-M01",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 18214.81,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2024,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36158",
+    "sku": "36158",
+    "honda_code": "51621-T5A-M01",
+    "name": "Amortiguador Delantero Lado Izquierdo (Hibrida)",
+    "description": "Amortiguador Delantero Lado Izquierdo (Hibrida)",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": null,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-31298",
+    "sku": "31298",
+    "honda_code": "51621-T5N-M11",
+    "name": "Amortiguador Delantero Izquierdo",
+    "description": "Amortiguador Delantero Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7969.5,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-27729",
+    "sku": "27729",
+    "honda_code": "51621-T5X-P01",
+    "name": "Amortiguador Delantero IZquierdo",
+    "description": "Amortiguador Delantero IZquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7969.5,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36159",
+    "sku": "36159",
+    "honda_code": "51621-T60-J03",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 35840.57,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-28992",
+    "sku": "28992",
+    "honda_code": "51621-T6Z-A02",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12729.02,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2021,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-32690",
+    "sku": "32690",
+    "honda_code": "51621-T7T-M01",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 17221.05,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2015,
+        "year_to": 2018,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-29862",
+    "sku": "29862",
+    "honda_code": "51621-T7W-P01",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 22360.34,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2016,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36160",
+    "sku": "36160",
+    "honda_code": "51621-T90-A22",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 22817.72,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36161",
+    "sku": "36161",
+    "honda_code": "51621-T91-A02",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 17552.3,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-29456",
+    "sku": "29456",
+    "honda_code": "51621-TEK-M01",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13578.64,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2017,
+        "year_to": 2021,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-28414",
+    "sku": "28414",
+    "honda_code": "51621-TG7-A01",
+    "name": "Amortiguador Delantero",
+    "description": "Amortiguador Delantero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 16192.64,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-32396",
+    "sku": "32396",
+    "honda_code": "51621-TGH-A01",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 78638.87,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2020,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-33458",
+    "sku": "33458",
+    "honda_code": "51621-THR-A92",
+    "name": "Amortiguador Delantero",
+    "description": "Amortiguador Delantero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 23697.83,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-29909",
+    "sku": "29909",
+    "honda_code": "51621-TLA-A51",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 17829.5,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2022,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-29990",
+    "sku": "29990",
+    "honda_code": "51621-TLB-A01",
+    "name": "Amortiguador Delantero Lado Izquierdo",
+    "description": "Amortiguador Delantero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 18959.09,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-30332",
+    "sku": "30332",
+    "honda_code": "51621-TRY-M01",
+    "name": "Amortiguador Delantero Lado Derecho",
+    "description": "Amortiguador Delantero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9325.01,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-33404",
+    "sku": "33404",
+    "honda_code": "51621-TVA-X92",
+    "name": "Amortiguador Delantero",
+    "description": "Amortiguador Delantero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 16898.11,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-39328",
+    "sku": "39328",
+    "honda_code": "52610-39K-M03",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7394.31,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-34645",
+    "sku": "34645",
+    "honda_code": "52610-T14-M01",
+    "name": "Amortiguador trasero",
+    "description": "Amortiguador trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5922.38,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-31299",
+    "sku": "31299",
+    "honda_code": "52610-T5N-M02",
+    "name": "Amortiguador trasero",
+    "description": "Amortiguador trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5898.82,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-27204",
+    "sku": "27204",
+    "honda_code": "52610-T5X-P01",
+    "name": "Amortiguador trasero",
+    "description": "Amortiguador trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5898.82,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-33489",
+    "sku": "33489",
+    "honda_code": "52610-THR-A22",
+    "name": "Amortiguador trasero",
+    "description": "Amortiguador trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 11018.7,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-29763",
+    "sku": "29763",
+    "honda_code": "52610-TRY-M01",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5656.27,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36162",
+    "sku": "36162",
+    "honda_code": "52611-3A0-A51",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 11265.41,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-38014",
+    "sku": "38014",
+    "honda_code": "52611-3C2-T51",
+    "name": "Amortiguador Trasero (Hibrida)",
+    "description": "Amortiguador Trasero (Hibrida)",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 15427.57,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-35800",
+    "sku": "35800",
+    "honda_code": "52611-3M6-M01",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7527.37,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2025,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2027,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36164",
+    "sku": "36164",
+    "honda_code": "52611-3W0-A02",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13086.61,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-25825",
+    "sku": "25825",
+    "honda_code": "52611-SJC-A03",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 11649.33,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2022,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-33921",
+    "sku": "33921",
+    "honda_code": "52611-T00-P01",
+    "name": "Amortiguador trasero",
+    "description": "Amortiguador trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10306.3,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2021,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36165",
+    "sku": "36165",
+    "honda_code": "52611-T60-J02",
+    "name": "Amortiguador Trasero Lado Derecho",
+    "description": "Amortiguador Trasero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 25664.56,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-29006",
+    "sku": "29006",
+    "honda_code": "52611-T6Z-A03",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9294.52,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2021,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-35316",
+    "sku": "35316",
+    "honda_code": "52611-T7T-M02",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 14899.5,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2016,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-38561",
+    "sku": "38561",
+    "honda_code": "52611-T7X-P02",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 16119.18,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36166",
+    "sku": "36166",
+    "honda_code": "52611-T90-A22",
+    "name": "Amortiguador Trasero Lado Derecho",
+    "description": "Amortiguador Trasero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9510.73,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36167",
+    "sku": "36167",
+    "honda_code": "52611-T91-A02",
+    "name": "Amortiguador Trasero Lado Derecho",
+    "description": "Amortiguador Trasero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9510.73,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-33493",
+    "sku": "33493",
+    "honda_code": "52611-TBG-K03",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 11829.51,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2016,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-32065",
+    "sku": "32065",
+    "honda_code": "52611-TEK-M02",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8404.7,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2017,
+        "year_to": 2021,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-28430",
+    "sku": "28430",
+    "honda_code": "52611-TG7-A01",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9510.73,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-32398",
+    "sku": "32398",
+    "honda_code": "52611-TGH-A01",
+    "name": "Amortiguador Trasero Lado Derecho",
+    "description": "Amortiguador Trasero Lado Derecho",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 65503.75,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2017,
+        "year_to": 2021,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-29911",
+    "sku": "29911",
+    "honda_code": "52611-TLB-A02",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 11265.41,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2022,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-33423",
+    "sku": "33423",
+    "honda_code": "52611-TVA-A03",
+    "name": "Amortiguador Trasero",
+    "description": "Amortiguador Trasero",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8453.21,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-38364",
+    "sku": "38364",
+    "honda_code": "52621-T60-J02",
+    "name": "Amortiguador Trasero Lado Izquierdo",
+    "description": "Amortiguador Trasero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 65503.75,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36168",
+    "sku": "36168",
+    "honda_code": "52621-T90-A22",
+    "name": "Amortiguador Trasero Lado Izquierdo",
+    "description": "Amortiguador Trasero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12666.65,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-36169",
+    "sku": "36169",
+    "honda_code": "52621-T91-A02",
+    "name": "Amortiguador Trasero Lado Izquierdo",
+    "description": "Amortiguador Trasero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12666.65,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "amo-32399",
+    "sku": "32399",
+    "honda_code": "52621-TGH-A01",
+    "name": "Amortiguador Trasero Lado Izquierdo",
+    "description": "Amortiguador Trasero Lado Izquierdo",
+    "category_id": "subcat-amortiguadores",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 65503.75,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-amortiguadores",
+      "name": "Amortiguadores",
+      "slug": "amortiguadores",
+      "image_key": "suspension"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2017,
+        "year_to": 2021,
+        "notes": null
+      }
+    ]
+  }
+]

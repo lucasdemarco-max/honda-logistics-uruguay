@@ -1,0 +1,332 @@
+[
+  {
+    "id": "bat-6272",
+    "sku": "6272",
+    "honda_code": "31500-FIT-999B",
+    "name": "Batería",
+    "description": "Batería",
+    "category_id": "subcat-baterias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4690.5,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-baterias",
+      "name": "Baterías",
+      "slug": "baterias",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "bat-26787",
+    "sku": "26787",
+    "honda_code": "31500-SD4-999B",
+    "name": "Batería",
+    "description": "Batería",
+    "category_id": "subcat-baterias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8566.57,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-baterias",
+      "name": "Baterías",
+      "slug": "baterias",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "bat-6279",
+    "sku": "6279",
+    "honda_code": "31500-SD4-999D",
+    "name": "Batería",
+    "description": "Batería",
+    "category_id": "subcat-baterias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6718.5,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-baterias",
+      "name": "Baterías",
+      "slug": "baterias",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "bat-6295",
+    "sku": "6295",
+    "honda_code": "31500-SR1-999",
+    "name": "Batería",
+    "description": "Batería",
+    "category_id": "subcat-baterias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3939.75,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-baterias",
+      "name": "Baterías",
+      "slug": "baterias",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "bat-6296",
+    "sku": "6296",
+    "honda_code": "31500-SR1-999B",
+    "name": "Batería",
+    "description": "Batería",
+    "category_id": "subcat-baterias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5868.0,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-baterias",
+      "name": "Baterías",
+      "slug": "baterias",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "bat-38369",
+    "sku": "38369",
+    "honda_code": "31500-TNY-E01",
+    "name": "Batería",
+    "description": "Batería",
+    "category_id": "subcat-baterias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 34270.24,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-baterias",
+      "name": "Baterías",
+      "slug": "baterias",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "bat-39498",
+    "sku": "39498",
+    "honda_code": "31500-TWA-Z01",
+    "name": "Batería",
+    "description": "Batería",
+    "category_id": "subcat-baterias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 14088.69,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-baterias",
+      "name": "Baterías",
+      "slug": "baterias",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "bat-38370",
+    "sku": "38370",
+    "honda_code": "31500-TZ7-AGM100M",
+    "name": "Batería",
+    "description": "Batería",
+    "category_id": "subcat-baterias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": null,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-baterias",
+      "name": "Baterías",
+      "slug": "baterias",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  }
+]

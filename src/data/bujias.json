@@ -1,0 +1,612 @@
+[
+  {
+    "id": "buj-34849",
+    "sku": "34849",
+    "honda_code": "12290-5A2-A02",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1890.5,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-25622",
+    "sku": "25622",
+    "honda_code": "12290-5B0-Y01",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2748.44,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2015,
+        "year_to": 2016,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-29903",
+    "sku": "29903",
+    "honda_code": "12290-5PA-A01",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2435.2,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2020,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-27138",
+    "sku": "27138",
+    "honda_code": "12290-5R0-003",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3876.64,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-36030",
+    "sku": "36030",
+    "honda_code": "12290-5WJ-A01",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6547.46,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2027,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-29745",
+    "sku": "29745",
+    "honda_code": "12290-5WX-M01",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 345.11,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-39047",
+    "sku": "39047",
+    "honda_code": "12290-62X-M01",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2167.7,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-30932",
+    "sku": "30932",
+    "honda_code": "12290-6A0-A01",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4194.04,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-35644",
+    "sku": "35644",
+    "honda_code": "12290-6FB-A01",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5323.63,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-36031",
+    "sku": "36031",
+    "honda_code": "12290-6MA-J01",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6163.54,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-33915",
+    "sku": "33915",
+    "honda_code": "12290-6Y0-004",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4318.78,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-24053",
+    "sku": "24053",
+    "honda_code": "12290-R1A-H01",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1882.19,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2021,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-1831",
+    "sku": "1831",
+    "honda_code": "12290-R40-A02",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1861.4,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2012,
+        "year_to": 2014,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-28044",
+    "sku": "28044",
+    "honda_code": "12290-R9P-A01",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4740.12,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2021,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "buj-31104",
+    "sku": "31104",
+    "honda_code": "12290-RB0-J11",
+    "name": "Bujías",
+    "description": "Bujías",
+    "category_id": "subcat-bujias",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4830.21,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-bujias",
+      "name": "Bujías",
+      "slug": "bujias",
+      "image_key": "encendido"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  }
+]

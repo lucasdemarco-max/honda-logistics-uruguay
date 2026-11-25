@@ -5,38 +5,48 @@ import { Button } from "@/components/ui/button";
 import { HONDA_RELATIONS, canClaimHomologation } from "@/lib/labels";
 import { formatUYU } from "@/lib/format";
 import { useCart } from "@/lib/cart";
+import { GENERIC_PRODUCT_PHOTO, getHondaProductPhoto } from "@/lib/product-photos";
 import type { CatalogProduct } from "@/lib/public.functions";
 
-export function productImage(p: Pick<CatalogProduct, "image_url" | "category">) {
-  if (p.image_url) return p.image_url;
-  if (p.category?.image_key) return `/images/categories/${p.category.image_key}.jpg`;
-  return "/images/categories/otros.jpg";
-}
-
-export function ProductCard({ product }: { product: CatalogProduct }) {
+export function ProductCard({ product, modelSlug }: { product: CatalogProduct; modelSlug?: string }) {
   const { add } = useCart();
   const relation = HONDA_RELATIONS.find((r) => r.value === product.honda_relation);
   const showRelation = relation && canClaimHomologation(product.honda_relation, product.homologation_reference);
   const outOfStock = product.availability === "sin_stock";
+  const image = product.honda_relation === "homologado_honda"
+    ? getHondaProductPhoto(product.honda_code)
+    : undefined;
+  const compatibility = modelSlug
+    ? product.compat.filter((application) => application.model_slug === modelSlug)
+    : product.compat;
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-lg border bg-card shadow-card transition-shadow hover:shadow-lift">
-      <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+      <div className="relative aspect-[4/3] overflow-hidden border-b bg-card">
         <img
-          src={productImage(product)}
-          alt={product.image_url ? product.name : `Imagen ilustrativa de la categoría ${product.category?.name ?? ""}`}
+          src={image?.url ?? GENERIC_PRODUCT_PHOTO}
+          alt={image ? product.name : ""}
           loading="lazy"
-          width={944}
-          height={704}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          width={800}
+          height={600}
+          className={image ? "h-full w-full object-contain p-4" : "h-full w-full object-cover opacity-60"}
         />
         <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
           {product.is_demo && <Badge variant="demo">Ejemplo</Badge>}
           {product.promo_text && <Badge>{product.promo_text}</Badge>}
         </div>
-        {!product.image_url && (
-          <span className="absolute bottom-2 right-2 rounded bg-ink/70 px-1.5 py-0.5 text-[10px] text-ink-foreground">
-            Imagen ilustrativa
+        {image ? (
+          <a
+            href={image.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-2 right-2 rounded bg-card px-1.5 py-0.5 text-xs text-muted-foreground underline underline-offset-2"
+          >
+            Fuente de la foto
+          </a>
+        ) : (
+          <span className="absolute inset-x-0 bottom-0 bg-ink/85 px-2 py-2 text-center text-sm font-medium text-ink-foreground">
+            Foto no disponible
           </span>
         )}
       </div>
@@ -73,11 +83,11 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
 
         <div className="rounded-md bg-muted/70 p-3">
           <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Compatibilidad cargada</p>
-          {product.compat.length === 0 ? (
+          {compatibility.length === 0 ? (
             <p className="text-xs text-muted-foreground">Sin aplicaciones cargadas. Consultanos con tu número de chasis.</p>
           ) : (
             <ul className="flex flex-wrap gap-1.5">
-              {product.compat.map((c, i) => (
+              {compatibility.map((c, i) => (
                 <li key={i} className="rounded border bg-card px-2 py-0.5 text-xs">
                   {c.model} <span className="text-muted-foreground">{c.year_from === c.year_to ? c.year_from : `${c.year_from}–${c.year_to}`}</span>
                 </li>
@@ -98,7 +108,7 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
             aria-label={`Agregar ${product.name} al carrito`}
             disabled={outOfStock}
             onClick={() => {
-              add({ productId: product.id, sku: product.sku, name: product.name, priceUYU: product.price_uyu, imageUrl: productImage(product) });
+              add({ productId: product.id, sku: product.sku, name: product.name, priceUYU: product.price_uyu, imageUrl: image?.url ?? null });
               toast.success("Agregado al carrito", { description: product.name });
             }}
           >

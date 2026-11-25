@@ -22,7 +22,7 @@ function AccountControls() {
   if (!ready) return <div className="h-9 w-24" aria-hidden />;
   if (!user)
     return (
-      <Button asChild size="sm" variant="ink-outline">
+      <Button asChild size="sm" variant="outline">
         <Link to="/auth" search={{}}>
           <User /> Ingresar
         </Link>
@@ -31,7 +31,7 @@ function AccountControls() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button size="sm" variant="ink-outline" aria-label="Menú de cuenta">
+        <Button size="sm" variant="outline" aria-label="Menú de cuenta">
           <User /> <span className="hidden max-w-32 truncate sm:inline">{access?.profile?.full_name || "Mi cuenta"}</span>
         </Button>
       </DropdownMenuTrigger>
@@ -62,24 +62,24 @@ function AccountControls() {
 export function SiteHeader() {
   const { totals, hydrated } = useCart();
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-border bg-ink text-ink-foreground">
+    <header className="sticky top-0 z-40 border-b bg-card text-card-foreground">
       <div className="stripe-band h-1 opacity-90" aria-hidden />
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
-        <Logo inverted />
+        <Logo />
         <nav aria-label="Principal" className="ml-6 hidden items-center gap-1 lg:flex">
           {NAV.map((n) => (
             <Link
               key={n.to}
               to={n.to}
-              className="rounded px-3 py-2 text-sm font-medium text-ink-muted transition-colors hover:text-ink-foreground"
-              activeProps={{ className: "text-ink-foreground bg-ink-foreground/10" }}
+              className="rounded px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              activeProps={{ className: "bg-accent text-accent-foreground" }}
             >
               {n.label}
             </Link>
           ))}
         </nav>
         <div className="ml-auto flex items-center gap-2">
-          <Button asChild size="sm" variant="ink-outline" className="relative">
+          <Button asChild size="sm" variant="outline" className="relative">
             <Link to="/carrito" aria-label={`Carrito, ${hydrated ? totals.units : 0} artículos`}>
               <ShoppingCart />
               <span className="hidden sm:inline">Carrito</span>
@@ -93,7 +93,7 @@ export function SiteHeader() {
           <AccountControls />
           <Sheet>
             <SheetTrigger asChild>
-              <Button size="icon" variant="ink-outline" className="lg:hidden" aria-label="Abrir menú">
+              <Button size="icon" variant="outline" className="lg:hidden" aria-label="Abrir menú">
                 <Menu />
               </Button>
             </SheetTrigger>

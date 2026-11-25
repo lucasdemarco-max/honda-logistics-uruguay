@@ -1,0 +1,729 @@
+[
+  {
+    "id": "cap-38966",
+    "sku": "38966",
+    "honda_code": "60100-39K-M00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 28923.05,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-34835",
+    "sku": "34835",
+    "honda_code": "60100-3A0-A00ZZ",
+    "name": "Capot de Motor (Híbrida)",
+    "description": "Capot de Motor (Híbrida)",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 68648.58,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-35804",
+    "sku": "35804",
+    "honda_code": "60100-3M6-M00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 15607.75,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-35675",
+    "sku": "35675",
+    "honda_code": "60100-3W0-A00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 69882.12,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-33928",
+    "sku": "33928",
+    "honda_code": "60100-T14-M00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 28297.96,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-35022",
+    "sku": "35022",
+    "honda_code": "60100-T24-T00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 43251.52,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-30619",
+    "sku": "30619",
+    "honda_code": "60100-T5N-M00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 35767.12,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-35897",
+    "sku": "35897",
+    "honda_code": "60100-T60-000ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 122717.83,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-32858",
+    "sku": "32858",
+    "honda_code": "60100-T6Z-A00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 145929.17,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2021,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-32634",
+    "sku": "32634",
+    "honda_code": "60100-T7T-M01ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 40774.73,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2021,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-31439",
+    "sku": "31439",
+    "honda_code": "60100-T7W-A90ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 57726.9,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-35674",
+    "sku": "35674",
+    "honda_code": "60100-T90-A00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 89622.92,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-33528",
+    "sku": "33528",
+    "honda_code": "60100-TBA-A00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 45362.39,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2019,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-29214",
+    "sku": "29214",
+    "honda_code": "60100-TET-H00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 43704.74,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2018,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-34650",
+    "sku": "34650",
+    "honda_code": "60100-TG7-A92ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 118545.97,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-32400",
+    "sku": "32400",
+    "honda_code": "60100-TGH-A00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 109931.98,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-33529",
+    "sku": "33529",
+    "honda_code": "60100-THR-A00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 59495.44,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-29991",
+    "sku": "29991",
+    "honda_code": "60100-TLA-A00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 52806.6,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-31743",
+    "sku": "31743",
+    "honda_code": "60100-TRY-M01ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 25884.94,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cap-32079",
+    "sku": "32079",
+    "honda_code": "60100-TVA-Y00ZZ",
+    "name": "Capot de Motor",
+    "description": "Capot de Motor",
+    "category_id": "subcat-capot",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 56565.43,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-capot",
+      "name": "Capot",
+      "slug": "capot",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  }
+]

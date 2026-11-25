@@ -3,6 +3,12 @@ import { createClient } from "@supabase/supabase-js";
 import type { Database } from "@/integrations/supabase/types";
 import { FILTER_SUBCATEGORY_SLUGS } from "@/lib/filter-categories";
 import filtrosData from "@/data/filtros.json";
+import amortiguadoresData from "@/data/amortiguadores.json";
+import bateriasData from "@/data/baterias.json";
+import bujiasData from "@/data/bujias.json";
+import capotData from "@/data/capot.json";
+import correasData from "@/data/correas.json";
+import cristalesDePuertasData from "@/data/cristales-de-puertas.json";
 
 function publicClient() {
   const url = process.env["SUPABASE_URL"]!;
@@ -110,34 +116,38 @@ async function enrich(sb: ReturnType<typeof publicClient>, products: ProductRow[
   }));
 }
 
-function filterFiltrosLocal(data: CatalogQuery): CatalogProduct[] {
+const localProducts = [
+  ...filtrosData,
+  ...amortiguadoresData,
+  ...bateriasData,
+  ...bujiasData,
+  ...capotData,
+  ...correasData,
+  ...cristalesDePuertasData,
+] as CatalogProduct[];
+
+function filterLocalProducts(data: CatalogQuery): CatalogProduct[] {
   if (data.marca) return [];
 
-  const isFiltrosCategory =
-    !data.categoria ||
-    data.categoria === "filtros" ||
-    FILTER_SUBCATEGORY_SLUGS.some((slug) => slug === data.categoria);
-
-  if (!isFiltrosCategory) return [];
-
   const qNorm = data.q?.toLowerCase().trim();
-  const allFilters = filtrosData as unknown as CatalogProduct[];
 
-  return allFilters.filter((p) => {
-    if (data.categoria && data.categoria !== "filtros") {
-      if (p.category?.slug !== data.categoria) return false;
+  return localProducts.filter((p) => {
+    if (data.categoria === "filtros") {
+      if (!p.category?.slug.startsWith("filtros-")) return false;
+    } else if (data.categoria && p.category?.slug !== data.categoria) {
+      return false;
     }
 
     if (data.modelo) {
       const matchModel = p.compat.some(
-        (c) => c.model_slug === data.modelo || c.model.toLowerCase() === data.modelo!.toLowerCase(),
+        (c) => c.model_slug === data.modelo,
       );
       if (!matchModel) return false;
     }
 
     if (data.anio) {
       const matchYear = p.compat.some((c) => {
-        if (data.modelo && c.model_slug !== data.modelo && c.model.toLowerCase() !== data.modelo!.toLowerCase()) {
+        if (data.modelo && c.model_slug !== data.modelo) {
           return false;
         }
         return data.anio! >= c.year_from && data.anio! <= c.year_to;
@@ -166,11 +176,11 @@ export const searchCatalog = createServerFn({ method: "GET" })
     marca: typeof input?.marca === "string" ? input.marca.slice(0, 60) : undefined,
   }))
   .handler(async ({ data }) => {
-    const localFilters = filterFiltrosLocal(data);
+    const matchingLocalProducts = filterLocalProducts(data);
 
     // If searching strictly within filters, return the local verified list directly
     if (data.categoria === "filtros" || (data.categoria && FILTER_SUBCATEGORY_SLUGS.some((s) => s === data.categoria))) {
-      return localFilters;
+      return matchingLocalProducts;
     }
 
     const sb = publicClient();
@@ -185,12 +195,14 @@ export const searchCatalog = createServerFn({ method: "GET" })
     if (error) throw new Error("No pudimos cargar el catálogo");
 
     const enriched = await enrich(sb, (rows ?? []) as ProductRow[]);
-    // Filter out old demo filter products so real filters take precedence
-    const nonDemoEnriched = enriched.filter((p) => !p.sku.startsWith("DEMO-FIL-"));
+    // The workbook-backed products replace the legacy examples in these categories.
+    const nonDemoEnriched = enriched.filter((p) =>
+      !p.sku.startsWith("DEMO-FIL-") && p.sku !== "DEMO-COR-001",
+    );
 
     // Uploaded records take precedence over JSON seed rows with the same SKU.
     // This avoids duplicate product cards after a previously local filter is imported.
-    const uniqueBySku = new Map(localFilters.map((product) => [product.sku, product] as const));
+    const uniqueBySku = new Map(matchingLocalProducts.map((product) => [product.sku, product] as const));
     for (const product of nonDemoEnriched) uniqueBySku.set(product.sku, product);
     return [...uniqueBySku.values()];
   });
