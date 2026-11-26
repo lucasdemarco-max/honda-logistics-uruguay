@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { queryOptions } from "@tanstack/react-query";
-import { ArrowRight, ClipboardList, FileText, PackageSearch, ShieldCheck, Truck, Landmark, Award } from "lucide-react";
+import { ArrowRight, ClipboardList, FileText, PackageSearch, ShieldCheck, Truck, Landmark, Award, LogIn, UserRound } from "lucide-react";
 import heroImg from "@/assets/hero-parts.jpg";
 import { Button } from "@/components/ui/button";
 import { getCatalogMeta } from "@/lib/public.functions";
+import { useAuth } from "@/lib/auth";
 
 export const catalogMetaQuery = queryOptions({
   queryKey: ["catalog-meta"],
@@ -61,6 +62,7 @@ const SERVICES = [
 ];
 
 function Index() {
+  const { user, ready } = useAuth();
   return (
     <>
       <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
@@ -81,8 +83,19 @@ function Index() {
             Repuestos organizados por modelo y categoría, presupuestos por número de chasis y el estado de cada repuesto de
             tu pedido.
           </p>
-          <div className="mt-8 max-w-2xl">
-            <Button asChild size="lg"><Link to="/catalogo">Elegir modelo Honda <ArrowRight /></Link></Button>
+          <div className="mt-8 flex max-w-2xl flex-wrap gap-3">
+            <Button asChild size="lg">
+              <Link to="/catalogo">Elegir modelo Honda <ArrowRight /></Link>
+            </Button>
+            {ready && (
+              <Button asChild size="lg" variant="outline">
+                {user ? (
+                  <Link to="/cuenta"><UserRound /> Mi cuenta</Link>
+                ) : (
+                  <Link to="/auth" search={{ modo: "login" }}><LogIn /> Iniciar sesión</Link>
+                )}
+              </Button>
+            )}
           </div>
         </div>
       </section>
