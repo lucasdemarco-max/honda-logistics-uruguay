@@ -47,3 +47,9 @@ cd <repository-name>
 npm i
 npm run dev
 ```
+
+## Catálogo por modelo e importación universal
+
+La evolución del catálogo usa ModelID → CategoryID, categorías dinámicas, filtros por año y búsqueda secundaria por código. La importación administrativa acepta Excel/CSV de cualquier categoría, ofrece vista previa y conserva los datos no informados y las compatibilidades existentes.
+
+La especificación de identificadores, reglas de conservación, configuración de Supabase, validaciones y límites de operación se encuentra en [docs/catalogo-importacion.md](docs/catalogo-importacion.md). El sincronizador local opcional se documenta en [scripts/README.md](scripts/README.md).

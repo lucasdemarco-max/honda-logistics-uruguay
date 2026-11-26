@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "sync:filtros": "bun scripts/generate-filtros-data.ts",
+    "sync:catalog": "bun scripts/generate-catalog-data.ts",
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
