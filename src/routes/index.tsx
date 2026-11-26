@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { queryOptions, useQuery } from "@tanstack/react-query";
-import { ArrowRight, ChevronDown, ClipboardList, FileText, PackageSearch, ShieldCheck, Truck, Landmark, Award } from "lucide-react";
+import { queryOptions } from "@tanstack/react-query";
+import { ArrowRight, ClipboardList, FileText, PackageSearch, ShieldCheck, Truck, Landmark, Award } from "lucide-react";
 import heroImg from "@/assets/hero-parts.jpg";
 import { Button } from "@/components/ui/button";
-import { getCatalogMeta, getHomeProductTypes } from "@/lib/public.functions";
+import { getCatalogMeta } from "@/lib/public.functions";
 
 export const catalogMetaQuery = queryOptions({
   queryKey: ["catalog-meta"],
@@ -61,11 +61,6 @@ const SERVICES = [
 ];
 
 function Index() {
-  const { data: productTypes = [], isLoading: loadingTypes, isError: productTypesError } = useQuery({
-    queryKey: ["home-product-types"],
-    queryFn: () => getHomeProductTypes(),
-    staleTime: 5 * 60_000,
-  });
   return (
     <>
       <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
@@ -109,73 +104,6 @@ function Index() {
             </Link>
           ))}
         </div>
-      </section>
-
-      <section className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8" aria-labelledby="explora-tipos">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="eyebrow text-primary">Categorías de repuestos</p>
-            <h2 id="explora-tipos" className="red-rule mt-4 text-4xl font-bold uppercase">Explorá por tipo de producto</h2>
-            <p className="mt-3 max-w-3xl text-sm text-muted-foreground">
-              Cada tipo reúne los códigos Honda disponibles. Abrí una categoría para consultar
-              los modelos compatibles y los años de aplicación de cada código.
-            </p>
-          </div>
-          <Button asChild variant="outline">
-            <Link to="/catalogo">Catálogo por modelo <ArrowRight /></Link>
-          </Button>
-        </div>
-        {loadingTypes ? (
-          <div className="mt-8 rounded-lg border bg-card p-8 text-sm text-muted-foreground" role="status">
-            Cargando tipos de producto…
-          </div>
-        ) : productTypesError ? (
-          <div className="mt-8 rounded-lg border bg-card p-8 text-sm text-muted-foreground" role="alert">
-            No se pudieron cargar los productos. Intentá nuevamente más tarde.
-          </div>
-        ) : (
-          <div className="mt-8 grid items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {productTypes.map((category) => (
-              <details key={category.slug} className="group overflow-hidden rounded-lg border bg-card shadow-card">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-5 hover:bg-muted/40">
-                  <div className="min-w-0">
-                    <h3 className="text-lg font-semibold uppercase">{category.name}</h3>
-                    <p className="mt-1 text-xs text-muted-foreground">
-                      {category.productCodes.length} códigos Honda
-                    </p>
-                  </div>
-                  <ChevronDown className="h-5 w-5 shrink-0 text-primary transition-transform group-open:rotate-180" aria-hidden />
-                </summary>
-                <div className="max-h-[560px] space-y-3 overflow-y-auto border-t p-4">
-                  {category.productCodes.map((part) => (
-                    <div key={part.hondaCode} className="rounded-lg border bg-background p-3">
-                      <p className="text-sm font-semibold">{part.name}</p>
-                      <p className="mt-1 font-mono text-xs text-primary">Honda Code: {part.hondaCode}</p>
-                      {part.models.length > 0 ? (
-                        <ul className="mt-2 space-y-1">
-                          {part.models.map((application) => (
-                            <li key={`${application.slug}-${application.yearFrom}-${application.yearTo}`}
-                              className="flex flex-wrap items-center justify-between gap-2 text-xs">
-                              <span>{application.name} · {application.yearFrom === application.yearTo
-                                ? application.yearFrom : `${application.yearFrom}–${application.yearTo}`}</span>
-                              <Link
-                                to="/catalogo"
-                                search={{ modelo: application.slug, categoria: category.slug, q: part.hondaCode }}
-                                className="font-medium text-primary hover:underline"
-                              >Ver pieza</Link>
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <p className="mt-2 text-xs text-muted-foreground">Aplicación por modelo pendiente de verificar.</p>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </details>
-            ))}
-          </div>
-        )}
       </section>
 
       <section className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
