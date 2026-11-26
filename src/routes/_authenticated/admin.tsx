@@ -51,8 +51,13 @@ const errorMessage = (error: unknown) => {
 
 const categoryFromRecord = (record: Record<string, unknown>) => {
   const get = (keys: string[]) => Object.entries(record).find(([key]) => keys.includes(normalizeImportValue(key)))?.[1];
-  const name = String(get(["categoryname", "categoria", "category", "categorianombre"]) ?? "").trim();
+  const abbreviatedName = String(get(["categoryname", "categoria", "category", "categorianombre"]) ?? "").trim();
   const externalId = String(get(["categoryid"]) ?? "").trim();
+  // WEB - Fichas uses CategoryID="Fluidos" and CategoryName="Flu".
+  // Other workbooks use CategoryID numeric and CategoryName descriptive.
+  const fullNameInId = /[a-zA-ZáéíóúñÁÉÍÓÚÑ]/.test(externalId)
+    && externalId.length > 3 && abbreviatedName.length <= 4;
+  const name = fullNameInId ? externalId : abbreviatedName;
   return { name, externalId };
 };
 
@@ -68,7 +73,7 @@ const modelNameFromRecord = (record: Record<string, unknown>) => {
 };
 
 const modelSlug = (name: string) =>
-  name
+  (name.toLowerCase() === "rigeline" ? "ridgeline" : name)
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
@@ -79,6 +84,7 @@ const modelSlug = (name: string) =>
 const modelDisplayName = (name: string) => {
   const names: Record<string, string> = {
     ridgeline: "Ridgeline",
+    rigeline: "Ridgeline",
     "zr-v": "ZR-V",
     odyssey: "Odyssey",
     "type-r": "Type-R",
