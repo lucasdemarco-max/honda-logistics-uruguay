@@ -19,7 +19,7 @@ export function CaseExcelImport() {
   const chooseFile = async (file: File) => {
     setRecords([]);
     setSource(file.name);
-    if (!/\\.xlsx?$/i.test(file.name)) {
+    if (!/\.xlsx?$/i.test(file.name)) {
       toast.error("Seleccioná un archivo Excel .xlsx o .xls");
       return;
     }
