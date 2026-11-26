@@ -1,117 +1,180 @@
-import xlsx from "xlsx";
-import fs from "fs";
-import path from "path";
+/** Universal, preservative catalog sync. Defaults to a read-only preview. */
+import * as XLSX from "xlsx";
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { prepareImportRecords, type CatalogLookup } from "../src/lib/admin-import.ts";
+import { readImportWorkbook, validateImportFile } from "../src/lib/import-workbook.ts";
+import type { LegacyCatalogProduct } from "../src/lib/catalog.ts";
 
-const excelPath = "C:/Users/ldemarco.HONDA/.gemini/antigravity/scratch/Bases de Excel/Filtros.xlsx";
-const outputPath = "C:/Users/ldemarco.HONDA/.gemini/antigravity/scratch/honda-logistics-uruguay/src/data/filtros.json";
-
-const MODEL_NAMES: Record<string, { name: string; slug: string }> = {
-  "WR-V": { name: "WR-V", slug: "wr-v" },
-  "HR-V": { name: "HR-V", slug: "hr-v" },
-  "CR-V": { name: "CR-V", slug: "cr-v" },
-  "RIDGELINE": { name: "Ridgeline", slug: "ridgeline" },
-  "ZR-V": { name: "ZR-V", slug: "zr-v" },
-  "PILOT": { name: "Pilot", slug: "pilot" },
-  "CITY": { name: "City", slug: "city" },
-  "FIT": { name: "Fit", slug: "fit" },
-  "CIVIC": { name: "Civic", slug: "civic" },
-  "ACCORD": { name: "Accord", slug: "accord" },
-  "ODYSSEY": { name: "Odyssey", slug: "odyssey" },
-  "TYPE-R": { name: "Civic Type R", slug: "type-r" },
-};
-
-function getSubcategory(name: string) {
-  const n = name.toLowerCase();
-  if (n.includes("aire acondicionado") || n.includes("polen") || n.includes("habitaculo")) {
-    return { id: "subcat-polen", name: "Filtros de Polen", slug: "filtros-polen", image_key: "filtros" };
+const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const args = process.argv.slice(2);
+const options = new Map<string, string>();
+let write = false;
+for (let index = 0; index < args.length; index++) {
+  const option = args[index];
+  if (option === "--write") {
+    write = true;
+    continue;
   }
-  if (n.includes("aire")) {
-    return { id: "subcat-aire", name: "Filtro de Aire", slug: "filtros-aire", image_key: "filtros" };
+  if (option === "--help") {
+    console.log(
+      "Uso: bun run sync:catalogo --input catalogo.xlsx [--output src/data/filtros.json] [--write]\nSin --write solo valida. Conserva todos los SKU y aplicaciones anteriores.",
+    );
+    process.exit(0);
   }
-  if (n.includes("combustible")) {
-    return { id: "subcat-combustible", name: "Filtros de Combustible", slug: "filtros-combustible", image_key: "filtros" };
+  if (
+    (option === "--input" || option === "--output") &&
+    args[index + 1] &&
+    !args[index + 1]!.startsWith("--")
+  ) {
+    options.set(option, args[++index]!);
+  } else {
+    throw new Error(`Argumento desconocido o incompleto: ${option ?? ""}. Usá --help.`);
   }
-  if (n.includes("transmision") || n.includes("cvt") || n.includes("diferencial") || n.includes("caja")) {
-    return { id: "subcat-caja", name: "Filtros de Caja de Cambio", slug: "filtros-caja-cambio", image_key: "filtros" };
-  }
-  return { id: "subcat-aceite", name: "Filtros de Aceite", slug: "filtros-aceite", image_key: "filtros" };
 }
 
-interface RawRow {
-  SKU: string | number;
-  NAME: string;
-  CategoryID: string;
-  CategoryName: string;
-  HondaCode: string;
-  Description: string;
-  Price: number;
-  Stock: number;
-  availability: unknown;
-  Active: string;
-  ModelID: string;
-  YearFrom: string | number;
-  YearTo: string | number;
-  CompatibilityNotes: string;
+const input = options.get("--input");
+if (!input) throw new Error("Indicá --input con el archivo Excel o CSV. Usá --help.");
+const inputPath = path.resolve(input);
+const outputPath = path.resolve(
+  options.get("--output") ?? path.join(projectRoot, "src/data/filtros.json"),
+);
+const basePath = fs.existsSync(outputPath)
+  ? outputPath
+  : path.join(projectRoot, "src/data/filtros.json");
+validateImportFile(inputPath, fs.statSync(inputPath).size);
+const workbook = readImportWorkbook(
+  XLSX.read(fs.readFileSync(inputPath), { type: "buffer", raw: true, cellNF: true }),
+);
+const existing: LegacyCatalogProduct[] = JSON.parse(fs.readFileSync(basePath, "utf8"));
+if (
+  !Array.isArray(existing) ||
+  existing.some((product) => !product.id || !product.sku || !Array.isArray(product.compat))
+) {
+  throw new Error("El catálogo base no tiene una estructura válida; no se modificó el archivo.");
 }
 
-const workbook = xlsx.readFile(excelPath);
-const sheet = workbook.Sheets["FIltros"];
-const rows = xlsx.utils.sheet_to_json<RawRow>(sheet, { defval: "" });
+const categoryMap = new Map<string, CatalogLookup>();
+const modelMap = new Map<string, CatalogLookup>();
+for (const product of existing) {
+  if (product.category) categoryMap.set(product.category.id, product.category);
+  for (const application of product.compat) {
+    const id = application.model_id ?? `model-${application.model_slug}`;
+    modelMap.set(id, { id, slug: application.model_slug, name: application.model });
+  }
+}
+let plan = prepareImportRecords(
+  workbook.records,
+  [...categoryMap.values()],
+  [...modelMap.values()],
+);
+let errors = plan.rows.filter((row) => row.error).map((row) => row.error);
+if (errors.length) throw new Error(errors.join("\n"));
+for (const category of plan.newCategories) {
+  const id = `category-${category.slug}`;
+  categoryMap.set(id, { ...category, id });
+}
+for (const model of plan.newModels) {
+  const id = `model-${model.slug}`;
+  modelMap.set(id, { ...model, id });
+}
+plan = prepareImportRecords(workbook.records, [...categoryMap.values()], [...modelMap.values()]);
+errors = plan.rows.filter((row) => row.error).map((row) => row.error);
+if (errors.length || plan.newCategories.length || plan.newModels.length) {
+  throw new Error(errors.join("\n") || "No se pudieron resolver los identificadores del catálogo.");
+}
 
-const productMap = new Map<string, any>();
-
-for (const r of rows) {
-  const sku = String(r.SKU).trim();
-  if (!sku) continue;
-
-  const rawModel = String(r.ModelID).trim().toUpperCase();
-  const modelInfo = MODEL_NAMES[rawModel] || { name: r.ModelID, slug: rawModel.toLowerCase() };
-  const yearFrom = Number(r.YearFrom) || 1995;
-  const yearTo = Number(r.YearTo) || new Date().getFullYear() + 1;
-
-  if (!productMap.has(sku)) {
-    const subcat = getSubcategory(String(r.NAME));
-    productMap.set(sku, {
-      id: `fil-${sku}`,
-      sku: sku,
-      honda_code: String(r.HondaCode).trim() || null,
-      name: String(r.NAME).trim(),
-      description: String(r.Description || r.NAME).trim(),
-      category_id: subcat.id,
+const products = new Map(existing.map((product) => [product.sku, structuredClone(product)]));
+const touched = new Set<string>();
+const timestamp = new Date().toISOString();
+let additions = 0;
+for (const row of plan.rows) {
+  const category = row.categoryId ? categoryMap.get(row.categoryId) : undefined;
+  if (!category) throw new Error(`No se pudo resolver la categoría de ${row.sku}`);
+  let product = products.get(row.sku);
+  if (!product) {
+    product = {
+      id: `catalog-${row.sku}`,
+      sku: row.sku,
+      name: row.name,
+      category_id: category.id,
+      category: { ...category, image_key: null },
       brand_id: null,
-      honda_relation: "homologado_honda",
-      homologation_reference: "Pieza Original Honda",
-      price_uyu: Number(r.Price) || null,
-      stock: Number(r.Stock) || 0,
-      availability: Number(r.Stock) > 0 ? "en_stock" : "consultar",
+      brand: null,
+      honda_code: null,
+      description: null,
+      honda_relation: null,
+      homologation_reference: null,
+      price_uyu: null,
+      stock: null,
+      availability: "consultar",
+      active: true,
+      is_demo: false,
       image_url: null,
       promo_text: null,
-      active: String(r.Active).toLowerCase() !== "no",
-      is_demo: false,
-      created_at: new Date().toISOString(),
-      updated_at: new Date().toISOString(),
-      category: subcat,
-      brand: null,
+      created_at: timestamp,
+      updated_at: timestamp,
       compat: [],
-    });
+    };
+    products.set(row.sku, product);
   }
-
-  const p = productMap.get(sku);
-  const exists = p.compat.some((c: any) => c.model_slug === modelInfo.slug && c.year_from === yearFrom && c.year_to === yearTo);
-  if (!exists) {
-    p.compat.push({
-      model: modelInfo.name,
-      model_slug: modelInfo.slug,
-      year_from: yearFrom,
-      year_to: yearTo,
-      notes: String(r.CompatibilityNotes).trim() || null,
-    });
+  if (!touched.has(row.sku)) {
+    product.name = row.name;
+    product.category_id = category.id;
+    product.category = {
+      ...category,
+      image_key: product.category?.id === category.id ? product.category.image_key : null,
+    };
+    if (row.provided.hondaCode) product.honda_code = row.hondaCode;
+    if (row.provided.description) product.description = row.description;
+    if (row.provided.price) product.price_uyu = row.price;
+    if (row.provided.stock) product.stock = row.stock;
+    if (row.provided.availability) product.availability = row.availability;
+    if (row.provided.active) product.active = row.active;
+    product.updated_at = timestamp;
+    touched.add(row.sku);
+  }
+  const model = row.modelId ? modelMap.get(row.modelId) : undefined;
+  if (model) {
+    const notes = row.compatibilityNotes.trim() || null;
+    const sameApplication = product.compat.some(
+      (application) =>
+        (application.model_id === model.id || application.model_slug === model.slug) &&
+        application.year_from === row.yearFrom &&
+        application.year_to === row.yearTo &&
+        (!notes || (application.notes?.trim() || null) === notes),
+    );
+    if (!sameApplication) {
+      product.compat.push({
+        model_id: model.id,
+        model: model.name,
+        model_slug: model.slug,
+        year_from: row.yearFrom,
+        year_to: row.yearTo,
+        notes,
+      });
+      additions++;
+    }
   }
 }
 
-const products = Array.from(productMap.values());
-
-fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-fs.writeFileSync(outputPath, JSON.stringify(products, null, 2), "utf-8");
-
-console.log(`Generated ${products.length} products from ${rows.length} rows.`);
+const result = [...products.values()];
+console.log(
+  `${workbook.sheets.length} hojas, ${plan.rows.length} filas válidas, ${touched.size} SKU en el archivo.`,
+);
+console.log(
+  `Catálogo: ${existing.length} → ${result.length} productos; ${additions} aplicaciones agregadas. Ningún SKU anterior eliminado.`,
+);
+for (const warning of plan.warnings) console.log(warning);
+if (write) {
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  const temporaryPath = `${outputPath}.tmp-${process.pid}`;
+  fs.writeFileSync(temporaryPath, JSON.stringify(result, null, 2) + "\n", "utf8");
+  fs.renameSync(temporaryPath, outputPath);
+  console.log(`Guardado: ${outputPath}`);
+} else {
+  console.log(
+    "Vista previa: no se escribió ningún archivo. Agregá --write para guardar el catálogo combinado.",
+  );
+}
