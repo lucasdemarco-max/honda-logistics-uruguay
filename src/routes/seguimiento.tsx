@@ -34,7 +34,7 @@ function Seguimiento() {
   const lookup = async () => {
     const normalized = normalizeCaseMin(caseNumber);
     if (!normalized || !/^\\d{6}$/.test(caseNumber)) {
-      setErrorMessage("Ingresá el número de caso de seis dígitos.");
+      setErrorMessage("Ingresá el número de caso de cinco dígitos.");
       return;
     }
     setPending(true);
@@ -62,7 +62,7 @@ function Seguimiento() {
       <PageHeader
         eyebrow="Clientes"
         title="Seguimiento de casos"
-        description="Ingresá los seis dígitos de tu caso. Consultá sus datos generales y el estado individual de cada repuesto."
+        description="Ingresá los cinco dígitos de tu caso. Consultá sus datos generales y el estado individual de cada repuesto."
       />
       <div className="mx-auto max-w-6xl space-y-8 px-4 py-10 sm:px-6 lg:px-8">
         {!ready ? (
@@ -91,21 +91,21 @@ function Seguimiento() {
             <section className="rounded-lg border bg-card p-6 shadow-card">
               <form onSubmit={(event) => { event.preventDefault(); void lookup(); }}>
                 <label htmlFor="case-number" className="block text-sm font-semibold">
-                  Número de caso (6 dígitos)
+                  Número de caso (5 dígitos)
                 </label>
                 <div className="mt-3 flex max-w-md flex-col gap-3 sm:flex-row">
-                  <Input id="case-number" type="text" inputMode="numeric" pattern="[0-9]{6}" maxLength={6}
-                    placeholder="Ej.: 001043" value={caseNumber}
-                    onChange={(event) => { setCaseNumber(event.target.value.replace(/\D/g, "").slice(0, 6)); setSearched(false); }}
+                  <Input id="case-number" type="text" inputMode="numeric" pattern="[0-9]{5}" maxLength={5}
+                    placeholder="Ej.: 01043" value={caseNumber}
+                    onChange={(event) => { setCaseNumber(event.target.value.replace(/\D/g, "").slice(0, 5)); setSearched(false); }}
                     required autoComplete="off" aria-describedby="case-number-help" />
-                  <Button type="submit" disabled={pending || caseNumber.length !== 6}>
+                  <Button type="submit" disabled={pending || caseNumber.length !== 5}>
                     <Search className="mr-2 h-4 w-4" />
                     {pending ? "Consultando…" : "Consultar caso"}
                   </Button>
                 </div>
                 <p id="case-number-help" className="mt-2 text-xs text-muted-foreground">
-                  Si tu número original tiene cinco dígitos, anteponé un cero.
-                  Ejemplo: 01043 → 001043.
+                  Ingresá los cinco dígitos tal como figuran en Caso Min del Excel.
+                  Ejemplo: 01043.
                 </p>
               </form>
               {errorMessage && <p className="mt-4 text-sm text-destructive" role="alert">{errorMessage}</p>}
