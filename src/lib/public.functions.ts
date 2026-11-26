@@ -47,6 +47,12 @@ export const getCatalogMeta = createServerFn({ method: "GET" }).handler(async ()
   ]);
 
   const dbModels = (models.data ?? []) as VehicleModel[];
+  // Keep every model represented by workbook compatibility even when the
+  // database does not yet have a matching vehicle_models row.
+  const localModels = new Map<string, string>();
+  for (const p of localProducts) for (const c of p.compat) {
+    if (c.model_slug && c.model) localModels.set(c.model_slug, c.model);
+  }
   const existingSlugs = new Set(dbModels.map((m) => m.slug));
   const additionalModels: VehicleModel[] = [];
   const modelOrder = ["ridgeline", "zr-v", "odyssey", "type-r"];
@@ -70,6 +76,11 @@ export const getCatalogMeta = createServerFn({ method: "GET" }).handler(async ()
 
   const otros = dbModels.find((m) => m.slug === "otros");
   const withoutOtros = dbModels.filter((m) => m.slug !== "otros");
+  for (const [slug, name] of localModels) {
+    if (!existingSlugs.has(slug) && !additionalModels.some((m) => m.slug === slug)) {
+      additionalModels.push({ id: `model-${slug}`, name, slug, sort_order: 10 + additionalModels.length });
+    }
+  }
   const finalModels = [...withoutOtros, ...additionalModels, ...(otros ? [otros] : [])];
 
   return {
@@ -194,7 +205,7 @@ export const searchCatalog = createServerFn({ method: "GET" })
     if (data.marca) args._brand = data.marca;
 
     const { data: rows, error } = await sb.rpc("search_products", args);
-    if (error) throw new Error("No pudimos cargar el catálogo");
+    // Workbook-backed items remain available if the database search is unavailable.\n    if (error) return matchingLocalProducts;
 
     const enriched = await enrich(sb, (rows ?? []) as ProductRow[]);
     // The workbook-backed products replace the legacy examples in these categories.
@@ -280,7 +291,7 @@ export function groupCatalogByHondaCode(products: CatalogProduct[]): HomeProduct
 export const getHomeProductTypes = createServerFn({ method: "GET" }).handler(async () => {
   const sb = publicClient();
   const { data: rows, error } = await sb.rpc("search_products", {});
-  if (error) throw new Error("No pudimos cargar los tipos de producto");
+  if (error) return groupCatalogByHondaCode(localProducts);
   const dbProducts = (rows ?? []) as ProductRow[];
   const all = new Map<string, CatalogProduct>();
   for (const product of localProducts) all.set(product.sku, product);
