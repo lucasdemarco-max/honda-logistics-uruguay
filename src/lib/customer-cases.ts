@@ -41,7 +41,7 @@ export function normalizeCaseMin(value: unknown): string | null {
 
 const toText = (value: unknown) => value === null || value === undefined ? "" : String(value).trim();
 const normalHeader = (value: string) => value.normalize("NFD")
-  .replace(/[\\u0300-\\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  .replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]/g, "");
 
 export function parseCaseWorkbook(buffer: ArrayBuffer, sourceFile: string): CaseSnapshot[] {
   const workbook = XLSX.read(buffer, { type: "array", cellDates: true });
