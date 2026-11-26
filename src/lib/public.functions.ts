@@ -249,7 +249,7 @@ export function groupCatalogByHondaCode(products: CatalogProduct[]): HomeProduct
     if (!grouped.has(categorySlug)) grouped.set(categorySlug, { name: categoryName, codes: new Map() });
     const category = grouped.get(categorySlug)!;
     const hondaCode = product.honda_code.trim().toUpperCase();
-    const codeKey = hondaCode.replace(/[\\s-]/g, "");
+    const codeKey = hondaCode.replace(/[\s-]/g, "");
     if (!category.codes.has(codeKey)) {
       category.codes.set(codeKey, { hondaCode, name: product.name, models: new Map() });
     }
