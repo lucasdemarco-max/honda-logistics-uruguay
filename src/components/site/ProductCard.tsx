@@ -1,11 +1,11 @@
-import { ShieldCheck, ShoppingCart, Info } from "lucide-react";
+import { ShieldCheck, ShoppingCart, Info, Package, Droplets, Disc3, Filter, CarFront, Lightbulb, Wrench } from "lucide-react";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { HONDA_RELATIONS, canClaimHomologation } from "@/lib/labels";
 import { formatUYU } from "@/lib/format";
 import { useCart } from "@/lib/cart";
-import { GENERIC_PRODUCT_PHOTO, getHondaProductPhoto } from "@/lib/product-photos";
+import { getHondaProductPhoto } from "@/lib/product-photos";
 import type { CatalogProduct } from "@/lib/public.functions";
 
 export function ProductCard({ product, modelSlug }: { product: CatalogProduct; modelSlug?: string }) {
@@ -13,6 +13,14 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
   const relation = HONDA_RELATIONS.find((r) => r.value === product.honda_relation);
   const showRelation = relation && canClaimHomologation(product.honda_relation, product.homologation_reference);
   const outOfStock = product.availability === "sin_stock";
+  const slug = product.category?.slug ?? "";
+  const GenericIcon = /fluidos/.test(slug) ? Droplets
+    : /frenos/.test(slug) ? Disc3
+    : /filtros/.test(slug) ? Filter
+    : /opticas|faros|sensores/.test(slug) ? Lightbulb
+    : /carroceria|puertas|paragolpes|guardabarros|parrillas|lunetas|parabrisas|espejos|capot/.test(slug) ? CarFront
+    : /refrigeracion|correas|amortiguadores/.test(slug) ? Wrench
+    : Package;
   const image = product.honda_relation === "homologado_honda"
     ? getHondaProductPhoto(product.honda_code)
     : undefined;
@@ -23,14 +31,15 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
   return (
     <article className="group flex flex-col overflow-hidden rounded-lg border bg-card shadow-card transition-shadow hover:shadow-lift">
       <div className="relative aspect-[4/3] overflow-hidden border-b bg-card">
-        <img
-          src={image?.url ?? GENERIC_PRODUCT_PHOTO}
-          alt={image ? product.name : ""}
-          loading="lazy"
-          width={800}
-          height={600}
-          className={image ? "h-full w-full object-contain p-4" : "h-full w-full object-cover opacity-60"}
-        />
+        {image ? (
+          <img src={image.url} alt={product.name} loading="lazy" width={800} height={600}
+            className="h-full w-full object-contain p-4" />
+        ) : (
+          <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-muted text-muted-foreground">
+            <GenericIcon className="h-20 w-20 opacity-50" aria-hidden />
+            <span className="text-center text-sm">Representación genérica · {product.category?.name ?? "Repuesto"}</span>
+          </div>
+        )>
         <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
           {product.is_demo && <Badge variant="demo">Ejemplo</Badge>}
           {product.promo_text && <Badge>{product.promo_text}</Badge>}
