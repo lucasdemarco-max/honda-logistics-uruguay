@@ -14,8 +14,7 @@ const photoCandidates = new Map(
   ]),
 );
 
-// Intentionally empty until a human reviews the original Honda branding and exact part code.
-const approvedHondaCodes = new Set<string>();
+// Approved after visually checking the local asset: the Honda logo is visible on the filter.\n// Every additional code must be reviewed individually before it is added here.\nconst approvedHondaCodes = new Set<string>(["15400RTA003"]);
 const approvedPhotoUrls = new Set(
   [...approvedHondaCodes].map((code) => photoCandidates.get(code)?.url).filter((url): url is string => !!url),
 );
