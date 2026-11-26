@@ -35,8 +35,8 @@ export interface CaseSnapshot {
 
 export function normalizeCaseMin(value: unknown): string | null {
   const raw = String(value ?? "").trim();
-  if (!/^\d{5,6}$/.test(raw)) return null;
-  return raw.padStart(6, "0");
+  if (!/^\d{5}$/.test(raw)) return null;
+  return raw;
 }
 
 const toText = (value: unknown) => value === null || value === undefined ? "" : String(value).trim();
