@@ -46,7 +46,7 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
           </a>
         ) : (
           <span className="absolute inset-x-0 bottom-0 bg-ink/85 px-2 py-2 text-center text-sm font-medium text-ink-foreground">
-            Foto no disponible
+            Imagen no disponible
           </span>
         )}
       </div>
