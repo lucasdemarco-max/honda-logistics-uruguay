@@ -7,10 +7,28 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-4 lg:px-8">
         <div className="md:col-span-2">
           <Logo inverted />
-          <p className="mt-4 max-w-sm text-sm text-ink-muted">
-            Repuestos para Honda Automóviles en Uruguay. Seguimiento de pedidos por repuesto, presupuestos por número de chasis y
-            envíos a todo el país.
-          </p>
+          <div className="mt-5 max-w-md space-y-3 text-sm text-ink-muted">
+            <h2 className="text-lg font-semibold text-ink-foreground">Honda Logistics</h2>
+            <p>Lunes a Viernes de 8:15 a 17:00 hs.</p>
+            <address className="not-italic">
+              Av. Giannattasio esq. Melchora Cuenca, Ciudad de la Costa, Canelones, Uruguay
+            </address>
+            <p>Tel. 2600 1212* int. 6</p>
+            <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+              <li><a href="tel:+59826001212" className="hover:text-primary">2600 1212</a></li>
+              <li><a href="mailto:info@hondauruguay.com" className="hover:text-primary">Enviar mail</a></li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/place/Honda+Uruguay+Autom%C3%B3viles+-+Repuestos/data=!4m2!3m1!1s0x0:0x702d6e3430bd9aba?sa=X&ved=1t:2428&ictx=111"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  Cómo llegar
+                </a>
+              </li>
+            </ul>
+          </div>
           <p className="mt-4 text-xs text-ink-muted">
             Honda Logistics es una empresa independiente. Las marcas mencionadas pertenecen a sus respectivos titulares.
           </p>
