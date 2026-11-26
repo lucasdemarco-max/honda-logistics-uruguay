@@ -21,9 +21,9 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
     : /carroceria|puertas|paragolpes|guardabarros|parrillas|lunetas|parabrisas|espejos|capot/.test(slug) ? CarFront
     : /refrigeracion|correas|amortiguadores/.test(slug) ? Wrench
     : Package;
-  const image = product.honda_relation === "homologado_honda"
-    ? getHondaProductPhoto(product.honda_code)
-    : undefined;
+  // Only show photographs approved against the exact Honda Code and genuine Honda branding.
+  // Missing or unverified internet photos remain marked as unavailable.
+  const image = getHondaProductPhoto(product.honda_code);
   const compatibility = modelSlug
     ? product.compat.filter((application) => application.model_slug === modelSlug)
     : product.compat;
@@ -39,7 +39,7 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
             <GenericIcon className="h-20 w-20 opacity-50" aria-hidden />
             <span className="text-center text-sm">Representación genérica · {product.category?.name ?? "Repuesto"}</span>
           </div>
-        )>
+        )}
         <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
           {product.is_demo && <Badge variant="demo">Ejemplo</Badge>}
           {product.promo_text && <Badge>{product.promo_text}</Badge>}
@@ -105,7 +105,7 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
           )}
         </div>
 
-        <div className="mt-auto flex items-end justify-between gap-3 pt-1">
+        <div className="mt-auto flex flex-col gap-3 pt-1">
           <div>
             <p className="font-display text-2xl font-bold leading-none">{formatUYU(product.price_uyu)}</p>
             {product.is_demo && product.price_uyu !== null && (
@@ -114,7 +114,7 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
           </div>
           <Button
             size="sm"
-            className="shrink-0 gap-2"
+            className="w-full gap-2"
             aria-label={`Agregar ${product.name} al carrito`}
             disabled={outOfStock}
             onClick={() => {
