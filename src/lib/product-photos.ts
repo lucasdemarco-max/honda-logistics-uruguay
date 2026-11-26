@@ -14,7 +14,9 @@ const photoCandidates = new Map(
   ]),
 );
 
-// Approved after visually checking the local asset: the Honda logo is visible on the filter.\n// Every additional code must be reviewed individually before it is added here.\nconst approvedHondaCodes = new Set<string>(["15400RTA003"]);
+// Approved after visually checking the local asset: the Honda logo is visible on the filter.
+// Every additional code must be reviewed individually before it is added here.
+const approvedHondaCodes = new Set<string>(["15400RTA003"]);
 const approvedPhotoUrls = new Set(
   [...approvedHondaCodes].map((code) => photoCandidates.get(code)?.url).filter((url): url is string => !!url),
 );

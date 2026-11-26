@@ -23,7 +23,7 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
     : Package;
   // Only show photographs approved against the exact Honda Code and genuine Honda branding.
   // Missing or unverified internet photos remain marked as unavailable.
-  const image = getHondaProductPhoto(product.honda_code);
+  const image = product.honda_relation === "homologado_honda" ? getHondaProductPhoto(product.honda_code) : undefined;
   const compatibility = modelSlug
     ? product.compat.filter((application) => application.model_slug === modelSlug)
     : product.compat;
