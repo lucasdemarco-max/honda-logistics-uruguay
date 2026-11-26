@@ -35,7 +35,7 @@ for (const name of files) {
   if (!sheet) { errors.push(`${name}: planilla vacía`); continue; }
   const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(sheet, { defval: "", raw: false });
   const families = new Set(rows.map((r) => normalize(r["CategoryID"])).filter(Boolean));
-  const filenameCategory = basename(name, ".xls").replace(/^WEB - Fichas - /, "");
+  const filenameCategory = basename(name).replace(/\.xlsx?$/i, "").replace(/^WEB - Fichas - /, "").replace(/^Prabrisas$/i, "Parabrisas");
   const matchingFamily = Array.from(families).every((family) =>
     slug(family) === slug(filenameCategory));
   if (!matchingFamily) {
