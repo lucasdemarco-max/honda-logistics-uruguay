@@ -96,7 +96,7 @@ function Seguimiento() {
                 <div className="mt-3 flex max-w-md flex-col gap-3 sm:flex-row">
                   <Input id="case-number" type="text" inputMode="numeric" pattern="[0-9]{6}" maxLength={6}
                     placeholder="Ej.: 001043" value={caseNumber}
-                    onChange={(event) => { setCaseNumber(event.target.value.replace(/\\D/g, "").slice(0, 6)); setSearched(false); }}
+                    onChange={(event) => { setCaseNumber(event.target.value.replace(/\D/g, "").slice(0, 6)); setSearched(false); }}
                     required autoComplete="off" aria-describedby="case-number-help" />
                   <Button type="submit" disabled={pending || caseNumber.length !== 6}>
                     <Search className="mr-2 h-4 w-4" />
