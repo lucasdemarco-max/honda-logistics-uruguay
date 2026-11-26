@@ -118,7 +118,6 @@ async function enrich(sb: ReturnType<typeof publicClient>, products: ProductRow[
 }
 
 const localProducts = [
-  ...webFichasData,
   ...filtrosData,
   ...amortiguadoresData,
   ...bateriasData,
@@ -126,6 +125,7 @@ const localProducts = [
   ...capotData,
   ...correasData,
   ...cristalesDePuertasData,
+  ...webFichasData,
 ] as CatalogProduct[];
 
 function filterLocalProducts(data: CatalogQuery): CatalogProduct[] {
