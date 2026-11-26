@@ -5,16 +5,18 @@ export function Logo({ inverted = false }: { inverted?: boolean }) {
   return (
     <Link
       to="/"
-      className={cn("inline-flex shrink-0 gap-2", inverted ? "items-center gap-4" : "flex-col")}
+      className={cn("inline-flex shrink-0 items-center gap-3", inverted ? "gap-4" : "gap-3")}
       aria-label="Honda Logistics — inicio"
     >
-      {inverted ? (
-        <img src="/brand/honda-emblem-white.svg" alt="" width={275} height={175} className="h-10 w-auto" />
-      ) : (
-        <img src="/brand/honda-power-of-dreams.svg" alt="" width={2234} height={521} className="h-7 w-auto" />
-      )}
-      <span className={cn("text-sm font-semibold leading-none", inverted ? "text-ink-foreground" : "text-foreground")}>
-        Logistics
+      <img
+        src="https://www.hondauruguay.com/assets/images/static/logo-honda-footer.svg"
+        alt="Honda"
+        width={150}
+        height={42}
+        className={cn("h-8 w-auto", inverted && "brightness-0 invert")}
+      />
+      <span className={cn("border-l pl-3 text-sm font-semibold leading-none tracking-wide", inverted ? "border-ink-border text-ink-foreground" : "border-border text-foreground")}>
+        LOGISTICS
       </span>
     </Link>
   );
