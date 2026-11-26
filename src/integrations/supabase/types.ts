@@ -266,6 +266,48 @@ export type Database = {
         }
         Relationships: []
       }
+      customer_case_imports: {
+        Row: {
+          case_min: string
+          chassis: string | null
+          cped: string
+          customer_name: string | null
+          lines: Json
+          requester: string | null
+          requester_area: string | null
+          source_file: string
+          updated_at: string
+          vehicle_type: string | null
+          vehicle_version: string | null
+        }
+        Insert: {
+          case_min: string
+          chassis?: string | null
+          cped: string
+          customer_name?: string | null
+          lines?: Json
+          requester?: string | null
+          requester_area?: string | null
+          source_file: string
+          updated_at?: string
+          vehicle_type?: string | null
+          vehicle_version?: string | null
+        }
+        Update: {
+          case_min?: string
+          chassis?: string | null
+          cped?: string
+          customer_name?: string | null
+          lines?: Json
+          requester?: string | null
+          requester_area?: string | null
+          source_file?: string
+          updated_at?: string
+          vehicle_type?: string | null
+          vehicle_version?: string | null
+        }
+        Relationships: []
+      }
       operator_permissions: {
         Row: {
           created_at: string
@@ -730,14 +772,6 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      lookup_customer_case: {
-        Args: { _case_min: string }
-        Returns: Json | null
-      }
-      import_customer_case_snapshots: {
-        Args: { _rows: Json }
-        Returns: number
-      }
       approve_ownership_transfer: {
         Args: { _note?: string; _transfer_id: string }
         Returns: undefined
@@ -760,8 +794,10 @@ export type Database = {
         }
         Returns: boolean
       }
+      import_customer_case_snapshots: { Args: { _rows: Json }; Returns: number }
       is_enabled_customer: { Args: { _user_id: string }; Returns: boolean }
       is_staff: { Args: { _user_id: string }; Returns: boolean }
+      lookup_customer_case: { Args: { _case_min: string }; Returns: Json }
       search_products: {
         Args: {
           _brand?: string
