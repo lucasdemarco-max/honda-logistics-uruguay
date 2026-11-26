@@ -45,7 +45,8 @@ const normalHeader = (value: string) => value.normalize("NFD")
 
 export function parseCaseWorkbook(buffer: ArrayBuffer, sourceFile: string): CaseSnapshot[] {
   const workbook = XLSX.read(buffer, { type: "array", cellDates: true });
-  const sheet = workbook.Sheets[workbook.SheetNames[0]];
+  const sheetName = workbook.SheetNames[0];
+  const sheet = sheetName ? workbook.Sheets[sheetName] : undefined;
   if (!sheet) throw new Error("El archivo no contiene hojas de casos.");
   const values = XLSX.utils.sheet_to_json<Record<string, unknown>>(sheet, { raw: false, defval: "" });
   const first = values[0];
