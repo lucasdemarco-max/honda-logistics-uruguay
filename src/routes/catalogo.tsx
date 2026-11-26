@@ -135,7 +135,11 @@ function Catalogo() {
               >
                 <span className="flex aspect-[16/9] w-full items-center justify-center bg-white p-2">
                   <img src={model.image} alt={model.name} width={480} height={270} loading="lazy" decoding="async"
-                    className="h-full w-full object-contain" />
+                    className="h-full w-full object-contain"
+                    onError={(event) => {
+                      const fallback = `/images/models/${model.slug}.webp`;
+                      if (!event.currentTarget.src.endsWith(fallback)) event.currentTarget.src = fallback;
+                    }} />
                 </span>
                 <span className={`w-full border-t px-2 py-3 text-sm font-bold uppercase tracking-wide ${search.modelo === model.slug ? "bg-primary/10 text-primary" : "text-foreground"}`}>
                   {model.name}
