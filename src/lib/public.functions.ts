@@ -3,6 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 import type { Database } from "@/integrations/supabase/types";
 import { FILTER_SUBCATEGORY_SLUGS } from "@/lib/filter-categories";
 import filtrosData from "@/data/filtros.json";
+import webFichasData from "@/data/catalogo-web-fichas.json";
 import amortiguadoresData from "@/data/amortiguadores.json";
 import bateriasData from "@/data/baterias.json";
 import bujiasData from "@/data/bujias.json";
@@ -117,6 +118,7 @@ async function enrich(sb: ReturnType<typeof publicClient>, products: ProductRow[
 }
 
 const localProducts = [
+  ...webFichasData,
   ...filtrosData,
   ...amortiguadoresData,
   ...bateriasData,
@@ -133,7 +135,7 @@ function filterLocalProducts(data: CatalogQuery): CatalogProduct[] {
 
   return localProducts.filter((p) => {
     if (data.categoria === "filtros") {
-      if (!p.category?.slug.startsWith("filtros-")) return false;
+      if (!p.category?.slug.startsWith("filtros-") && p.category?.slug !== "filtros") return false;
     } else if (data.categoria && p.category?.slug !== data.categoria) {
       return false;
     }
@@ -178,8 +180,8 @@ export const searchCatalog = createServerFn({ method: "GET" })
   .handler(async ({ data }) => {
     const matchingLocalProducts = filterLocalProducts(data);
 
-    // If searching strictly within filters, return the local verified list directly
-    if (data.categoria === "filtros" || (data.categoria && FILTER_SUBCATEGORY_SLUGS.some((s) => s === data.categoria))) {
+    // Keep filter subcategories local; all other categories combine workbook and database products.
+    if (data.categoria && FILTER_SUBCATEGORY_SLUGS.some((s) => s === data.categoria)) {
       return matchingLocalProducts;
     }
 
@@ -202,6 +204,7 @@ export const searchCatalog = createServerFn({ method: "GET" })
 
     // Uploaded records take precedence over JSON seed rows with the same SKU.
     // This avoids duplicate product cards after a previously local filter is imported.
+    // Keep the most recently imported workbook SKU, while preserving previous source-only products.
     const uniqueBySku = new Map(matchingLocalProducts.map((product) => [product.sku, product] as const));
     for (const product of nonDemoEnriched) uniqueBySku.set(product.sku, product);
     return [...uniqueBySku.values()];
