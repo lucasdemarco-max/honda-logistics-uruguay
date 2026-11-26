@@ -1,7 +1,7 @@
 -- Honda Logistics: importable customer case snapshots.
 -- The Excel source is uploaded by an administrator, never checked into the public repository.
 create table if not exists public.customer_case_imports (
-  case_min text primary key check (case_min ~ '^[0-9]{6}$'),
+  case_min text primary key check (case_min ~ '^[0-9]{5}$'),
   cped text not null,
   customer_name text,
   chassis text,
@@ -70,7 +70,7 @@ begin
     raise exception 'Enviar hasta 100 casos por lote';
   end if;
   for r in select value from jsonb_array_elements(_rows) as j(value) loop
-    if coalesce(r->>'case_min', '') !~ '^[0-9]{6}$'
+    if coalesce(r->>'case_min', '') !~ '^[0-9]{5}$'
        or coalesce(r->>'cped', '') = ''
        or jsonb_typeof(r->'lines') is distinct from 'array' then
       raise exception 'Número, CPED o líneas de caso inválidos';
