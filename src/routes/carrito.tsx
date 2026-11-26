@@ -6,6 +6,7 @@ import { EmptyState } from "@/components/site/EmptyState";
 import { useCart } from "@/lib/cart";
 import { formatUYU } from "@/lib/format";
 import { MAX_QTY } from "@/lib/cart-logic";
+import { GENERIC_PRODUCT_PHOTO, getReviewedCartPhoto } from "@/lib/product-photos";
 
 export const Route = createFileRoute("/carrito")({
   head: () => ({
@@ -21,6 +22,27 @@ export const Route = createFileRoute("/carrito")({
   }),
   component: Carrito,
 });
+
+function CartProductPhoto({ url }: { url: string | null | undefined }) {
+  const photo = getReviewedCartPhoto(url);
+  return (
+    <figure className="relative h-18 w-24 shrink-0 overflow-hidden rounded bg-muted">
+      <img
+        src={photo ?? GENERIC_PRODUCT_PHOTO}
+        alt=""
+        width={96}
+        height={72}
+        loading="lazy"
+        className={photo ? "h-full w-full object-contain" : "h-full w-full object-cover opacity-60"}
+      />
+      {!photo && (
+        <figcaption className="absolute inset-x-0 bottom-0 bg-ink/85 px-1 py-1 text-center text-xs leading-tight text-ink-foreground">
+          Foto no disponible
+        </figcaption>
+      )}
+    </figure>
+  );
+}
 
 function Carrito() {
   const { items, totals, update, remove, clear, hydrated } = useCart();
@@ -42,9 +64,7 @@ function Carrito() {
               <ul className="divide-y rounded-lg border bg-card shadow-card">
                 {items.map((i) => (
                   <li key={i.productId} className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center">
-                    {i.imageUrl && (
-                      <img src={i.imageUrl} alt="" width={96} height={72} loading="lazy" className="h-18 w-24 rounded object-cover" />
-                    )}
+                    <CartProductPhoto url={i.imageUrl} />
                     <div className="flex-1">
                       <p className="font-semibold">{i.name}</p>
                       <p className="font-mono text-xs text-muted-foreground">{i.sku}</p>

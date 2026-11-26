@@ -1,0 +1,1854 @@
+[
+  {
+    "id": "cor-38038",
+    "sku": "38038",
+    "honda_code": "13441-RPY-G01",
+    "name": "Correa de Distribución (Híbrida)",
+    "description": "Correa de Distribución (Híbrida)",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4579.34,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-35845",
+    "sku": "35845",
+    "honda_code": "14400-6FB-A01",
+    "name": "Correa de Distribución",
+    "description": "Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12159.38,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-28359",
+    "sku": "28359",
+    "honda_code": "14400-R9P-A01",
+    "name": "Correa de Distribución",
+    "description": "Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6066.52,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2025,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-2501",
+    "sku": "2501",
+    "honda_code": "14400-RCA-A01",
+    "name": "Correa de Distribución",
+    "description": "Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5915.45,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-35846",
+    "sku": "35846",
+    "honda_code": "14401-5K9-004",
+    "name": "Cadena de Distribución",
+    "description": "Cadena de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7491.33,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-38039",
+    "sku": "38039",
+    "honda_code": "14401-6MA-J01",
+    "name": "Cadena de Distribución",
+    "description": "Cadena de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10152.45,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-25500",
+    "sku": "25500",
+    "honda_code": "14401-RB1-003",
+    "name": "Cadena de Distribución",
+    "description": "Cadena de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7488.56,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-2513",
+    "sku": "2513",
+    "honda_code": "14401-RNA-A01",
+    "name": "Cadena de Distribución",
+    "description": "Cadena de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8643.1,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-38645",
+    "sku": "38645",
+    "honda_code": "14401-RPY-G01",
+    "name": "Cadena de Distribución",
+    "description": "Cadena de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10113.64,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-27449",
+    "sku": "27449",
+    "honda_code": "14510-5A2-A02",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4583.5,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-27636",
+    "sku": "27636",
+    "honda_code": "14510-5R1-003",
+    "name": "Tensor de Cadena de Distribución",
+    "description": "Tensor de Cadena de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6328.48,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-38111",
+    "sku": "38111",
+    "honda_code": "14510-6A0-A01",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4959.11,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-36639",
+    "sku": "36639",
+    "honda_code": "14510-6FB-A01",
+    "name": "Tensor de Correa de Distribución",
+    "description": "Tensor de Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 26708.22,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-38055",
+    "sku": "38055",
+    "honda_code": "14510-6MA-J01",
+    "name": "Tensor de Cadena de Distribución",
+    "description": "Tensor de Cadena de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8605.67,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-28361",
+    "sku": "28361",
+    "honda_code": "14510-R9P-A01",
+    "name": "Tensor de Correa de Distribución",
+    "description": "Tensor de Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12505.88,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2025,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-2556",
+    "sku": "2556",
+    "honda_code": "14510-RCA-A01",
+    "name": "Tensor de Correa de Distribución",
+    "description": "Tensor de Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10748.43,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2013,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2016,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2017,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-2557",
+    "sku": "2557",
+    "honda_code": "14510-RNA-A01",
+    "name": "Tensor de Correa de Distribución",
+    "description": "Tensor de Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2802.49,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2021,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-38383",
+    "sku": "38383",
+    "honda_code": "14510-RPY-G01",
+    "name": "Tensor de Correa de Distribución",
+    "description": "Tensor de Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4959.11,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-25698",
+    "sku": "25698",
+    "honda_code": "14512-PWC-000",
+    "name": "Tensor de Correa de Distribución",
+    "description": "Tensor de Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1984.75,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-2570",
+    "sku": "2570",
+    "honda_code": "14520-RCA-A01",
+    "name": "Tensor de Correa de Distribución",
+    "description": "Tensor de Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12097.01,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2017,
+        "year_to": 2019,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2016,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2017,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-35847",
+    "sku": "35847",
+    "honda_code": "14550-6S9-A01",
+    "name": "Tensor de Correa de Distribución",
+    "description": "Tensor de Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4751.21,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-2581",
+    "sku": "2581",
+    "honda_code": "14550-RCA-A01",
+    "name": "Tensor de Correa de Distribución",
+    "description": "Tensor de Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4751.21,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2021,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-36640",
+    "sku": "36640",
+    "honda_code": "14560-6S9-A01",
+    "name": "Tensor de Correa de Distribución",
+    "description": "Tensor de Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6033.26,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-29750",
+    "sku": "29750",
+    "honda_code": "31110-55A-Z01",
+    "name": "Correa de Alternador",
+    "description": "Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1050.59,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-29129",
+    "sku": "29129",
+    "honda_code": "31110-59B-014",
+    "name": "Correa de Alternador",
+    "description": "Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3627.16,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2019,
+        "notes": null
+      },
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-35646",
+    "sku": "35646",
+    "honda_code": "31110-5BA-A02",
+    "name": "Correa Delantero Alternador",
+    "description": "Correa Delantero Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3627.16,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-27288",
+    "sku": "27288",
+    "honda_code": "31110-5R0-003",
+    "name": "Correa de Alternador",
+    "description": "Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3451.14,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2027,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-36041",
+    "sku": "36041",
+    "honda_code": "31110-66V-A01",
+    "name": "Correa de Alternador",
+    "description": "Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3451.14,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-30935",
+    "sku": "30935",
+    "honda_code": "31110-6B2-A01",
+    "name": "Correa de Alternador",
+    "description": "Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3853.08,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-35647",
+    "sku": "35647",
+    "honda_code": "31110-6FB-A02",
+    "name": "Correa de Alternador",
+    "description": "Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3506.58,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-27039",
+    "sku": "27039",
+    "honda_code": "31110-R2A-M12",
+    "name": "Correa de Alternador",
+    "description": "Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 2013.86,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-28849",
+    "sku": "28849",
+    "honda_code": "31110-RLV-A02",
+    "name": "Correa de Alternador",
+    "description": "Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3506.58,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-32365",
+    "sku": "32365",
+    "honda_code": "31110-RPY-G02",
+    "name": "Correa de Alternador",
+    "description": "Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3139.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-39003",
+    "sku": "39003",
+    "honda_code": "31170-50Z-G01",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9711.7,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-28173",
+    "sku": "28173",
+    "honda_code": "31170-51B-H02",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7426.19,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-33191",
+    "sku": "33191",
+    "honda_code": "31170-55C-M01",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5550.93,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-38751",
+    "sku": "38751",
+    "honda_code": "31170-59B-000",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": null,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-29130",
+    "sku": "29130",
+    "honda_code": "31170-59B-015",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8162.15,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-37307",
+    "sku": "37307",
+    "honda_code": "31170-5A2-A01",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8464.3,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-33940",
+    "sku": "33940",
+    "honda_code": "31170-5KK-003",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7031.18,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-35648",
+    "sku": "35648",
+    "honda_code": "31170-61A-A01",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7927.92,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-30936",
+    "sku": "30936",
+    "honda_code": "31170-6B2-A01",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 16792.78,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-32059",
+    "sku": "32059",
+    "honda_code": "31170-RLV-A02",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7927.92,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2025,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-32366",
+    "sku": "32366",
+    "honda_code": "31170-RPY-G01",
+    "name": "Tensor de Correa de Alternador",
+    "description": "Tensor de Correa de Alternador",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12393.61,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      },
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-37951",
+    "sku": "37951",
+    "honda_code": "38920-RCA-305",
+    "name": "Correa de Dirección Hidráulica",
+    "description": "Correa de Dirección Hidráulica",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5478.86,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cor-28407",
+    "sku": "28407",
+    "honda_code": "51320-TG7-A01",
+    "name": "Tensor de Correa de Distribución",
+    "description": "Tensor de Correa de Distribución",
+    "category_id": "subcat-correas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 1914.07,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-correas",
+      "name": "Correas",
+      "slug": "correas",
+      "image_key": "correas"
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  }
+]

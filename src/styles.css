@@ -1,5 +1,5 @@
 /*
- * Tailwind v4 entry. Keep @imports at the top. Web fonts are loaded via <link> in __root.tsx.
+ * Tailwind v4 entry. Keep @imports at the top.
  */
 @import "tailwindcss" source(none);
 @source "../src";
@@ -7,9 +7,46 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Roobert B web fonts from Honda Automóviles Uruguay. */
+@font-face {
+  font-family: "Roobert B";
+  src: url("/brand/Roobert-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roobert B";
+  src: url("/brand/Roobert-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roobert B";
+  src: url("/brand/Roobert-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roobert B";
+  src: url("/brand/Roobert-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roobert B";
+  src: url("/brand/Roobert-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
-  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Barlow Condensed", "IBM Plex Sans", ui-sans-serif, sans-serif;
+  --font-sans: "Roobert B", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sans);
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
   --radius-sm: calc(var(--radius) - 2px);

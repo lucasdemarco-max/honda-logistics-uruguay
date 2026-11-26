@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/site/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { CaseExcelImport } from "@/components/admin/CaseExcelImport";
 import {
   Table,
   TableBody,
@@ -49,6 +50,22 @@ const errorMessage = (error: unknown) => {
   return "Ocurrió un error inesperado";
 };
 
+const categoryFromRecord = (record: Record<string, unknown>) => {
+  const get = (keys: string[]) => Object.entries(record).find(([key]) => keys.includes(normalizeImportValue(key)))?.[1];
+  const abbreviatedName = String(get(["categoryname", "categoria", "category", "categorianombre"]) ?? "").trim();
+  const externalId = String(get(["categoryid"]) ?? "").trim();
+  // WEB - Fichas uses CategoryID="Fluidos" and CategoryName="Flu".
+  // Other workbooks use CategoryID numeric and CategoryName descriptive.
+  const fullNameInId = /[a-zA-ZáéíóúñÁÉÍÓÚÑ]/.test(externalId)
+    && externalId.length > 3 && abbreviatedName.length <= 4;
+  const name = fullNameInId ? externalId : abbreviatedName;
+  return { name, externalId };
+};
+
+const categorySlug = (name: string) =>
+  name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim()
+    .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
 const modelNameFromRecord = (record: Record<string, unknown>) => {
   const entry = Object.entries(record).find(([key]) =>
     ["modelo", "model", "modelname", "modelid"].includes(normalizeImportValue(key)),
@@ -57,7 +74,7 @@ const modelNameFromRecord = (record: Record<string, unknown>) => {
 };
 
 const modelSlug = (name: string) =>
-  name
+  (name.toLowerCase() === "rigeline" ? "ridgeline" : name)
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
@@ -68,6 +85,7 @@ const modelSlug = (name: string) =>
 const modelDisplayName = (name: string) => {
   const names: Record<string, string> = {
     ridgeline: "Ridgeline",
+    rigeline: "Ridgeline",
     "zr-v": "ZR-V",
     odyssey: "Odyssey",
     "type-r": "Type-R",
@@ -137,7 +155,8 @@ function Admin() {
       const headers = [
         "SKU",
         "Nombre",
-        "Categoría",
+        "CategoryID",
+        "CategoryName",
         "Subcategoría Filtros",
         "Código Honda",
         "Descripción",
@@ -145,7 +164,7 @@ function Admin() {
         "Stock",
         "Disponibilidad",
         "Activo",
-        "Modelo",
+        "ModelID",
         "Año Desde",
         "Año Hasta",
         "Notas Compatibilidad",
@@ -157,6 +176,8 @@ function Admin() {
         ["Plantilla de productos Honda Logistics"],
         ["Ingresá una fila por producto y repetí el SKU cuando tenga más de un modelo compatible."],
         ["Las filas con el mismo SKU deben repetir los mismos datos del producto."],
+        ["CategoryID identifica la familia en el Excel; CategoryName es el nombre visible y estable en el catálogo."],
+        ["Las categorías nuevas se preparan en vista previa y se crean al confirmar la importación."],
         ["Si el precio cambia entre filas del mismo SKU, se usará el precio más alto."],
         [
           "Dejá Modelo, Año Desde y Año Hasta vacíos si el producto no tiene compatibilidad específica.",
@@ -252,6 +273,26 @@ function Admin() {
 
       if (!records.length) throw new Error("La hoja no contiene filas de productos");
 
+      const categoryRecords = records.map(({ record }) => categoryFromRecord(record));
+      const namesByExternalId = new Map<string, string>();
+      for (const item of categoryRecords) {
+        if (item.externalId && !item.name) {
+          throw new Error(`CategoryID ${item.externalId} necesita CategoryName para identificar su categoría`);
+        }
+        if (!item.externalId || !item.name) continue;
+        const previous = namesByExternalId.get(item.externalId);
+        if (previous && normalizeImportValue(previous) !== normalizeImportValue(item.name)) {
+          throw new Error(`CategoryID ${item.externalId} tiene nombres diferentes: ${previous} y ${item.name}`);
+        }
+        namesByExternalId.set(item.externalId, item.name);
+      }
+      const uniqueCategoryNames = [...new Set(categoryRecords.map((item) => item.name).filter(Boolean))];
+      const pendingCategories: CatalogLookup[] = uniqueCategoryNames
+        .filter((name) => !categories.some((category) =>
+          [category.name, category.slug].some((value) =>
+            normalizeImportValue(value) === normalizeImportValue(name))))
+        .map((name) => ({ id: `pending-${categorySlug(name)}`, name, slug: categorySlug(name) }));
+      const availableCategories = [...categories, ...pendingCategories];
       const sourceModelNames = [
         ...new Set(records.map(({ record }) => modelNameFromRecord(record)).filter(Boolean)),
       ];
@@ -263,40 +304,16 @@ function Admin() {
             ),
           ),
       );
-      let availableModels = models;
-      if (missingModels.length > 0) {
-        const { data: userResult, error: userError } = await supabase.auth.getUser();
-        if (userError) throw userError;
-        if (!userResult.user) throw new Error("Iniciá sesión para agregar modelos al catálogo");
-        const { data: canManageCatalog, error: permissionError } = await supabase.rpc(
-          "has_permission",
-          { _user_id: userResult.user.id, _perm: "catalogo" },
-        );
-        if (permissionError) throw permissionError;
-        if (!canManageCatalog)
-          throw new Error("Tu cuenta no tiene permisos para agregar modelos al catálogo");
-
-        const { error: insertModelsError } = await supabase.from("vehicle_models").upsert(
-          missingModels.map((name, index) => ({
-            name: modelDisplayName(name),
-            slug: modelSlug(name),
-            sort_order: 100 + index,
-          })),
-          { onConflict: "slug" },
-        );
-        if (insertModelsError) throw insertModelsError;
-
-        const { data: refreshedModels, error: modelsError } = await supabase
-          .from("vehicle_models")
-          .select("id, name, slug")
-          .order("sort_order");
-        if (modelsError) throw modelsError;
-        availableModels = refreshedModels;
-        setModels(refreshedModels);
-      }
+      // Preview is read-only; missing models are staged until confirmation.
+      const pendingModels: CatalogLookup[] = missingModels.map((name) => ({
+        id: `pending-${modelSlug(name)}`,
+        name: modelDisplayName(name),
+        slug: modelSlug(name),
+      }));
+      const availableModels = [...models, ...pendingModels];
 
       const parsedRows = records.map(({ record, rowNumber }) =>
-        parseImportRow(record, rowNumber, categories, availableModels),
+        parseImportRow(record, rowNumber, availableCategories, availableModels),
       );
       const validatedRows = validateDuplicateSkus(parsedRows);
       setRows(validatedRows);
@@ -335,6 +352,45 @@ function Admin() {
       if (!canManageCatalog)
         throw new Error("Tu cuenta no tiene permisos para administrar el catálogo");
 
+      // Create missing vehicle models only when the user confirms the import.
+      const pendingModelRows = validRows.filter((row) => row.modelId?.startsWith("pending-"));
+      const pendingModelSlugs = [...new Set(pendingModelRows.map((row) => row.modelId!.slice("pending-".length)))];
+      if (pendingModelSlugs.length) {
+        const { error: insertModelsError } = await supabase.from("vehicle_models").upsert(
+          pendingModelSlugs.map((slug, index) => ({
+            name: modelDisplayName(slug), slug, sort_order: 100 + index,
+          })),
+          { onConflict: "slug" },
+        );
+        if (insertModelsError) throw insertModelsError;
+      }
+      const { data: storedModels, error: refreshedModelsError } = await supabase
+        .from("vehicle_models").select("id, name, slug").order("sort_order");
+      if (refreshedModelsError) throw refreshedModelsError;
+      const modelBySlug = new Map(storedModels.map((item) => [item.slug, item.id]));
+      setModels(storedModels);
+
+      // New workbook categories are created only after explicit confirmation.
+      // Existing categories and other products remain intact.
+      const pendingCategoryRows = validRows.filter((row) => row.categoryId?.startsWith("pending-"));
+      const pendingNames = [...new Set(pendingCategoryRows.map((row) => row.categoryName))];
+      if (pendingNames.length) {
+        const { error: createCategoryError } = await supabase.from("categories").upsert(
+          pendingNames.map((name, index) => ({
+            name,
+            slug: categorySlug(name),
+            sort_order: 100 + index,
+          })),
+          { onConflict: "slug" },
+        );
+        if (createCategoryError) throw createCategoryError;
+      }
+      const { data: storedCategories, error: refreshedCategoryError } = await supabase
+        .from("categories").select("id, name, slug").order("sort_order");
+      if (refreshedCategoryError) throw refreshedCategoryError;
+      const categoryBySlug = new Map(storedCategories.map((item) => [item.slug, item.id]));
+      setCategories(storedCategories);
+
       const rowsBySku = new Map<string, ImportRow[]>();
       for (const row of validRows) {
         const group = rowsBySku.get(row.sku) ?? [];
@@ -342,17 +398,29 @@ function Admin() {
         rowsBySku.set(row.sku, group);
       }
 
+      // Preserve existing price/stock when an incoming workbook leaves those cells blank.
+      const knownProducts: { sku: string; price_uyu: number | null; stock: number | null }[] = [];
+      for (const batch of chunksOf([...rowsBySku.keys()], 100)) {
+        const { data, error } = await supabase.from("products")
+          .select("sku, price_uyu, stock").in("sku", batch);
+        if (error) throw error;
+        knownProducts.push(...data);
+      }
+      const currentBySku = new Map(knownProducts.map((product) => [product.sku, product]));
+
       const productRows = [...rowsBySku.values()].map((group) => {
         const row = group[0];
         if (!row) throw new Error("No pudimos preparar una fila de producto");
         return {
           sku: row.sku,
           name: row.name,
-          category_id: row.categoryId,
+          category_id: row.categoryId?.startsWith("pending-")
+            ? categoryBySlug.get(categorySlug(row.categoryName)) ?? null
+            : row.categoryId,
           honda_code: row.hondaCode || null,
           description: row.description || null,
-          price_uyu: row.price,
-          stock: row.stock,
+          price_uyu: row.price ?? currentBySku.get(row.sku)?.price_uyu ?? null,
+          stock: row.stock ?? currentBySku.get(row.sku)?.stock ?? null,
           availability: row.availability,
           active: row.active,
           is_demo: false,
@@ -375,14 +443,18 @@ function Admin() {
         throw new Error("No pudimos confirmar el guardado de todos los productos");
       }
 
+      // Merge compatibilities instead of deleting unrelated model applications.
       const productIds = savedProducts.map((product) => product.id);
+      const existingCompatibilities: { product_id: string; model_id: string; year_from: number; year_to: number }[] = [];
       for (const batch of chunksOf(productIds, 100)) {
-        const { error } = await supabase
-          .from("product_compatibilities")
-          .delete()
-          .in("product_id", batch);
+        const { data, error } = await supabase.from("product_compatibilities")
+          .select("product_id, model_id, year_from, year_to").in("product_id", batch);
         if (error) throw error;
+        existingCompatibilities.push(...data);
       }
+      const existingCompatibilityKeys = new Set(existingCompatibilities.map((row) =>
+        JSON.stringify([row.product_id, row.model_id, row.year_from, row.year_to]),
+      ));
 
       const compatibilityRows = new Map<
         string,
@@ -401,13 +473,15 @@ function Admin() {
           throw new Error(`No encontramos el producto ${row.sku} después de guardarlo`);
         const compatibility = {
           product_id: productId,
-          model_id: row.modelId,
+          model_id: row.modelId.startsWith("pending-")
+            ? modelBySlug.get(row.modelId.slice("pending-".length)) ?? row.modelId
+            : row.modelId,
           year_from: row.yearFrom,
           year_to: row.yearTo,
           notes: row.compatibilityNotes || null,
         };
-        const key = JSON.stringify(compatibility);
-        compatibilityRows.set(key, compatibility);
+        const key = JSON.stringify([compatibility.product_id, compatibility.model_id, compatibility.year_from, compatibility.year_to]);
+        if (!existingCompatibilityKeys.has(key)) compatibilityRows.set(key, compatibility);
       }
 
       const compatibilityValues = [...compatibilityRows.values()];
@@ -442,7 +516,7 @@ function Admin() {
               <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
                 Cargá .xlsx, .xls o CSV. Repetí el SKU en una fila por modelo compatible y mantené
                 iguales los datos del producto en esas filas. Para SKU repetidos con distintos
-                precios se conserva el más alto; los modelos faltantes se agregan al catálogo.
+                precios se conserva el más alto; las categorías nuevas se crean al confirmar y las compatibilidades previas se conservan.
               </p>
             </div>
             <Button
@@ -481,7 +555,7 @@ function Admin() {
             {fileName && <span className="text-sm text-muted-foreground">{fileName}</span>}
           </div>
           <p className="mt-2 text-xs text-muted-foreground">
-            Categorías y modelos deben existir en el sistema. Las celdas vacías de precio o stock se
+            El archivo puede incluir CategoryID, CategoryName y ModelID. Las categorías nuevas se crean al confirmar. Las celdas vacías de precio o stock se
             guardan sin dato.
           </p>
 
@@ -546,8 +620,9 @@ function Admin() {
           )}
         </section>
 
+        <CaseExcelImport />
         <p className="mt-6 text-xs text-muted-foreground">
-          Las demás pantallas administrativas (clientes, casos, presupuestos, marcas, titularidad y
+          Las pantallas administrativas restantes (clientes, presupuestos, marcas, titularidad y
           auditoría) siguen pendientes de construir.
         </p>
       </div>

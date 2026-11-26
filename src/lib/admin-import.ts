@@ -92,8 +92,14 @@ export const parseImportRow = (
     "categoría",
     "category",
     "category name",
-    "categoryid",
+    "categoryname",
   ]);
+  const categoryExternalId = textValue(record, ["categoryid"]);
+  // WEB - Fichas stores the full family name in CategoryID and a short code in CategoryName.
+  // Other suppliers may use numeric CategoryID and descriptive CategoryName.
+  const workbookFamilyIsId = /[a-zA-ZáéíóúñÁÉÍÓÚÑ]/.test(categoryExternalId)
+    && categoryExternalId.length > 3 && (!categoryName || categoryName.length <= 4);
+  const effectiveCategoryName = workbookFamilyIsId ? categoryExternalId : categoryName;
   const subcategoryName = textValue(record, [
     "subcategoria",
     "subcategoría",
@@ -119,7 +125,10 @@ export const parseImportRow = (
     inactivo: false,
   };
   const active = activeValue ? activeOptions[activeValue] : true;
-  const modelName = textValue(record, ["modelo", "model", "model name", "modelid"]);
+  const rawModelName = textValue(record, ["modelo", "model", "model name", "modelid"]);
+  const modelName = normalize(rawModelName) === "rigeline" ? "ridgeline"
+    : normalize(rawModelName) === "civictyper" ? "type-r"
+    : rawModelName;
   const yearFromValue = parseNumber(
     getValue(record, ["anio desde", "año desde", "year from", "desde"]),
   );
@@ -132,23 +141,25 @@ export const parseImportRow = (
   const subcategory = FILTER_SUBCATEGORIES.find((item) =>
     [item.name, item.slug].some((value) => normalize(value) === normalize(subcategoryName)),
   );
-  const categorySearch = subcategory ? "filtros" : categoryName || subcategoryName;
+  const categorySearch = subcategory ? "filtros" : effectiveCategoryName || subcategoryName;
+  // CategoryID is an external workbook identifier; match an existing slug/name only when no name is provided.
+  const categoryLookup = categorySearch || categoryExternalId;
   const category = categories.find((item) =>
-    [item.name, item.slug].some((value) => normalize(value) === normalize(categorySearch)),
+    [item.name, item.slug].some((value) => normalize(value) === normalize(categoryLookup)),
   );
   const model = models.find((item) =>
     [item.name, item.slug].some((value) => normalize(value) === normalize(modelName)),
   );
-  const availabilityValue = getValue(record, ["disponibilidad", "availability", "estado"]);
+  const availabilityValue = getValue(record, ["disponibilidad", "availability", "avaible", "estado"]);
   const availability = parseAvailability(availabilityValue);
 
   const errors: string[] = [];
   if (!sku) errors.push("SKU requerido");
   if (!name) errors.push("Nombre requerido");
-  if (!subcategoryName && !categoryName) errors.push("Categoría o subcategoría requerida");
+  if (!subcategoryName && !effectiveCategoryName && !categoryExternalId) errors.push("CategoryName o categoría requerida para identificar CategoryID");
   if (subcategoryName && !subcategory) errors.push(`Subcategoría desconocida: ${subcategoryName}`);
-  if (categoryName && !category) errors.push(`Categoría desconocida: ${categoryName}`);
-  if (subcategory && categoryName && normalize(categoryName) !== "filtros") {
+  if (!category) errors.push(`Categoría desconocida: ${categoryLookup || categoryExternalId}`);
+  if (subcategory && effectiveCategoryName && normalize(effectiveCategoryName) !== "filtros") {
     errors.push("La subcategoría de filtros debe usar la categoría Filtros");
   }
   if (String(priceValue ?? "").trim() && price === null) errors.push("Precio inválido");
@@ -180,7 +191,7 @@ export const parseImportRow = (
     categoryId: category?.id ?? null,
     categoryName: subcategory
       ? `${category?.name ?? "Filtros"} / ${subcategory.name}`
-      : (category?.name ?? categoryName),
+      : (category?.name ?? effectiveCategoryName),
     hondaCode,
     description,
     price,

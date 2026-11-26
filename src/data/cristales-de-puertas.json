@@ -1,0 +1,4924 @@
+[
+  {
+    "id": "cri-38971",
+    "sku": "38971",
+    "honda_code": "73300-39K-M01",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7588.35,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-34795",
+    "sku": "34795",
+    "honda_code": "73300-3A0-A01",
+    "name": "Cristal de Puerta Delantera Derecha",
+    "description": "Cristal de Puerta Delantera Derecha",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 24249.46,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-39509",
+    "sku": "39509",
+    "honda_code": "73300-3C0-T01",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12747.04,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38022",
+    "sku": "38022",
+    "honda_code": "73300-3C0-T11",
+    "name": "Cristal Puerta Delantero Lado Derecho (Híbrida)",
+    "description": "Cristal Puerta Delantero Lado Derecho (Híbrida)",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12747.04,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35822",
+    "sku": "35822",
+    "honda_code": "73300-3M6-M01",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7588.35,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2022,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-39512",
+    "sku": "39512",
+    "honda_code": "73300-3V0-J02",
+    "name": "Cristal de la Puerta Delantera",
+    "description": "Cristal de la Puerta Delantera",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 62548.79,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35823",
+    "sku": "35823",
+    "honda_code": "73300-3W0-305",
+    "name": "Cristal de la Puerta Delantera",
+    "description": "Cristal de la Puerta Delantera",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10697.15,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-25868",
+    "sku": "25868",
+    "honda_code": "73300-SJC-A20",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6600.13,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33960",
+    "sku": "33960",
+    "honda_code": "73300-T14-M01",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5462.23,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-36085",
+    "sku": "36085",
+    "honda_code": "73300-T20-A13",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 39749.09,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35030",
+    "sku": "35030",
+    "honda_code": "73300-T24-T01",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4027.72,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29797",
+    "sku": "29797",
+    "honda_code": "73300-T5N-M00",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3365.21,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-27172",
+    "sku": "27172",
+    "honda_code": "73300-T5R-X00",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 20036.02,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28263",
+    "sku": "28263",
+    "honda_code": "73300-T7W-A00",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12458.75,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35691",
+    "sku": "35691",
+    "honda_code": "73300-T90-A01",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 21068.59,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38797",
+    "sku": "38797",
+    "honda_code": "73300-TBG-A01",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13934.84,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2019,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29232",
+    "sku": "29232",
+    "honda_code": "73300-TEM-M00",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5344.42,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2018,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28546",
+    "sku": "28546",
+    "honda_code": "73300-TG7-A10",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 21068.59,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2021,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33047",
+    "sku": "33047",
+    "honda_code": "73300-TGG-305",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 11201.65,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33611",
+    "sku": "33611",
+    "honda_code": "73300-THR-A00",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13940.39,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29933",
+    "sku": "29933",
+    "honda_code": "73300-TLA-A11",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 24249.46,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33477",
+    "sku": "33477",
+    "honda_code": "73300-TVA-A11",
+    "name": "Cristal Puerta Delantero Lado Derecho",
+    "description": "Cristal Puerta Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 23844.74,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28861",
+    "sku": "28861",
+    "honda_code": "73330-TG7-A01",
+    "name": "Cristal Esquinero Delantero Derecho",
+    "description": "Cristal Esquinero Delantero Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8841.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2025,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33612",
+    "sku": "33612",
+    "honda_code": "73330-THR-A01",
+    "name": "Cristal Esquinero de la Puerta Delantera Lado Derecho",
+    "description": "Cristal Esquinero de la Puerta Delantera Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13377.67,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2021,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29934",
+    "sku": "29934",
+    "honda_code": "73331-T5N-M00",
+    "name": "Cristal Esquinero Delantero Derecho",
+    "description": "Cristal Esquinero Delantero Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3623.0,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-27275",
+    "sku": "27275",
+    "honda_code": "73331-T5R-305",
+    "name": "Cristal Esquinero Delantero Lado Derecho",
+    "description": "Cristal Esquinero Delantero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7481.63,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38972",
+    "sku": "38972",
+    "honda_code": "73350-39K-M01",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7588.35,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-34796",
+    "sku": "34796",
+    "honda_code": "73350-3A0-A01",
+    "name": "Cristal de Puerta Delantera Izquierda",
+    "description": "Cristal de Puerta Delantera Izquierda",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 24249.46,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-39514",
+    "sku": "39514",
+    "honda_code": "73350-3C0-T01",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12747.04,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38021",
+    "sku": "38021",
+    "honda_code": "73350-3C0-T11",
+    "name": "Cristal Puerta Delantero Lado Izquierdo (Híbrida)",
+    "description": "Cristal Puerta Delantero Lado Izquierdo (Híbrida)",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12747.04,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35824",
+    "sku": "35824",
+    "honda_code": "73350-3M6-M01",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7588.35,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-39518",
+    "sku": "39518",
+    "honda_code": "73350-3V0-J02",
+    "name": "Cristal de la Puerta Delantera",
+    "description": "Cristal de la Puerta Delantera",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 62548.79,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35825",
+    "sku": "35825",
+    "honda_code": "73350-3W0-305",
+    "name": "Cristal de la Puerta Delantera",
+    "description": "Cristal de la Puerta Delantera",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10697.15,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-25869",
+    "sku": "25869",
+    "honda_code": "73350-SJC-A20",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6600.13,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33961",
+    "sku": "33961",
+    "honda_code": "73350-T14-M01",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5462.23,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-36088",
+    "sku": "36088",
+    "honda_code": "73350-T20-A13",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 39749.09,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35031",
+    "sku": "35031",
+    "honda_code": "73350-T24-T01",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4027.72,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29798",
+    "sku": "29798",
+    "honda_code": "73350-T5N-M00",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4806.65,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-27174",
+    "sku": "27174",
+    "honda_code": "73350-T5R-X00",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 20036.02,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28264",
+    "sku": "28264",
+    "honda_code": "73350-T7W-A00",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12458.75,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35692",
+    "sku": "35692",
+    "honda_code": "73350-T90-A01",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 21068.59,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38686",
+    "sku": "38686",
+    "honda_code": "73350-TBG-A01",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13934.84,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2019,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29233",
+    "sku": "29233",
+    "honda_code": "73350-TEM-M00",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5344.42,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2018,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28547",
+    "sku": "28547",
+    "honda_code": "73350-TG7-A10",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 21068.59,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2024,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2021,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33048",
+    "sku": "33048",
+    "honda_code": "73350-TGG-305",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 11201.65,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33619",
+    "sku": "33619",
+    "honda_code": "73350-THR-A00",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13940.39,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29998",
+    "sku": "29998",
+    "honda_code": "73350-TLA-A11",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 24249.46,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33478",
+    "sku": "33478",
+    "honda_code": "73350-TVA-A11",
+    "name": "Cristal Puerta Delantero Lado Izquierdo",
+    "description": "Cristal Puerta Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 23844.74,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28747",
+    "sku": "28747",
+    "honda_code": "73370-TG7-A01",
+    "name": "Cristal Esquinero Delantero Izquierdo",
+    "description": "Cristal Esquinero Delantero Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8841.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2025,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38389",
+    "sku": "38389",
+    "honda_code": "73370-THR-A00",
+    "name": "Cristal Esquinero de la Puerta Delantera Lado Izquierdo",
+    "description": "Cristal Esquinero de la Puerta Delantera Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": null,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2020,
+        "year_to": 2021,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33621",
+    "sku": "33621",
+    "honda_code": "73370-THR-A01",
+    "name": "Cristal Esquinero de la Puerta Delantera Lado Izquierdo",
+    "description": "Cristal Esquinero de la Puerta Delantera Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 13377.67,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29799",
+    "sku": "29799",
+    "honda_code": "73371-T5N-M00",
+    "name": "Cristal Esquinero Delantero Izquierdo",
+    "description": "Cristal Esquinero Delantero Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3623.0,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-27273",
+    "sku": "27273",
+    "honda_code": "73371-T5R-305",
+    "name": "Cristal Esquinero Delantero Lado Izquierdo",
+    "description": "Cristal Esquinero Delantero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10321.54,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38969",
+    "sku": "38969",
+    "honda_code": "73400-39K-M01",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6353.42,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38052",
+    "sku": "38052",
+    "honda_code": "73400-3C0-T31",
+    "name": "Cristal Puerta Trasero Lado Derecho (Híbrida)",
+    "description": "Cristal Puerta Trasero Lado Derecho (Híbrida)",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4462.92,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35826",
+    "sku": "35826",
+    "honda_code": "73400-3M6-M01",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6353.42,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2022,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-39520",
+    "sku": "39520",
+    "honda_code": "73400-3V0-J12",
+    "name": "Cristal de la Puerta Trasera",
+    "description": "Cristal de la Puerta Trasera",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 26008.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-25870",
+    "sku": "25870",
+    "honda_code": "73400-SJC-C01",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 22177.39,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33962",
+    "sku": "33962",
+    "honda_code": "73400-T14-M01",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5462.23,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35032",
+    "sku": "35032",
+    "honda_code": "73400-T24-T01",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3835.06,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29935",
+    "sku": "29935",
+    "honda_code": "73400-T5N-M00",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3377.68,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-27176",
+    "sku": "27176",
+    "honda_code": "73400-T5R-A00",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10781.69,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-36090",
+    "sku": "36090",
+    "honda_code": "73400-T60-A01",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 25513.49,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28951",
+    "sku": "28951",
+    "honda_code": "73400-T6Z-A00",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 19714.46,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2021,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28265",
+    "sku": "28265",
+    "honda_code": "73400-T7W-A00",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 11894.65,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35693",
+    "sku": "35693",
+    "honda_code": "73400-T90-A01",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7657.65,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29234",
+    "sku": "29234",
+    "honda_code": "73400-TEM-M00",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5344.42,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28548",
+    "sku": "28548",
+    "honda_code": "73400-TG7-A00",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7657.65,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33049",
+    "sku": "33049",
+    "honda_code": "73400-TGG-305",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 11309.76,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-31468",
+    "sku": "31468",
+    "honda_code": "73400-THR-A00",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 23797.62,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29936",
+    "sku": "29936",
+    "honda_code": "73400-TLC-A01",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 17568.94,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33479",
+    "sku": "33479",
+    "honda_code": "73400-TVA-A11",
+    "name": "Cristal Puerta Trasero Lado Derecho",
+    "description": "Cristal Puerta Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6674.98,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38967",
+    "sku": "38967",
+    "honda_code": "73405-39K-M01",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 43914.02,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33963",
+    "sku": "33963",
+    "honda_code": "73405-T14-M01",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4785.86,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-32160",
+    "sku": "32160",
+    "honda_code": "73405-T6Z-A01",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8461.53,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28550",
+    "sku": "28550",
+    "honda_code": "73405-TG7-A00",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9151.76,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38970",
+    "sku": "38970",
+    "honda_code": "73450-39K-M01",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6353.42,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38001",
+    "sku": "38001",
+    "honda_code": "73450-3C0-T31",
+    "name": "Cristal Puerta Trasero Lado Izquierdo (Híbrida)",
+    "description": "Cristal Puerta Trasero Lado Izquierdo (Híbrida)",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4462.92,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35828",
+    "sku": "35828",
+    "honda_code": "73450-3M6-M01",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6353.42,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2022,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-39524",
+    "sku": "39524",
+    "honda_code": "73450-3V0-J12",
+    "name": "Cristal de la Puerta Trasera",
+    "description": "Cristal de la Puerta Trasera",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 26008.29,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35829",
+    "sku": "35829",
+    "honda_code": "73450-3W0-306",
+    "name": "Cristal de la Puerta Trasera",
+    "description": "Cristal de la Puerta Trasera",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9492.71,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38247",
+    "sku": "38247",
+    "honda_code": "73450-3W0-316",
+    "name": "Cristal de la Puerta Trasera",
+    "description": "Cristal de la Puerta Trasera",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9492.71,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-25871",
+    "sku": "25871",
+    "honda_code": "73450-SJC-C01",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 22177.39,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33964",
+    "sku": "33964",
+    "honda_code": "73450-T14-M01",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5462.23,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35033",
+    "sku": "35033",
+    "honda_code": "73450-T24-T01",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3835.06,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29800",
+    "sku": "29800",
+    "honda_code": "73450-T5N-M00",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4826.05,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-27177",
+    "sku": "27177",
+    "honda_code": "73450-T5R-A00",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10781.69,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-36092",
+    "sku": "36092",
+    "honda_code": "73450-T60-A01",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 25513.49,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28952",
+    "sku": "28952",
+    "honda_code": "73450-T6Z-A00",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 19714.46,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2021,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28266",
+    "sku": "28266",
+    "honda_code": "73450-T7W-A00",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 11894.65,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "HR-V",
+        "model_slug": "hr-v",
+        "year_from": 2019,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35694",
+    "sku": "35694",
+    "honda_code": "73450-T90-A01",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7657.65,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29235",
+    "sku": "29235",
+    "honda_code": "73450-TEM-M00",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5344.42,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28549",
+    "sku": "28549",
+    "honda_code": "73450-TG7-A00",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 7657.65,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33050",
+    "sku": "33050",
+    "honda_code": "73450-TGG-305",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 10360.35,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2020,
+        "year_to": 2020,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-31469",
+    "sku": "31469",
+    "honda_code": "73450-THR-A00",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 23797.62,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29937",
+    "sku": "29937",
+    "honda_code": "73450-TLC-A01",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 17568.94,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33480",
+    "sku": "33480",
+    "honda_code": "73450-TVA-A11",
+    "name": "Cristal Puerta Trasero Lado Izquierdo",
+    "description": "Cristal Puerta Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 6674.98,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38968",
+    "sku": "38968",
+    "honda_code": "73455-39K-M01",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 43914.02,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33965",
+    "sku": "33965",
+    "honda_code": "73455-T14-M01",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 5462.23,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "City",
+        "model_slug": "city",
+        "year_from": 2022,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-32161",
+    "sku": "32161",
+    "honda_code": "73455-T6Z-A01",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8461.53,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Ridgeline",
+        "model_slug": "ridgeline",
+        "year_from": 2019,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28551",
+    "sku": "28551",
+    "honda_code": "73455-TG7-A00",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 9151.76,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-34840",
+    "sku": "34840",
+    "honda_code": "73500-3A0-A01",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8984.05,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35034",
+    "sku": "35034",
+    "honda_code": "73500-T24-T01",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 16413.01,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-36093",
+    "sku": "36093",
+    "honda_code": "73500-T60-A01",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 21625.76,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33624",
+    "sku": "33624",
+    "honda_code": "73500-TBG-A01",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 25277.87,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2019,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29236",
+    "sku": "29236",
+    "honda_code": "73500-TEM-M01",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8984.05,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2018,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28557",
+    "sku": "28557",
+    "honda_code": "73500-TG7-A01",
+    "name": "Cristal Delantero Panel Trasero de Guardabarro Lado Derecho",
+    "description": "Cristal Delantero Panel Trasero de Guardabarro Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 32920.27,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33333",
+    "sku": "33333",
+    "honda_code": "73500-TG7-A21",
+    "name": "Cristal Delantero Panel Trasero de Guardabarro Lado Derecho",
+    "description": "Cristal Delantero Panel Trasero de Guardabarro Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 40893.93,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33481",
+    "sku": "33481",
+    "honda_code": "73500-TVA-A01",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12271.64,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35854",
+    "sku": "35854",
+    "honda_code": "73501-3W0-306",
+    "name": "Cristal Esquinero Trasero",
+    "description": "Cristal Esquinero Trasero",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3082.46,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35830",
+    "sku": "35830",
+    "honda_code": "73510-T90-A01",
+    "name": "Cristal Esquinero Trasero Derecho",
+    "description": "Cristal Esquinero Trasero Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 37366.56,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-39527",
+    "sku": "39527",
+    "honda_code": "73511-3V0-J12",
+    "name": "Cristal Esquinero Trasero",
+    "description": "Cristal Esquinero Trasero",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 34637.53,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-30352",
+    "sku": "30352",
+    "honda_code": "73511-T5N-M00",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4131.67,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-27862",
+    "sku": "27862",
+    "honda_code": "73511-T5R-305",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4576.57,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33627",
+    "sku": "33627",
+    "honda_code": "73511-THR-A01",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 26613.97,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38030",
+    "sku": "38030",
+    "honda_code": "73512-3C0-T11",
+    "name": "Cristal Esquinero Trasero Lado Derecho (Híbrida)",
+    "description": "Cristal Esquinero Trasero Lado Derecho (Híbrida)",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 16968.8,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-30199",
+    "sku": "30199",
+    "honda_code": "73512-TLC-A01",
+    "name": "Cristal Esquinero Trasero Lado Derecho",
+    "description": "Cristal Esquinero Trasero Lado Derecho",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 19855.84,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-24836",
+    "sku": "24836",
+    "honda_code": "73525-SYY-000",
+    "name": "Burlete Luneta",
+    "description": "Burlete Luneta",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 687.46,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-34841",
+    "sku": "34841",
+    "honda_code": "73550-3A0-A01",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8984.05,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2023,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35035",
+    "sku": "35035",
+    "honda_code": "73550-T24-T01",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 16413.01,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2023,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-36095",
+    "sku": "36095",
+    "honda_code": "73550-T60-A01",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 21625.76,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic Type R",
+        "model_slug": "type-r",
+        "year_from": 2023,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33631",
+    "sku": "33631",
+    "honda_code": "73550-TBG-A01",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 25277.87,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2019,
+        "year_to": 2019,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-29237",
+    "sku": "29237",
+    "honda_code": "73550-TEM-M01",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 8984.05,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Civic",
+        "model_slug": "civic",
+        "year_from": 2018,
+        "year_to": 2018,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28543",
+    "sku": "28543",
+    "honda_code": "73550-TG7-A01",
+    "name": "Cristal Delantero Panel Trasero de Guardabarro Lado Izquierdo",
+    "description": "Cristal Delantero Panel Trasero de Guardabarro Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 32920.27,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38650",
+    "sku": "38650",
+    "honda_code": "73550-TG7-A21",
+    "name": "Cristal Delantero Panel Trasero de Guardabarro Lado Izquierdo",
+    "description": "Cristal Delantero Panel Trasero de Guardabarro Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": null,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2018,
+        "year_to": 2024,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33482",
+    "sku": "33482",
+    "honda_code": "73550-TVA-A01",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 12271.64,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Accord",
+        "model_slug": "accord",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-39423",
+    "sku": "39423",
+    "honda_code": "73551-3W0-316",
+    "name": "Cristal Esquinero Trasero",
+    "description": "Cristal Esquinero Trasero",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 3082.46,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-35831",
+    "sku": "35831",
+    "honda_code": "73560-T90-A01",
+    "name": "Cristal Esquinero Trasero Izquierdo",
+    "description": "Cristal Esquinero Trasero Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 37366.56,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2026,
+        "year_to": 2026,
+        "notes": null
+      },
+      {
+        "model": "Pilot",
+        "model_slug": "pilot",
+        "year_from": 2023,
+        "year_to": 2026,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-39528",
+    "sku": "39528",
+    "honda_code": "73561-3V0-J12",
+    "name": "Cristal Esquinero Trasero",
+    "description": "Cristal Esquinero Trasero",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 34637.53,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "ZR-V",
+        "model_slug": "zr-v",
+        "year_from": 2026,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-30353",
+    "sku": "30353",
+    "honda_code": "73561-T5N-M00",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4131.67,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      },
+      {
+        "model": "WR-V",
+        "model_slug": "wr-v",
+        "year_from": 2019,
+        "year_to": 2025,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-28092",
+    "sku": "28092",
+    "honda_code": "73561-T5R-305",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 4181.56,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Fit",
+        "model_slug": "fit",
+        "year_from": 2018,
+        "year_to": 2023,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-33635",
+    "sku": "33635",
+    "honda_code": "73561-THR-A01",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 26613.97,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "Odyssey",
+        "model_slug": "odyssey",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38018",
+    "sku": "38018",
+    "honda_code": "73562-3C0-T11",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo (Híbrida)",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo (Híbrida)",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 16968.8,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2024,
+        "year_to": 2027,
+        "notes": null
+      }
+    ]
+  },
+  {
+    "id": "cri-38800",
+    "sku": "38800",
+    "honda_code": "73562-TLA-A01",
+    "name": "Cristal Esquinero Trasero Lado Izquierdo",
+    "description": "Cristal Esquinero Trasero Lado Izquierdo",
+    "category_id": "subcat-cristales-de-puertas",
+    "brand_id": null,
+    "honda_relation": "homologado_honda",
+    "homologation_reference": "Pieza Original Honda",
+    "price_uyu": 19855.84,
+    "stock": 0,
+    "availability": "consultar",
+    "image_url": null,
+    "promo_text": null,
+    "active": true,
+    "is_demo": false,
+    "created_at": "2026-11-25T00:00:00Z",
+    "updated_at": "2026-11-25T00:00:00Z",
+    "category": {
+      "id": "subcat-cristales-de-puertas",
+      "name": "Cristales de Puertas",
+      "slug": "cristales-de-puertas",
+      "image_key": null
+    },
+    "brand": null,
+    "compat": [
+      {
+        "model": "CR-V",
+        "model_slug": "cr-v",
+        "year_from": 2018,
+        "year_to": 2022,
+        "notes": null
+      }
+    ]
+  }
+]

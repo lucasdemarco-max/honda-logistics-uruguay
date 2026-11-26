@@ -1,42 +1,61 @@
-import { ShieldCheck, ShoppingCart, Info } from "lucide-react";
+import { ShieldCheck, ShoppingCart, Info, Package, Droplets, Disc3, Filter, CarFront, Lightbulb, Wrench } from "lucide-react";
 import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { HONDA_RELATIONS, canClaimHomologation } from "@/lib/labels";
 import { formatUYU } from "@/lib/format";
 import { useCart } from "@/lib/cart";
+import { getHondaProductPhoto } from "@/lib/product-photos";
 import type { CatalogProduct } from "@/lib/public.functions";
 
-export function productImage(p: Pick<CatalogProduct, "image_url" | "category">) {
-  if (p.image_url) return p.image_url;
-  if (p.category?.image_key) return `/images/categories/${p.category.image_key}.jpg`;
-  return "/images/categories/otros.jpg";
-}
-
-export function ProductCard({ product }: { product: CatalogProduct }) {
+export function ProductCard({ product, modelSlug }: { product: CatalogProduct; modelSlug?: string }) {
   const { add } = useCart();
   const relation = HONDA_RELATIONS.find((r) => r.value === product.honda_relation);
   const showRelation = relation && canClaimHomologation(product.honda_relation, product.homologation_reference);
   const outOfStock = product.availability === "sin_stock";
+  const slug = product.category?.slug ?? "";
+  const GenericIcon = /fluidos/.test(slug) ? Droplets
+    : /frenos/.test(slug) ? Disc3
+    : /filtros/.test(slug) ? Filter
+    : /opticas|faros|sensores/.test(slug) ? Lightbulb
+    : /carroceria|puertas|paragolpes|guardabarros|parrillas|lunetas|parabrisas|espejos|capot/.test(slug) ? CarFront
+    : /refrigeracion|correas|amortiguadores/.test(slug) ? Wrench
+    : Package;
+  // Only show photographs approved against the exact Honda Code and genuine Honda branding.
+  // Missing or unverified internet photos remain marked as unavailable.
+  const image = getHondaProductPhoto(product.honda_code);
+  const compatibility = modelSlug
+    ? product.compat.filter((application) => application.model_slug === modelSlug)
+    : product.compat;
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-lg border bg-card shadow-card transition-shadow hover:shadow-lift">
-      <div className="relative aspect-[4/3] overflow-hidden bg-muted">
-        <img
-          src={productImage(product)}
-          alt={product.image_url ? product.name : `Imagen ilustrativa de la categoría ${product.category?.name ?? ""}`}
-          loading="lazy"
-          width={944}
-          height={704}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-        />
+      <div className="relative aspect-[4/3] overflow-hidden border-b bg-card">
+        {image ? (
+          <img src={image.url} alt={product.name} loading="lazy" width={800} height={600}
+            className="h-full w-full object-contain p-4" />
+        ) : (
+          <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-muted text-muted-foreground">
+            <GenericIcon className="h-20 w-20 opacity-50" aria-hidden />
+            <span className="text-center text-sm">Representación genérica · {product.category?.name ?? "Repuesto"}</span>
+          </div>
+        )}
         <div className="absolute left-3 top-3 flex flex-wrap gap-1.5">
           {product.is_demo && <Badge variant="demo">Ejemplo</Badge>}
           {product.promo_text && <Badge>{product.promo_text}</Badge>}
         </div>
-        {!product.image_url && (
-          <span className="absolute bottom-2 right-2 rounded bg-ink/70 px-1.5 py-0.5 text-[10px] text-ink-foreground">
-            Imagen ilustrativa
+        {image ? (
+          <a
+            href={image.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute bottom-2 right-2 rounded bg-card px-1.5 py-0.5 text-xs text-muted-foreground underline underline-offset-2"
+          >
+            Fuente de la foto
+          </a>
+        ) : (
+          <span className="absolute inset-x-0 bottom-0 bg-ink/85 px-2 py-2 text-center text-sm font-medium text-ink-foreground">
+            Imagen no disponible
           </span>
         )}
       </div>
@@ -73,11 +92,11 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
 
         <div className="rounded-md bg-muted/70 p-3">
           <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Compatibilidad cargada</p>
-          {product.compat.length === 0 ? (
+          {compatibility.length === 0 ? (
             <p className="text-xs text-muted-foreground">Sin aplicaciones cargadas. Consultanos con tu número de chasis.</p>
           ) : (
             <ul className="flex flex-wrap gap-1.5">
-              {product.compat.map((c, i) => (
+              {compatibility.map((c, i) => (
                 <li key={i} className="rounded border bg-card px-2 py-0.5 text-xs">
                   {c.model} <span className="text-muted-foreground">{c.year_from === c.year_to ? c.year_from : `${c.year_from}–${c.year_to}`}</span>
                 </li>
@@ -86,7 +105,7 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
           )}
         </div>
 
-        <div className="mt-auto flex items-end justify-between gap-3 pt-1">
+        <div className="mt-auto flex flex-col gap-3 pt-1">
           <div>
             <p className="font-display text-2xl font-bold leading-none">{formatUYU(product.price_uyu)}</p>
             {product.is_demo && product.price_uyu !== null && (
@@ -94,15 +113,16 @@ export function ProductCard({ product }: { product: CatalogProduct }) {
             )}
           </div>
           <Button
-            size="icon"
+            size="sm"
+            className="w-full gap-2"
             aria-label={`Agregar ${product.name} al carrito`}
             disabled={outOfStock}
             onClick={() => {
-              add({ productId: product.id, sku: product.sku, name: product.name, priceUYU: product.price_uyu, imageUrl: productImage(product) });
+              add({ productId: product.id, sku: product.sku, name: product.name, priceUYU: product.price_uyu, imageUrl: image?.url ?? null });
               toast.success("Agregado al carrito", { description: product.name });
             }}
           >
-            <ShoppingCart />
+            <ShoppingCart className="h-4 w-4" /> Agregar al carrito
           </Button>
         </div>
       </div>

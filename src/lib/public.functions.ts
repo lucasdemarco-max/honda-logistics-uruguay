@@ -3,6 +3,13 @@ import { createClient } from "@supabase/supabase-js";
 import type { Database } from "@/integrations/supabase/types";
 import { FILTER_SUBCATEGORY_SLUGS } from "@/lib/filter-categories";
 import filtrosData from "@/data/filtros.json";
+import webFichasData from "@/data/catalogo-web-fichas.json";
+import amortiguadoresData from "@/data/amortiguadores.json";
+import bateriasData from "@/data/baterias.json";
+import bujiasData from "@/data/bujias.json";
+import capotData from "@/data/capot.json";
+import correasData from "@/data/correas.json";
+import cristalesDePuertasData from "@/data/cristales-de-puertas.json";
 
 function publicClient() {
   const url = process.env["SUPABASE_URL"]!;
@@ -40,6 +47,12 @@ export const getCatalogMeta = createServerFn({ method: "GET" }).handler(async ()
   ]);
 
   const dbModels = (models.data ?? []) as VehicleModel[];
+  // Keep every model represented by workbook compatibility even when the
+  // database does not yet have a matching vehicle_models row.
+  const localModels = new Map<string, string>();
+  for (const p of localProducts) for (const c of p.compat) {
+    if (c.model_slug && c.model) localModels.set(c.model_slug, c.model);
+  }
   const existingSlugs = new Set(dbModels.map((m) => m.slug));
   const additionalModels: VehicleModel[] = [];
   const modelOrder = ["ridgeline", "zr-v", "odyssey", "type-r"];
@@ -63,6 +76,11 @@ export const getCatalogMeta = createServerFn({ method: "GET" }).handler(async ()
 
   const otros = dbModels.find((m) => m.slug === "otros");
   const withoutOtros = dbModels.filter((m) => m.slug !== "otros");
+  for (const [slug, name] of localModels) {
+    if (!existingSlugs.has(slug) && !additionalModels.some((m) => m.slug === slug)) {
+      additionalModels.push({ id: `model-${slug}`, name, slug, sort_order: 10 + additionalModels.length });
+    }
+  }
   const finalModels = [...withoutOtros, ...additionalModels, ...(otros ? [otros] : [])];
 
   return {
@@ -110,34 +128,39 @@ async function enrich(sb: ReturnType<typeof publicClient>, products: ProductRow[
   }));
 }
 
-function filterFiltrosLocal(data: CatalogQuery): CatalogProduct[] {
+const localProducts = [
+  ...filtrosData,
+  ...amortiguadoresData,
+  ...bateriasData,
+  ...bujiasData,
+  ...capotData,
+  ...correasData,
+  ...cristalesDePuertasData,
+  ...webFichasData,
+] as CatalogProduct[];
+
+function filterLocalProducts(data: CatalogQuery): CatalogProduct[] {
   if (data.marca) return [];
 
-  const isFiltrosCategory =
-    !data.categoria ||
-    data.categoria === "filtros" ||
-    FILTER_SUBCATEGORY_SLUGS.some((slug) => slug === data.categoria);
-
-  if (!isFiltrosCategory) return [];
-
   const qNorm = data.q?.toLowerCase().trim();
-  const allFilters = filtrosData as unknown as CatalogProduct[];
 
-  return allFilters.filter((p) => {
-    if (data.categoria && data.categoria !== "filtros") {
-      if (p.category?.slug !== data.categoria) return false;
+  return localProducts.filter((p) => {
+    if (data.categoria === "filtros") {
+      if (!p.category?.slug.startsWith("filtros-") && p.category?.slug !== "filtros") return false;
+    } else if (data.categoria && p.category?.slug !== data.categoria) {
+      return false;
     }
 
     if (data.modelo) {
       const matchModel = p.compat.some(
-        (c) => c.model_slug === data.modelo || c.model.toLowerCase() === data.modelo!.toLowerCase(),
+        (c) => c.model_slug === data.modelo,
       );
       if (!matchModel) return false;
     }
 
     if (data.anio) {
       const matchYear = p.compat.some((c) => {
-        if (data.modelo && c.model_slug !== data.modelo && c.model.toLowerCase() !== data.modelo!.toLowerCase()) {
+        if (data.modelo && c.model_slug !== data.modelo) {
           return false;
         }
         return data.anio! >= c.year_from && data.anio! <= c.year_to;
@@ -166,11 +189,11 @@ export const searchCatalog = createServerFn({ method: "GET" })
     marca: typeof input?.marca === "string" ? input.marca.slice(0, 60) : undefined,
   }))
   .handler(async ({ data }) => {
-    const localFilters = filterFiltrosLocal(data);
+    const matchingLocalProducts = filterLocalProducts(data);
 
-    // If searching strictly within filters, return the local verified list directly
-    if (data.categoria === "filtros" || (data.categoria && FILTER_SUBCATEGORY_SLUGS.some((s) => s === data.categoria))) {
-      return localFilters;
+    // Keep filter subcategories local; all other categories combine workbook and database products.
+    if (data.categoria && FILTER_SUBCATEGORY_SLUGS.some((s) => s === data.categoria)) {
+      return matchingLocalProducts;
     }
 
     const sb = publicClient();
@@ -182,14 +205,103 @@ export const searchCatalog = createServerFn({ method: "GET" })
     if (data.marca) args._brand = data.marca;
 
     const { data: rows, error } = await sb.rpc("search_products", args);
-    if (error) throw new Error("No pudimos cargar el catálogo");
+    // Workbook-backed items remain available if the database search is unavailable.\n    if (error) return matchingLocalProducts;
 
     const enriched = await enrich(sb, (rows ?? []) as ProductRow[]);
-    // Filter out old demo filter products so real filters take precedence
-    const nonDemoEnriched = enriched.filter((p) => !p.sku.startsWith("DEMO-FIL-"));
+    // The workbook-backed products replace the legacy examples in these categories.
+    const nonDemoEnriched = enriched.filter((p) =>
+      !p.sku.startsWith("DEMO-FIL-") && p.sku !== "DEMO-COR-001",
+    );
 
-    return [...localFilters, ...nonDemoEnriched];
+    // Uploaded records take precedence over JSON seed rows with the same SKU.
+    // This avoids duplicate product cards after a previously local filter is imported.
+    // Keep the most recently imported workbook SKU, while preserving previous source-only products.
+    const uniqueBySku = new Map(matchingLocalProducts.map((product) => [product.sku, product] as const));
+    for (const product of nonDemoEnriched) uniqueBySku.set(product.sku, product);
+    return [...uniqueBySku.values()];
   });
+
+
+/**
+ * A home-page product type is the descriptive category name of its source workbook.
+ * WEB - Fichas uses CategoryID for that descriptive name and CategoryName for the
+ * source's short abbreviation; we preserve the readable name in the catalog.
+ *
+ * A Honda code appears exactly once in each product type. Different SKUs with
+ * the same code contribute their full set of vehicle/year applications.
+ */
+export interface HomeProductCode {
+  hondaCode: string;
+  name: string;
+  models: { name: string; slug: string; yearFrom: number; yearTo: number }[];
+}
+
+export interface HomeProductType {
+  slug: string;
+  name: string;
+  productCodes: HomeProductCode[];
+}
+
+export function groupCatalogByHondaCode(products: CatalogProduct[]): HomeProductType[] {
+  const grouped = new Map<string, {
+    name: string;
+    codes: Map<string, {
+      hondaCode: string;
+      name: string;
+      models: Map<string, { name: string; slug: string; yearFrom: number; yearTo: number }>;
+    }>;
+  }>();
+
+  for (const product of products) {
+    if (!product.active || !product.honda_code?.trim() || !product.category) continue;
+    const categorySlug = product.category.slug.startsWith("filtros-")
+      ? "filtros" : product.category.slug;
+    const categoryName = categorySlug === "filtros" ? "Filtros" : product.category.name;
+    if (!grouped.has(categorySlug)) grouped.set(categorySlug, { name: categoryName, codes: new Map() });
+    const category = grouped.get(categorySlug)!;
+    const hondaCode = product.honda_code.trim().toUpperCase();
+    const codeKey = hondaCode.replace(/[\s-]/g, "");
+    if (!category.codes.has(codeKey)) {
+      category.codes.set(codeKey, { hondaCode, name: product.name, models: new Map() });
+    }
+    const part = category.codes.get(codeKey)!;
+    for (const application of product.compat) {
+      const key = `${application.model_slug}:${application.year_from}:${application.year_to}`;
+      part.models.set(key, {
+        name: application.model,
+        slug: application.model_slug,
+        yearFrom: application.year_from,
+        yearTo: application.year_to,
+      });
+    }
+  }
+
+  return [...grouped.entries()].map(([slug, value]) => ({
+    slug,
+    name: value.name,
+    productCodes: [...value.codes.values()].map((part) => ({
+      hondaCode: part.hondaCode,
+      name: part.name,
+      models: [...part.models.values()].sort((a, b) =>
+        a.name.localeCompare(b.name, "es") || a.yearFrom - b.yearFrom),
+    })).sort((a, b) => a.name.localeCompare(b.name, "es") || a.hondaCode.localeCompare(b.hondaCode)),
+  })).sort((a, b) => a.name.localeCompare(b.name, "es"));
+}
+
+export const getHomeProductTypes = createServerFn({ method: "GET" }).handler(async () => {
+  const sb = publicClient();
+  const { data: rows, error } = await sb.rpc("search_products", {});
+  if (error) return groupCatalogByHondaCode(localProducts);
+  const dbProducts = (rows ?? []) as ProductRow[];
+  const all = new Map<string, CatalogProduct>();
+  for (const product of localProducts) all.set(product.sku, product);
+  for (const product of await enrich(sb, dbProducts)) {
+    if (!product.sku.startsWith("DEMO-FIL-") && product.sku !== "DEMO-COR-001") {
+      all.set(product.sku, product);
+    }
+  }
+  return groupCatalogByHondaCode([...all.values()]);
+});
 
 export const listBrands = createServerFn({ method: "GET" }).handler(async () => {
   const sb = publicClient();

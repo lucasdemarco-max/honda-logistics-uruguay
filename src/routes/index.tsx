@@ -1,11 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
-import { ArrowRight, ClipboardList, FileText, PackageSearch, ShieldCheck, Truck, Landmark, Award } from "lucide-react";
+import { queryOptions } from "@tanstack/react-query";
+import { ArrowRight, ClipboardList, FileText, PackageSearch, ShieldCheck, Truck, Landmark, Award, LogIn, UserRound } from "lucide-react";
 import heroImg from "@/assets/hero-parts.jpg";
 import { Button } from "@/components/ui/button";
-import { SearchBox } from "@/components/site/SearchBox";
 import { getCatalogMeta } from "@/lib/public.functions";
-import { HONDA_FILTER_MODELS } from "@/lib/filter-categories";
+import { useAuth } from "@/lib/auth";
 
 export const catalogMetaQuery = queryOptions({
   queryKey: ["catalog-meta"],
@@ -34,8 +33,8 @@ export const Route = createFileRoute("/")({
 const SERVICES = [
   {
     icon: PackageSearch,
-    title: "Catálogo de repuestos",
-    text: "Buscá por nombre, código Honda o modelo. Cada aplicación se carga de forma explícita.",
+    title: "Catálogo de repuestos por Modelo",
+    text: "Elegí tu modelo Honda y explorá sus repuestos agrupados por categoría.",
     to: "/catalogo" as const,
     cta: "Ver catálogo",
   },
@@ -63,7 +62,7 @@ const SERVICES = [
 ];
 
 function Index() {
-  const { data } = useSuspenseQuery(catalogMetaQuery);
+  const { user, ready } = useAuth();
   return (
     <>
       <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
@@ -81,11 +80,22 @@ function Index() {
             El repuesto correcto para tu Honda, <span className="text-primary">con seguimiento real.</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-ink-muted">
-            Catálogo con compatibilidades cargadas por modelo y año, presupuestos por número de chasis y el estado de cada repuesto de
+            Repuestos organizados por modelo y categoría, presupuestos por número de chasis y el estado de cada repuesto de
             tu pedido.
           </p>
-          <div className="mt-8 max-w-2xl">
-            <SearchBox size="lg" />
+          <div className="mt-8 flex max-w-2xl flex-wrap gap-3">
+            <Button asChild size="lg">
+              <Link to="/catalogo">Elegir modelo Honda <ArrowRight /></Link>
+            </Button>
+            {ready && (
+              <Button asChild size="lg" variant="outline">
+                {user ? (
+                  <Link to="/cuenta"><UserRound /> Mi cuenta</Link>
+                ) : (
+                  <Link to="/auth" search={{ modo: "login" }}><LogIn /> Iniciar sesión</Link>
+                )}
+              </Button>
+            )}
           </div>
         </div>
       </section>
@@ -104,79 +114,6 @@ function Index() {
               <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
                 {s.cta} <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden />
               </span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      <section className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <p className="eyebrow text-primary">Categorías</p>
-            <h2 className="red-rule mt-4 text-4xl font-bold uppercase">Explorá por sistema</h2>
-          </div>
-          <Button asChild variant="outline">
-            <Link to="/catalogo">Todo el catálogo <ArrowRight /></Link>
-          </Button>
-        </div>
-        <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-7">
-          <div className="group overflow-hidden rounded-lg border bg-card shadow-card transition-shadow hover:shadow-lift">
-            <div className="aspect-square overflow-hidden bg-muted">
-              <img
-                src="/images/categories/filtros.jpg"
-                alt=""
-                loading="lazy"
-                width={944}
-                height={704}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="border-t-2 border-transparent p-3 transition-colors group-hover:border-primary">
-              <Link to="/catalogo" search={{ categoria: "filtros" }} className="hover:text-primary">
-                <p className="font-display text-lg font-semibold uppercase">Filtros por Modelo</p>
-              </Link>
-              <ul className="mt-2 grid grid-cols-2 gap-1 text-[11px]">
-                {HONDA_FILTER_MODELS.slice(0, 8).map((m) => (
-                  <li key={m.slug}>
-                    <Link
-                      to="/catalogo"
-                      search={{ categoria: "filtros", modelo: m.slug }}
-                      className="block truncate rounded px-1 py-0.5 text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary font-medium"
-                    >
-                      {m.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                to="/catalogo"
-                search={{ categoria: "filtros" }}
-                className="mt-2 block text-[11px] font-semibold text-primary hover:underline"
-              >
-                Ver todos los modelos →
-              </Link>
-            </div>
-          </div>
-          {data.categories.filter((c) => c.slug !== "filtros").map((c) => (
-            <Link
-              key={c.id}
-              to="/catalogo"
-              search={{ categoria: c.slug }}
-              className="group overflow-hidden rounded-lg border bg-card shadow-card transition-shadow hover:shadow-lift"
-            >
-              <div className="aspect-square overflow-hidden bg-muted">
-                <img
-                  src={`/images/categories/${c.image_key ?? "otros"}.jpg`}
-                  alt=""
-                  loading="lazy"
-                  width={944}
-                  height={704}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="border-t-2 border-transparent p-3 transition-colors group-hover:border-primary">
-                <p className="font-display text-lg font-semibold uppercase">{c.name}</p>
-              </div>
             </Link>
           ))}
         </div>

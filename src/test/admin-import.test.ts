@@ -23,6 +23,30 @@ const productRecord = (overrides: Record<string, unknown> = {}) => ({
 });
 
 describe("product Excel import validation", () => {
+  it("resolves CategoryID with CategoryName regardless of column order", () => {
+    const row = parseImportRow(
+      { SKU: "COR-1", NAME: "Correa", CategoryID: 17, CategoryName: "Correas", ModelID: "CIVIC", YearFrom: 2019, YearTo: 2024 },
+      2,
+      [...categories, { id: "correas-id", name: "Correas", slug: "correas" }],
+      models,
+    );
+    expect(row.error).toBeNull();
+    expect(row.categoryId).toBe("correas-id");
+    expect(row.modelId).toBe("civic-id");
+  });
+
+  it("accepts staged new categories and models without database writes during parsing", () => {
+    const row = parseImportRow(
+      { SKU: "FLU-1", NAME: "Fluido de transmisión", CategoryID: "FLU", CategoryName: "Fluidos", ModelID: "ZR-V", YearFrom: 2023, YearTo: 2026 },
+      3,
+      [...categories, { id: "pending-fluidos", name: "Fluidos", slug: "fluidos" }],
+      [...models, { id: "pending-zr-v", name: "ZR-V", slug: "zr-v" }],
+    );
+    expect(row.error).toBeNull();
+    expect(row.categoryId).toBe("pending-fluidos");
+    expect(row.modelId).toBe("pending-zr-v");
+  });
+
   it("parses localized prices and filter subcategories", () => {
     const row = parseImportRow(
       productRecord({
