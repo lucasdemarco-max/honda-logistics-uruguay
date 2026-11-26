@@ -210,6 +210,88 @@ export const searchCatalog = createServerFn({ method: "GET" })
     return [...uniqueBySku.values()];
   });
 
+
+/**
+ * A home-page product type is the descriptive category name of its source workbook.
+ * WEB - Fichas uses CategoryID for that descriptive name and CategoryName for the
+ * source's short abbreviation; we preserve the readable name in the catalog.
+ *
+ * A Honda code appears exactly once in each product type. Different SKUs with
+ * the same code contribute their full set of vehicle/year applications.
+ */
+export interface HomeProductCode {
+  hondaCode: string;
+  name: string;
+  models: { name: string; slug: string; yearFrom: number; yearTo: number }[];
+}
+
+export interface HomeProductType {
+  slug: string;
+  name: string;
+  productCodes: HomeProductCode[];
+}
+
+export function groupCatalogByHondaCode(products: CatalogProduct[]): HomeProductType[] {
+  const grouped = new Map<string, {
+    name: string;
+    codes: Map<string, {
+      hondaCode: string;
+      name: string;
+      models: Map<string, { name: string; slug: string; yearFrom: number; yearTo: number }>;
+    }>;
+  }>();
+
+  for (const product of products) {
+    if (!product.active || !product.honda_code?.trim() || !product.category) continue;
+    const categorySlug = product.category.slug.startsWith("filtros-")
+      ? "filtros" : product.category.slug;
+    const categoryName = categorySlug === "filtros" ? "Filtros" : product.category.name;
+    if (!grouped.has(categorySlug)) grouped.set(categorySlug, { name: categoryName, codes: new Map() });
+    const category = grouped.get(categorySlug)!;
+    const hondaCode = product.honda_code.trim().toUpperCase();
+    const codeKey = hondaCode.replace(/[\\s-]/g, "");
+    if (!category.codes.has(codeKey)) {
+      category.codes.set(codeKey, { hondaCode, name: product.name, models: new Map() });
+    }
+    const part = category.codes.get(codeKey)!;
+    for (const application of product.compat) {
+      const key = `${application.model_slug}:${application.year_from}:${application.year_to}`;
+      part.models.set(key, {
+        name: application.model,
+        slug: application.model_slug,
+        yearFrom: application.year_from,
+        yearTo: application.year_to,
+      });
+    }
+  }
+
+  return [...grouped.entries()].map(([slug, value]) => ({
+    slug,
+    name: value.name,
+    productCodes: [...value.codes.values()].map((part) => ({
+      hondaCode: part.hondaCode,
+      name: part.name,
+      models: [...part.models.values()].sort((a, b) =>
+        a.name.localeCompare(b.name, "es") || a.yearFrom - b.yearFrom),
+    })).sort((a, b) => a.name.localeCompare(b.name, "es") || a.hondaCode.localeCompare(b.hondaCode)),
+  })).sort((a, b) => a.name.localeCompare(b.name, "es"));
+}
+
+export const getHomeProductTypes = createServerFn({ method: "GET" }).handler(async () => {
+  const sb = publicClient();
+  const { data: rows, error } = await sb.rpc("search_products", {});
+  if (error) throw new Error("No pudimos cargar los tipos de producto");
+  const dbProducts = (rows ?? []) as ProductRow[];
+  const all = new Map<string, CatalogProduct>();
+  for (const product of localProducts) all.set(product.sku, product);
+  for (const product of await enrich(sb, dbProducts)) {
+    if (!product.sku.startsWith("DEMO-FIL-") && product.sku !== "DEMO-COR-001") {
+      all.set(product.sku, product);
+    }
+  }
+  return groupCatalogByHondaCode([...all.values()]);
+});
+
 export const listBrands = createServerFn({ method: "GET" }).handler(async () => {
   const sb = publicClient();
   const { data } = await sb.from("brands").select("*").eq("active", true).order("sort_order");
