@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { queryOptions, useQuery, useSuspenseQuery } from "@tanstack/react-query";
-import { BatteryCharging, CarFront, PackageSearch, X } from "lucide-react";
+import { BatteryCharging, CarFront, PackageSearch, X, ChevronDown } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -19,10 +19,17 @@ interface CatalogSearch {
   marca?: string | undefined;
 }
 const asText = (value: unknown) => typeof value === "string" && value.trim() ? value.trim().slice(0, 80) : undefined;
-const MODELS_WITH_PHOTOS = new Set([
-  "accord", "city", "civic", "cr-v", "fit", "hr-v",
-  "odyssey", "pilot", "ridgeline", "type-r", "wr-v", "zr-v",
-]);
+const OFFICIAL_HONDA_MODELS = [
+  { name: "RIDGELINE", slug: "ridgeline", image: "https://ddam7hqojzrd9.cloudfront.net/images/799/122/ridgeline_q90.jpg?v=", source: "https://www.hondauruguay.com/" },
+  { name: "WR-V", slug: "wr-v", image: "https://ddam7hqojzrd9.cloudfront.net/images/786/122/wr-v_2026_q90.jpg?v=", source: "https://www.hondauruguay.com/" },
+  { name: "HR-V", slug: "hr-v", image: "https://ddam7hqojzrd9.cloudfront.net/images/737/122/hr-v_q90.jpg?v=", source: "https://www.hondauruguay.com/" },
+  { name: "ZR-V", slug: "zr-v", image: "https://ddam7hqojzrd9.cloudfront.net/images/244/122/198_zr-v_q90.png?v=20250227161251", source: "https://www.hondauruguay.com/" },
+  { name: "ZR-V Advanced Hybrid", slug: "zr-v", image: "https://ddam7hqojzrd9.cloudfront.net/images/1001/122/zrv_e_hev_q90.jpg?v=", source: "https://www.hondauruguay.com/" },
+  { name: "CR-V Advanced Hybrid", slug: "cr-v", image: "https://ddam7hqojzrd9.cloudfront.net/images/567/122/840_cr-v_q90.jpg?v=20250227161251", source: "https://www.hondauruguay.com/" },
+  { name: "PILOT", slug: "pilot", image: "https://ddam7hqojzrd9.cloudfront.net/images/566/122/pilot_q90.jpg?v=20250227161251", source: "https://www.hondauruguay.com/" },
+  { name: "Type R", slug: "type-r", image: "https://ddam7hqojzrd9.cloudfront.net/images/242/122/type-r_q90.png?v=20250227161251", source: "https://www.hondauruguay.com/" },
+] as const;
+const LEGACY_MODEL_SLUGS = ["city", "fit", "accord", "odyssey", "civic"] as const;
 const CATEGORY_IMAGE_KEYS = new Set([
   "correas", "encendido", "filtros", "frenos", "motor", "otros", "suspension",
 ]);
@@ -117,36 +124,40 @@ function Catalogo() {
             </div>
             {selectedModel && <Button variant="ghost" onClick={() => navigate({ search: {} })}><X /> Cambiar modelo</Button>}
           </div>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
-            {models.map((model) => (
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {OFFICIAL_HONDA_MODELS.map((model, index) => (
               <button
-                key={model.slug}
+                key={`${model.name}-${index}`}
                 type="button"
                 aria-pressed={search.modelo === model.slug}
                 onClick={() => set({ modelo: model.slug, categoria: undefined, anio: undefined, q: undefined, marca: undefined })}
-                className={`flex min-w-0 flex-col items-center overflow-hidden rounded-lg border bg-white text-center transition-colors hover:border-primary ${search.modelo === model.slug ? "border-primary ring-1 ring-primary" : ""}`}
+                className={`flex min-w-0 flex-col overflow-hidden rounded-lg border bg-white text-center transition-all hover:border-primary hover:shadow-md ${search.modelo === model.slug ? "border-primary ring-2 ring-primary" : ""}`}
               >
-                <span className="flex aspect-[12/5] w-full items-center justify-center px-2">
-                  {MODELS_WITH_PHOTOS.has(model.slug) ? (
-                    <img
-                      src={`/images/models/${model.slug}.webp`}
-                      alt=""
-                      width={480}
-                      height={200}
-                      loading="lazy"
-                      decoding="async"
-                      className="h-full w-full object-contain"
-                    />
-                  ) : (
-                    <CarFront className="size-8 text-muted-foreground" aria-hidden />
-                  )}
+                <span className="flex aspect-[16/9] w-full items-center justify-center bg-white p-2">
+                  <img src={model.image} alt={model.name} width={480} height={270} loading="lazy" decoding="async"
+                    className="h-full w-full object-contain" />
                 </span>
-                <span className={`w-full px-2 py-2.5 font-semibold ${search.modelo === model.slug ? "bg-primary/10 text-primary" : "text-foreground"}`}>
+                <span className={`w-full border-t px-2 py-3 text-sm font-bold uppercase tracking-wide ${search.modelo === model.slug ? "bg-primary/10 text-primary" : "text-foreground"}`}>
                   {model.name}
                 </span>
               </button>
             ))}
           </div>
+          <details className="mt-5 rounded-lg border bg-card p-4">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold">
+              Otros modelos con repuestos disponibles
+              <ChevronDown className="size-4 text-muted-foreground" />
+            </summary>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {models.filter((model) => LEGACY_MODEL_SLUGS.includes(model.slug as typeof LEGACY_MODEL_SLUGS[number])).map((model) => (
+                <button key={model.slug} type="button"
+                  onClick={() => set({ modelo: model.slug, categoria: undefined, anio: undefined, q: undefined, marca: undefined })}
+                  className={`rounded-full border px-4 py-2 text-sm font-medium hover:border-primary ${search.modelo === model.slug ? "border-primary bg-primary/10 text-primary" : "bg-background"}`}>
+                  {model.name}
+                </button>
+              ))}
+            </div>
+          </details>
         </section>
 
         {selectedModel && (
