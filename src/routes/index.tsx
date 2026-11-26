@@ -1,10 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { queryOptions, useSuspenseQuery } from "@tanstack/react-query";
-import { ArrowRight, ClipboardList, FileText, PackageSearch, ShieldCheck, Truck, Landmark, Award } from "lucide-react";
+import { queryOptions, useQuery } from "@tanstack/react-query";
+import { ArrowRight, ChevronDown, ClipboardList, FileText, PackageSearch, ShieldCheck, Truck, Landmark, Award } from "lucide-react";
 import heroImg from "@/assets/hero-parts.jpg";
 import { Button } from "@/components/ui/button";
-import { getCatalogMeta } from "@/lib/public.functions";
-import { HONDA_FILTER_MODELS } from "@/lib/filter-categories";
+import { getCatalogMeta, getHomeProductTypes } from "@/lib/public.functions";
 
 export const catalogMetaQuery = queryOptions({
   queryKey: ["catalog-meta"],
@@ -33,7 +32,7 @@ export const Route = createFileRoute("/")({
 const SERVICES = [
   {
     icon: PackageSearch,
-    title: "Catálogo de repuestos",
+    title: "Catálogo de repuestos por Modelo",
     text: "Elegí tu modelo Honda y explorá sus repuestos agrupados por categoría.",
     to: "/catalogo" as const,
     cta: "Ver catálogo",
@@ -62,7 +61,11 @@ const SERVICES = [
 ];
 
 function Index() {
-  const { data } = useSuspenseQuery(catalogMetaQuery);
+  const { data: productTypes = [], isLoading: loadingTypes, isError: productTypesError } = useQuery({
+    queryKey: ["home-product-types"],
+    queryFn: () => getHomeProductTypes(),
+    staleTime: 5 * 60_000,
+  });
   return (
     <>
       <section className="relative isolate overflow-hidden bg-ink text-ink-foreground">
@@ -108,77 +111,71 @@ function Index() {
         </div>
       </section>
 
-      <section className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8" aria-labelledby="explora-tipos">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <p className="eyebrow text-primary">Categorías</p>
-            <h2 className="red-rule mt-4 text-4xl font-bold uppercase">Explorá por sistema</h2>
+            <p className="eyebrow text-primary">Categorías de repuestos</p>
+            <h2 id="explora-tipos" className="red-rule mt-4 text-4xl font-bold uppercase">Explorá por tipo de producto</h2>
+            <p className="mt-3 max-w-3xl text-sm text-muted-foreground">
+              Cada tipo reúne los códigos Honda disponibles. Abrí una categoría para consultar
+              los modelos compatibles y los años de aplicación de cada código.
+            </p>
           </div>
           <Button asChild variant="outline">
-            <Link to="/catalogo">Todo el catálogo <ArrowRight /></Link>
+            <Link to="/catalogo">Catálogo por modelo <ArrowRight /></Link>
           </Button>
         </div>
-        <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-7">
-          <div className="group overflow-hidden rounded-lg border bg-card shadow-card transition-shadow hover:shadow-lift">
-            <div className="aspect-square overflow-hidden bg-muted">
-              <img
-                src="/images/categories/filtros.jpg"
-                alt=""
-                loading="lazy"
-                width={944}
-                height={704}
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-            </div>
-            <div className="border-t-2 border-transparent p-3 transition-colors group-hover:border-primary">
-              <Link to="/catalogo" search={{ categoria: "filtros" }} className="hover:text-primary">
-                <p className="font-display text-lg font-semibold uppercase">Filtros por Modelo</p>
-              </Link>
-              <ul className="mt-2 grid grid-cols-2 gap-1 text-[11px]">
-                {HONDA_FILTER_MODELS.slice(0, 8).map((m) => (
-                  <li key={m.slug}>
-                    <Link
-                      to="/catalogo"
-                      search={{ categoria: "filtros", modelo: m.slug }}
-                      className="block truncate rounded px-1 py-0.5 text-muted-foreground transition-colors hover:bg-primary/10 hover:text-primary font-medium"
-                    >
-                      {m.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                to="/catalogo"
-                search={{ categoria: "filtros" }}
-                className="mt-2 block text-[11px] font-semibold text-primary hover:underline"
-              >
-                Ver todos los modelos →
-              </Link>
-            </div>
+        {loadingTypes ? (
+          <div className="mt-8 rounded-lg border bg-card p-8 text-sm text-muted-foreground" role="status">
+            Cargando tipos de producto…
           </div>
-          {data.categories.filter((c) => c.slug !== "filtros").map((c) => (
-            <Link
-              key={c.id}
-              to="/catalogo"
-              search={{ categoria: c.slug }}
-              className="group overflow-hidden rounded-lg border bg-card shadow-card transition-shadow hover:shadow-lift"
-            >
-              <div className="aspect-square overflow-hidden bg-muted">
-                <img
-                  src={`/images/categories/${c.image_key ?? "otros"}.jpg`}
-                  alt=""
-                  loading="lazy"
-                  width={944}
-                  height={704}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="border-t-2 border-transparent p-3 transition-colors group-hover:border-primary">
-                <p className="font-display text-lg font-semibold uppercase">{c.name}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+        ) : productTypesError ? (
+          <div className="mt-8 rounded-lg border bg-card p-8 text-sm text-muted-foreground" role="alert">
+            No se pudieron cargar los productos. Intentá nuevamente más tarde.
+          </div>
+        ) : (
+          <div className="mt-8 grid items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
+            {productTypes.map((category) => (
+              <details key={category.slug} className="group overflow-hidden rounded-lg border bg-card shadow-card">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 p-5 hover:bg-muted/40">
+                  <div className="min-w-0">
+                    <h3 className="text-lg font-semibold uppercase">{category.name}</h3>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {category.productCodes.length} códigos Honda
+                    </p>
+                  </div>
+                  <ChevronDown className="h-5 w-5 shrink-0 text-primary transition-transform group-open:rotate-180" aria-hidden />
+                </summary>
+                <div className="max-h-[560px] space-y-3 overflow-y-auto border-t p-4">
+                  {category.productCodes.map((part) => (
+                    <div key={part.hondaCode} className="rounded-lg border bg-background p-3">
+                      <p className="text-sm font-semibold">{part.name}</p>
+                      <p className="mt-1 font-mono text-xs text-primary">Honda Code: {part.hondaCode}</p>
+                      {part.models.length > 0 ? (
+                        <ul className="mt-2 space-y-1">
+                          {part.models.map((application) => (
+                            <li key={`${application.slug}-${application.yearFrom}-${application.yearTo}`}
+                              className="flex flex-wrap items-center justify-between gap-2 text-xs">
+                              <span>{application.name} · {application.yearFrom === application.yearTo
+                                ? application.yearFrom : `${application.yearFrom}–${application.yearTo}`}</span>
+                              <Link
+                                to="/catalogo"
+                                search={{ modelo: application.slug, categoria: category.slug, q: part.hondaCode }}
+                                className="font-medium text-primary hover:underline"
+                              >Ver pieza</Link>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="mt-2 text-xs text-muted-foreground">Aplicación por modelo pendiente de verificar.</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </details>
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="mx-auto mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
