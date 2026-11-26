@@ -33,7 +33,7 @@ function Seguimiento() {
   const authorized = access?.isStaff || access?.profile?.account_status === "habilitada";
   const lookup = async () => {
     const normalized = normalizeCaseMin(caseNumber);
-    if (!normalized || !/^\\d{6}$/.test(caseNumber)) {
+    if (!normalized || caseNumber.length !== 5) {
       setErrorMessage("Ingresá el número de caso de cinco dígitos.");
       return;
     }
