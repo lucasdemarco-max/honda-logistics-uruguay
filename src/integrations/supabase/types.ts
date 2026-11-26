@@ -730,6 +730,14 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      lookup_customer_case: {
+        Args: { _case_min: string }
+        Returns: Json | null
+      }
+      import_customer_case_snapshots: {
+        Args: { _rows: Json }
+        Returns: number
+      }
       approve_ownership_transfer: {
         Args: { _note?: string; _transfer_id: string }
         Returns: undefined
