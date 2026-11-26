@@ -17,9 +17,9 @@ function workbook(rows: string[][]) {
 }
 
 describe("case workbook import", () => {
-  it("normalizes five digits to six without losing zeroes", () => {
-    expect(normalizeCaseMin("01043")).toBe("001043");
-    expect(normalizeCaseMin("001043")).toBe("001043");
+  it("preserves exactly five digits including leading zeroes", () => {
+    expect(normalizeCaseMin("01043")).toBe("01043");
+    expect(normalizeCaseMin("001043")).toBeNull();
     expect(normalizeCaseMin("1043")).toBeNull();
     expect(normalizeCaseMin("0001043")).toBeNull();
     expect(normalizeCaseMin("abc123")).toBeNull();
@@ -32,7 +32,7 @@ describe("case workbook import", () => {
     ]);
     const parsed = parseCaseWorkbook(buffer, "casos.xlsx");
     expect(parsed).toHaveLength(1);
-    expect(parsed[0]?.case_min).toBe("001043");
+    expect(parsed[0]?.case_min).toBe("01043");
     expect(parsed[0]?.cped).toBe("X 0021 - 00001043");
     expect(parsed[0]?.vehicle_version).toBe("RIDGELINE");
     expect(parsed[0]?.lines).toHaveLength(2);
