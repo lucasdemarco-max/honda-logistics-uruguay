@@ -113,7 +113,8 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
             )}
           </div>
           <Button
-            size="icon"
+            size="sm"
+            className="shrink-0 gap-2"
             aria-label={`Agregar ${product.name} al carrito`}
             disabled={outOfStock}
             onClick={() => {
@@ -121,7 +122,7 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
               toast.success("Agregado al carrito", { description: product.name });
             }}
           >
-            <ShoppingCart />
+            <ShoppingCart className="h-4 w-4" /> Agregar al carrito
           </Button>
         </div>
       </div>
