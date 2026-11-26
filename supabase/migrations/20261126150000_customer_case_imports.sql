@@ -62,7 +62,7 @@ declare
   r jsonb;
   n integer := 0;
 begin
-  if not public.has_role('admin'::public.app_role, auth.uid()) then
+  if not public.has_role(auth.uid(), 'admin'::public.app_role) then
     raise exception 'Acceso restringido a administradores';
   end if;
   if jsonb_typeof(_rows) is distinct from 'array'
