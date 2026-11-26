@@ -1,6 +1,7 @@
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { queryOptions, useQuery, useSuspenseQuery } from "@tanstack/react-query";
 import { BatteryCharging, CarFront, PackageSearch, X } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { PageHeader } from "@/components/site/PageHeader";
@@ -13,6 +14,7 @@ import { catalogMetaQuery } from "./index";
 interface CatalogSearch {
   modelo?: string | undefined;
   categoria?: string | undefined;
+  anio?: number | undefined;
   q?: string | undefined;
   marca?: string | undefined;
 }
@@ -49,6 +51,7 @@ export const Route = createFileRoute("/catalogo")({
     return {
       modelo: asText(s["modelo"]),
       categoria: asText(s["categoria"]),
+      anio: Number.isInteger(Number(s["anio"])) && Number(s["anio"]) >= 1970 && Number(s["anio"]) <= 2100 ? Number(s["anio"]) : undefined,
       q: asText(s["q"]),
       marca: asText(s["marca"]),
     };
@@ -73,8 +76,16 @@ function Catalogo() {
   // No database schema changes are needed when importing additional categories.
   const query = catalogQuery({ modelo: selectedModel?.slug, q: search.q, marca: search.marca });
   const { data: results = [], isLoading, isError } = useQuery({ ...query, enabled: !!selectedModel });
-  const products = results.filter((product) =>
+  const modelProducts = results.filter((product) =>
     product.compat.some((application) => application.model_slug === selectedModel?.slug),
+  );
+  const years = [...new Set(modelProducts.flatMap((product) =>
+    product.compat.filter((c) => c.model_slug === selectedModel?.slug)
+      .flatMap((c) => Array.from({ length: Math.max(0, c.year_to - c.year_from + 1) }, (_, i) => c.year_from + i)),
+  ))].sort((a, b) => b - a);
+  const products = modelProducts.filter((product) =>
+    !search.anio || product.compat.some((c) =>
+      c.model_slug === selectedModel?.slug && search.anio! >= c.year_from && search.anio! <= c.year_to),
   );
   const categories = Array.from(
     new Map(products.map((product) => {
@@ -112,7 +123,7 @@ function Catalogo() {
                 key={model.slug}
                 type="button"
                 aria-pressed={search.modelo === model.slug}
-                onClick={() => set({ modelo: model.slug, categoria: undefined, q: undefined, marca: undefined })}
+                onClick={() => set({ modelo: model.slug, categoria: undefined, anio: undefined, q: undefined, marca: undefined })}
                 className={`flex min-w-0 flex-col items-center overflow-hidden rounded-lg border bg-white text-center transition-colors hover:border-primary ${search.modelo === model.slug ? "border-primary ring-1 ring-primary" : ""}`}
               >
                 <span className="flex aspect-[12/5] w-full items-center justify-center px-2">
@@ -145,6 +156,16 @@ function Catalogo() {
                 <p className="text-xs font-semibold uppercase text-primary">Paso 2</p>
                 <h2 id="categoria-heading" className="text-2xl font-bold">Categorías para {selectedModel.name}</h2>
                 <p className="text-sm text-muted-foreground">Si tu repuesto no está dentro de estas categorías, comunicate con nosotros para un presupuesto.</p>
+                <div className="mt-4 max-w-64">
+                  <label htmlFor="catalog-year" className="mb-1 block text-sm font-medium">Año del vehículo</label>
+                  <Select value={search.anio ? String(search.anio) : "__all"} onValueChange={(value) => set({ anio: value === "__all" ? undefined : Number(value), categoria: undefined })}>
+                    <SelectTrigger id="catalog-year"><SelectValue placeholder="Todos los años" /></SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="__all">Todos los años</SelectItem>
+                      {years.map((year) => <SelectItem key={year} value={String(year)}>{year}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
               {isLoading ? <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">{Array.from({ length: 4 }, (_, i) => <Skeleton key={i} className="h-16" />)}</div>
                 : isError ? <EmptyState icon={PackageSearch} title="No pudimos cargar las categorías" description="Reintentá la consulta más tarde." />
@@ -185,7 +206,7 @@ function Catalogo() {
                   <div>
                     <p className="text-xs font-semibold uppercase text-primary">Paso 3</p>
                     <h2 id="productos-heading" className="text-2xl font-bold">{categories.find((category) => category.slug === categorySelected)?.name} · {selectedModel.name}</h2>
-                    <p className="text-sm text-muted-foreground">{displayedProducts.length} repuestos encontrados.</p>
+                    <p className="text-sm text-muted-foreground">{displayedProducts.length} repuestos encontrados{search.anio ? ` · Año ${search.anio}` : ""}.</p>
                   </div>
                   <Button variant="outline" onClick={() => set({ categoria: undefined })}>Cambiar categoría</Button>
                 </div>
