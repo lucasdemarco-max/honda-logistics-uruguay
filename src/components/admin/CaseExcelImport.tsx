@@ -85,8 +85,8 @@ export function CaseExcelImport() {
         </p>
       )}
       <p className="mt-3 text-xs text-muted-foreground">
-        El importador acepta los cinco dígitos actuales de Caso Min y los normaliza a seis
-        agregando un cero a la izquierda. Para publicar los datos privados se requiere
+        El importador conserva exactamente los cinco dígitos de Caso Min,
+        incluidos los ceros iniciales. Para publicar los datos privados se requiere
         la migración SQL de customer_case_imports y una cuenta de cliente habilitada con chasis verificado.
       </p>
     </section>
