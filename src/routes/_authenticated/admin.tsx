@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { PageHeader } from "@/components/site/PageHeader";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { CaseExcelImport } from "@/components/admin/CaseExcelImport";
 import {
   Table,
   TableBody,
@@ -619,8 +620,9 @@ function Admin() {
           )}
         </section>
 
+        <CaseExcelImport />
         <p className="mt-6 text-xs text-muted-foreground">
-          Las demás pantallas administrativas (clientes, casos, presupuestos, marcas, titularidad y
+          Las pantallas administrativas restantes (clientes, presupuestos, marcas, titularidad y
           auditoría) siguen pendientes de construir.
         </p>
       </div>
