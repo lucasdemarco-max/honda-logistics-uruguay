@@ -30,7 +30,7 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
 
   return (
     <article className="group flex flex-col overflow-hidden rounded-lg border bg-card shadow-card transition-shadow hover:shadow-lift">
-      <div className="relative aspect-[4/3] overflow-hidden border-b bg-card">
+      <div className="relative aspect-[4/3] overflow-hidden border-b bg-white">
         {image ? (
           <img src={image.url} alt={product.name} loading="lazy" width={800} height={600}
             className="h-full w-full object-contain p-4" />
@@ -91,7 +91,7 @@ export function ProductCard({ product, modelSlug }: { product: CatalogProduct; m
         )}
 
         <div className="rounded-md bg-muted/70 p-3">
-          <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Compatibilidad cargada</p>
+          <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Modelo y año</p>
           {compatibility.length === 0 ? (
             <p className="text-xs text-muted-foreground">Sin aplicaciones cargadas. Consultanos con tu número de chasis.</p>
           ) : (

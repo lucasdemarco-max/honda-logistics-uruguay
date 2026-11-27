@@ -3,12 +3,15 @@ import { LayoutDashboard, LogOut, Menu, ShoppingCart, User } from "lucide-react"
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { BUSINESS } from "@/lib/business";
 import { Logo } from "./Logo";
 import { useCart } from "@/lib/cart";
 import { useAccess, useAuth, useSignOut } from "@/lib/auth";
 
 export const NAV = [
   { to: "/catalogo", label: "Catálogo" },
+  { to: "/repuestos-oportunos", label: "Repuestos Oportunos" },
+  { to: "/accesorios", label: "Accesorios" },
   { to: "/marcas", label: "Marcas Asociadas" },
   { to: "/seguimiento", label: "Seguimiento" },
   { to: "/presupuestos", label: "Presupuestos" },
@@ -66,12 +69,12 @@ export function SiteHeader() {
       <div className="stripe-band h-1 opacity-90" aria-hidden />
       <div className="mx-auto flex h-16 max-w-7xl items-center gap-4 px-4 sm:px-6 lg:px-8">
         <Logo />
-        <nav aria-label="Principal" className="ml-6 hidden items-center gap-1 lg:flex">
+        <nav aria-label="Principal" className="ml-3 hidden items-center gap-1 xl:flex">
           {NAV.map((n) => (
             <Link
               key={n.to}
               to={n.to}
-              className="rounded px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="rounded px-2 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
               activeProps={{ className: "bg-accent text-accent-foreground" }}
             >
               {n.label}
@@ -93,7 +96,7 @@ export function SiteHeader() {
           <AccountControls />
           <Sheet>
             <SheetTrigger asChild>
-              <Button size="icon" variant="outline" className="lg:hidden" aria-label="Abrir menú">
+              <Button size="icon" variant="outline" className="xl:hidden" aria-label="Abrir menú">
                 <Menu />
               </Button>
             </SheetTrigger>
@@ -108,8 +111,12 @@ export function SiteHeader() {
                     {n.label}
                   </Link>
                 ))}
+                <a href={BUSINESS.whatsapp.url} target="_blank" rel="noopener noreferrer" className="rounded px-3 py-2.5 font-medium hover:bg-muted">WhatsApp</a>
                 <Link to="/cuenta" className="rounded px-3 py-2.5 font-medium hover:bg-muted">Mi cuenta</Link>
-              </nav>
+              <a href={BUSINESS.whatsapp.url} target="_blank" rel="noopener noreferrer" className="rounded px-2 py-2 text-sm font-medium text-muted-foreground hover:text-foreground">
+            WhatsApp
+          </a>
+        </nav>
             </SheetContent>
           </Sheet>
         </div>

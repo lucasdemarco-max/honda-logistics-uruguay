@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { BUSINESS } from "@/lib/business";
 import { Logo } from "./Logo";
 
 export function SiteFooter() {
@@ -8,7 +9,6 @@ export function SiteFooter() {
         <div className="md:col-span-2">
           <Logo inverted />
           <div className="mt-5 max-w-md space-y-3 text-sm text-ink-muted">
-            <h2 className="text-lg font-semibold text-ink-foreground">Honda Logistics</h2>
             <p>Lunes a Viernes de 8:15 a 17:00 hs.</p>
             <address className="not-italic">
               Av. Giannattasio esq. Melchora Cuenca, Ciudad de la Costa, Canelones, Uruguay
@@ -16,6 +16,7 @@ export function SiteFooter() {
             <p>Tel. 2600 1212* int. 6</p>
             <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm">
               <li><a href="tel:+59826001212" className="hover:text-primary">2600 1212</a></li>
+              <li><a href={BUSINESS.whatsapp.url} target="_blank" rel="noopener noreferrer" className="hover:text-primary">WhatsApp {BUSINESS.whatsapp.display}</a></li>
               <li><a href="mailto:info@hondauruguay.com" className="hover:text-primary">Enviar mail</a></li>
               <li>
                 <a
@@ -37,6 +38,8 @@ export function SiteFooter() {
           <h2 className="eyebrow mb-3 text-ink-muted">Tienda</h2>
           <ul className="space-y-2 text-sm">
             <li><Link to="/catalogo" className="hover:text-primary">Catálogo de repuestos</Link></li>
+            <li><Link to="/repuestos-oportunos" className="hover:text-primary">Repuestos Oportunos</Link></li>
+            <li><Link to="/accesorios" className="hover:text-primary">Accesorios</Link></li>
             <li><Link to="/marcas" className="hover:text-primary">Marcas Asociadas</Link></li>
             <li><Link to="/carrito" className="hover:text-primary">Carrito</Link></li>
             <li><Link to="/envios" className="hover:text-primary">Envíos y formas de pago</Link></li>

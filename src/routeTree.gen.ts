@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AccesoriosRouteImport } from './routes/accesorios'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as CarritoRouteImport } from './routes/carrito'
 import { Route as CatalogoRouteImport } from './routes/catalogo'
@@ -18,6 +19,7 @@ import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as EnviosRouteImport } from './routes/envios'
 import { Route as MarcasRouteImport } from './routes/marcas'
 import { Route as PresupuestosRouteImport } from './routes/presupuestos'
+import { Route as RepuestosOportunosRouteImport } from './routes/repuestos-oportunos'
 import { Route as SeguimientoRouteImport } from './routes/seguimiento'
 import { Route as AuthenticatedAdminRouteImport } from './routes/_authenticated/admin'
 import { Route as AuthenticatedCuentaRouteImport } from './routes/_authenticated/cuenta'
@@ -29,6 +31,11 @@ const IndexRoute = IndexRouteImport.update({
 } as any)
 const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
   id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AccesoriosRoute = AccesoriosRouteImport.update({
+  id: '/accesorios',
+  path: '/accesorios',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AuthRoute = AuthRouteImport.update({
@@ -66,6 +73,11 @@ const PresupuestosRoute = PresupuestosRouteImport.update({
   path: '/presupuestos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const RepuestosOportunosRoute = RepuestosOportunosRouteImport.update({
+  id: '/repuestos-oportunos',
+  path: '/repuestos-oportunos',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SeguimientoRoute = SeguimientoRouteImport.update({
   id: '/seguimiento',
   path: '/seguimiento',
@@ -84,6 +96,7 @@ const AuthenticatedCuentaRoute = AuthenticatedCuentaRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/accesorios': typeof AccesoriosRoute
   '/auth': typeof AuthRoute
   '/carrito': typeof CarritoRoute
   '/catalogo': typeof CatalogoRoute
@@ -91,12 +104,14 @@ export interface FileRoutesByFullPath {
   '/envios': typeof EnviosRoute
   '/marcas': typeof MarcasRoute
   '/presupuestos': typeof PresupuestosRoute
+  '/repuestos-oportunos': typeof RepuestosOportunosRoute
   '/seguimiento': typeof SeguimientoRoute
   '/admin': typeof AuthenticatedAdminRoute
   '/cuenta': typeof AuthenticatedCuentaRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/accesorios': typeof AccesoriosRoute
   '/auth': typeof AuthRoute
   '/carrito': typeof CarritoRoute
   '/catalogo': typeof CatalogoRoute
@@ -104,6 +119,7 @@ export interface FileRoutesByTo {
   '/envios': typeof EnviosRoute
   '/marcas': typeof MarcasRoute
   '/presupuestos': typeof PresupuestosRoute
+  '/repuestos-oportunos': typeof RepuestosOportunosRoute
   '/seguimiento': typeof SeguimientoRoute
   '/admin': typeof AuthenticatedAdminRoute
   '/cuenta': typeof AuthenticatedCuentaRoute
@@ -112,6 +128,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/accesorios': typeof AccesoriosRoute
   '/auth': typeof AuthRoute
   '/carrito': typeof CarritoRoute
   '/catalogo': typeof CatalogoRoute
@@ -119,6 +136,7 @@ export interface FileRoutesById {
   '/envios': typeof EnviosRoute
   '/marcas': typeof MarcasRoute
   '/presupuestos': typeof PresupuestosRoute
+  '/repuestos-oportunos': typeof RepuestosOportunosRoute
   '/seguimiento': typeof SeguimientoRoute
   '/_authenticated/admin': typeof AuthenticatedAdminRoute
   '/_authenticated/cuenta': typeof AuthenticatedCuentaRoute
@@ -127,6 +145,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/accesorios'
     | '/auth'
     | '/carrito'
     | '/catalogo'
@@ -134,12 +153,14 @@ export interface FileRouteTypes {
     | '/envios'
     | '/marcas'
     | '/presupuestos'
+    | '/repuestos-oportunos'
     | '/seguimiento'
     | '/admin'
     | '/cuenta'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/accesorios'
     | '/auth'
     | '/carrito'
     | '/catalogo'
@@ -147,6 +168,7 @@ export interface FileRouteTypes {
     | '/envios'
     | '/marcas'
     | '/presupuestos'
+    | '/repuestos-oportunos'
     | '/seguimiento'
     | '/admin'
     | '/cuenta'
@@ -154,6 +176,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/_authenticated'
+    | '/accesorios'
     | '/auth'
     | '/carrito'
     | '/catalogo'
@@ -161,6 +184,7 @@ export interface FileRouteTypes {
     | '/envios'
     | '/marcas'
     | '/presupuestos'
+    | '/repuestos-oportunos'
     | '/seguimiento'
     | '/_authenticated/admin'
     | '/_authenticated/cuenta'
@@ -169,6 +193,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AccesoriosRoute: typeof AccesoriosRoute
   AuthRoute: typeof AuthRoute
   CarritoRoute: typeof CarritoRoute
   CatalogoRoute: typeof CatalogoRoute
@@ -176,6 +201,7 @@ export interface RootRouteChildren {
   EnviosRoute: typeof EnviosRoute
   MarcasRoute: typeof MarcasRoute
   PresupuestosRoute: typeof PresupuestosRoute
+  RepuestosOportunosRoute: typeof RepuestosOportunosRoute
   SeguimientoRoute: typeof SeguimientoRoute
 }
 
@@ -193,6 +219,13 @@ declare module '@tanstack/react-router' {
       path: ''
       fullPath: '/'
       preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/accesorios': {
+      id: '/accesorios'
+      path: '/accesorios'
+      fullPath: '/accesorios'
+      preLoaderRoute: typeof AccesoriosRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/auth': {
@@ -244,6 +277,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PresupuestosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/repuestos-oportunos': {
+      id: '/repuestos-oportunos'
+      path: '/repuestos-oportunos'
+      fullPath: '/repuestos-oportunos'
+      preLoaderRoute: typeof RepuestosOportunosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/seguimiento': {
       id: '/seguimiento'
       path: '/seguimiento'
@@ -284,6 +324,7 @@ const AuthenticatedRouteRouteWithChildren =
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AccesoriosRoute: AccesoriosRoute,
   AuthRoute: AuthRoute,
   CarritoRoute: CarritoRoute,
   CatalogoRoute: CatalogoRoute,
@@ -291,6 +332,7 @@ const rootRouteChildren: RootRouteChildren = {
   EnviosRoute: EnviosRoute,
   MarcasRoute: MarcasRoute,
   PresupuestosRoute: PresupuestosRoute,
+  RepuestosOportunosRoute: RepuestosOportunosRoute,
   SeguimientoRoute: SeguimientoRoute,
 }
 export const routeTree = rootRouteImport

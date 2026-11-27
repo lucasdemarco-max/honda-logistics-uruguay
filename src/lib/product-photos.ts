@@ -14,9 +14,15 @@ const photoCandidates = new Map(
   ]),
 );
 
-// Approved after visually checking the local asset: the Honda logo is visible on the filter.
-// Every additional code must be reviewed individually before it is added here.
-const approvedHondaCodes = new Set<string>(["15400RTA003"]);
+// Each photograph has a white background and shows Honda identification without other branding.
+const approvedHondaCodes = new Set([
+  "14400RCAA01",
+  "15400RTA003",
+  "17048TEK000",
+  "172206MAJ01",
+  "17220R5AA00",
+  "80292TR8M01",
+]);
 const approvedPhotoUrls = new Set(
   [...approvedHondaCodes].map((code) => photoCandidates.get(code)?.url).filter((url): url is string => !!url),
 );
