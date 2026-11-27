@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { queryOptions } from "@tanstack/react-query";
-import { ArrowRight, Archive, ClipboardList, FileText, PackageSearch, ShieldCheck, Truck, Landmark, Award, LogIn, MessageCircle, UserRound, Wrench } from "lucide-react";
-import heroImg from "@/assets/hero-parts.jpg";
+import { ArrowRight, Archive, ClipboardList, FileText, PackageSearch, ShieldCheck, Truck, Landmark, Award, LogIn, MessageCircle, PackageOpen, UserRound, Wrench } from "lucide-react";
+import heroImg from "@/assets/honda-logistics-fachada.webp";
 import { Button } from "@/components/ui/button";
 import { getCatalogMeta } from "@/lib/public.functions";
 import { useAuth } from "@/lib/auth";
@@ -38,6 +38,13 @@ const SERVICES = [
     text: "Elegí tu modelo Honda y explorá sus repuestos agrupados por categoría.",
     to: "/catalogo" as const,
     cta: "Ver catálogo",
+  },
+  {
+    icon: PackageOpen,
+    title: "KITS",
+    text: "Kits de servicio y auxiliares por modelo y año.",
+    to: "/kits" as const,
+    cta: "Ver kits",
   },
   {
     icon: Archive,
@@ -101,7 +108,7 @@ function Index() {
               </Button>
             )}
           </div>
-          <img src={heroImg} alt="" width={1920} height={1088} className="h-auto w-full object-contain" />
+          <img src={heroImg} alt="Fachada de Honda Logistics" width={473} height={379} className="h-auto w-full object-contain" />
         </div>
       </section>
 

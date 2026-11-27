@@ -19,9 +19,14 @@ const approvedHondaCodes = new Set([
   "14400RCAA01",
   "15400RTA003",
   "17048TEK000",
+  "1722055AZ01",
   "172206MAJ01",
   "17220R5AA00",
+  "80291TF0U01",
+  "80292SDA407",
   "80292TR8M01",
+  "9410914000",
+  "9410920000",
 ]);
 const approvedPhotoUrls = new Set(
   [...approvedHondaCodes].map((code) => photoCandidates.get(code)?.url).filter((url): url is string => !!url),

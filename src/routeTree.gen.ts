@@ -17,6 +17,7 @@ import { Route as CarritoRouteImport } from './routes/carrito'
 import { Route as CatalogoRouteImport } from './routes/catalogo'
 import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as EnviosRouteImport } from './routes/envios'
+import { Route as KitsRouteImport } from './routes/kits'
 import { Route as MarcasRouteImport } from './routes/marcas'
 import { Route as PresupuestosRouteImport } from './routes/presupuestos'
 import { Route as RepuestosOportunosRouteImport } from './routes/repuestos-oportunos'
@@ -63,6 +64,11 @@ const EnviosRoute = EnviosRouteImport.update({
   path: '/envios',
   getParentRoute: () => rootRouteImport,
 } as any)
+const KitsRoute = KitsRouteImport.update({
+  id: '/kits',
+  path: '/kits',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MarcasRoute = MarcasRouteImport.update({
   id: '/marcas',
   path: '/marcas',
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/catalogo': typeof CatalogoRoute
   '/checkout': typeof CheckoutRoute
   '/envios': typeof EnviosRoute
+  '/kits': typeof KitsRoute
   '/marcas': typeof MarcasRoute
   '/presupuestos': typeof PresupuestosRoute
   '/repuestos-oportunos': typeof RepuestosOportunosRoute
@@ -117,6 +124,7 @@ export interface FileRoutesByTo {
   '/catalogo': typeof CatalogoRoute
   '/checkout': typeof CheckoutRoute
   '/envios': typeof EnviosRoute
+  '/kits': typeof KitsRoute
   '/marcas': typeof MarcasRoute
   '/presupuestos': typeof PresupuestosRoute
   '/repuestos-oportunos': typeof RepuestosOportunosRoute
@@ -134,6 +142,7 @@ export interface FileRoutesById {
   '/catalogo': typeof CatalogoRoute
   '/checkout': typeof CheckoutRoute
   '/envios': typeof EnviosRoute
+  '/kits': typeof KitsRoute
   '/marcas': typeof MarcasRoute
   '/presupuestos': typeof PresupuestosRoute
   '/repuestos-oportunos': typeof RepuestosOportunosRoute
@@ -151,6 +160,7 @@ export interface FileRouteTypes {
     | '/catalogo'
     | '/checkout'
     | '/envios'
+    | '/kits'
     | '/marcas'
     | '/presupuestos'
     | '/repuestos-oportunos'
@@ -166,6 +176,7 @@ export interface FileRouteTypes {
     | '/catalogo'
     | '/checkout'
     | '/envios'
+    | '/kits'
     | '/marcas'
     | '/presupuestos'
     | '/repuestos-oportunos'
@@ -182,6 +193,7 @@ export interface FileRouteTypes {
     | '/catalogo'
     | '/checkout'
     | '/envios'
+    | '/kits'
     | '/marcas'
     | '/presupuestos'
     | '/repuestos-oportunos'
@@ -199,6 +211,7 @@ export interface RootRouteChildren {
   CatalogoRoute: typeof CatalogoRoute
   CheckoutRoute: typeof CheckoutRoute
   EnviosRoute: typeof EnviosRoute
+  KitsRoute: typeof KitsRoute
   MarcasRoute: typeof MarcasRoute
   PresupuestosRoute: typeof PresupuestosRoute
   RepuestosOportunosRoute: typeof RepuestosOportunosRoute
@@ -261,6 +274,13 @@ declare module '@tanstack/react-router' {
       path: '/envios'
       fullPath: '/envios'
       preLoaderRoute: typeof EnviosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kits': {
+      id: '/kits'
+      path: '/kits'
+      fullPath: '/kits'
+      preLoaderRoute: typeof KitsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/marcas': {
@@ -330,6 +350,7 @@ const rootRouteChildren: RootRouteChildren = {
   CatalogoRoute: CatalogoRoute,
   CheckoutRoute: CheckoutRoute,
   EnviosRoute: EnviosRoute,
+  KitsRoute: KitsRoute,
   MarcasRoute: MarcasRoute,
   PresupuestosRoute: PresupuestosRoute,
   RepuestosOportunosRoute: RepuestosOportunosRoute,

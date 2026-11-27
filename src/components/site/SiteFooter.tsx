@@ -38,6 +38,7 @@ export function SiteFooter() {
           <h2 className="eyebrow mb-3 text-ink-muted">Tienda</h2>
           <ul className="space-y-2 text-sm">
             <li><Link to="/catalogo" className="hover:text-primary">Catálogo de repuestos</Link></li>
+            <li><Link to="/kits" className="hover:text-primary">KITS</Link></li>
             <li><Link to="/repuestos-oportunos" className="hover:text-primary">Repuestos Oportunos</Link></li>
             <li><Link to="/accesorios" className="hover:text-primary">Accesorios</Link></li>
             <li><Link to="/marcas" className="hover:text-primary">Marcas Asociadas</Link></li>

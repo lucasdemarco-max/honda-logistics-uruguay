@@ -12,13 +12,13 @@ export function Logo({ inverted = false }: { inverted?: boolean }) {
       aria-label="Honda Logistics — inicio"
     >
       <img
-        src="/brand/honda-emblem-white.svg"
+        src={inverted ? "/brand/honda-emblem-white.svg" : "/brand/honda-uruguay-header.svg"}
         alt=""
-        width={35}
-        height={22}
-        className={cn("h-[22px] w-auto", !inverted && "brightness-0")}
+        width={inverted ? 35 : 145}
+        height={inverted ? 22 : 14}
+        className={inverted ? "h-[22px] w-auto" : "h-auto w-[118px] sm:w-[145px]"}
       />
-      HONDA LOGISTICS
+      {inverted ? "HONDA LOGISTICS" : "LOGISTICS"}
     </Link>
   );
 }

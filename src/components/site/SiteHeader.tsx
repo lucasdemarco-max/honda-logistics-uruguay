@@ -10,6 +10,7 @@ import { useAccess, useAuth, useSignOut } from "@/lib/auth";
 
 export const NAV = [
   { to: "/catalogo", label: "Catálogo" },
+  { to: "/kits", label: "KITS" },
   { to: "/repuestos-oportunos", label: "Repuestos Oportunos" },
   { to: "/accesorios", label: "Accesorios" },
   { to: "/marcas", label: "Marcas Asociadas" },
